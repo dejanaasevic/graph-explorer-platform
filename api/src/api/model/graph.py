@@ -1,22 +1,11 @@
-from typing import List
+import uuid
+from typing import Dict, Any
 
-class Graph(object):
-    def __init__(self, nodes:List[object]=None, edges:List[object]=None):
-        self._nodes = nodes
-        self._edges = edges
 
-    @property
-    def nodes(self):
-        return self._nodes
+class Node:
+    def __init__(self, attributes: Dict[str, Any] = None ):
+        self.node_id : uuid.UUID = uuid.uuid4()
+        self.attributes : Dict[str, Any] = attributes or {}
 
-    @property
-    def edges(self):
-        return self._edges
-
-    @nodes.setter
-    def nodes(self, value):
-        self._nodes = value
-
-    @edges.setter
-    def edges(self, value):
-        self._edges = value
+    def __repr__(self):
+        return f"Node(id={self.node_id}, attributes={self.attributes})"
