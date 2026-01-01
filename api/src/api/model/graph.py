@@ -1,6 +1,5 @@
 import uuid
-from typing import Dict, Any, Optional, List
-
+from typing import Dict, Any, Optional, List, Iterable
 
 class Node:
     def __init__(self, attributes: Dict[str, Any] = None ):
@@ -77,20 +76,17 @@ class Graph:
         for edge in self._edges.values():
             if edge.source.node_id == node_id or edge.target.node_id == node_id:
                 edges_to_remove.append(edge)
-
         for edge in edges_to_remove:
             self.remove_edge(edge.id)
-
         self._adjacency.pop(node_id, None)
         self._nodes.pop(node_id)
 
     def remove_edge(self, edge_id : uuid.UUID) -> None:
-        edge = self._edges.pop(edge_id, None)
-        if edge:
-            self._adjacency[edge.source.node_id].remove(edge)
+        edge_to_remove = self._edges.pop(edge_id, None)
+        if edge_to_remove:
+            self._adjacency[edge_to_remove.source.node_id].remove(edge_to_remove)
             if not self.directed:
-                self._adjacency[edge.target.node_id].remove(edge)
-
+                self._adjacency[edge_to_remove.target.node_id].remove(edge_to_remove)
 
     def get_neighbors(self, node_id : uuid.UUID) -> List[Node]:
         neighbors = []
