@@ -1,0 +1,5 @@
+Metadata-Version: 2.4
+Name: graph-core
+Version: 0.0.1
+Summary: Graph visualisation core
+Requires-Dist: graph-api>=0.0.1

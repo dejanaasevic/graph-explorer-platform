@@ -1,0 +1,1366 @@
+{
+  "@id": "company-root",
+  "name": "Tech Company",
+  "departments": [
+    {
+      "@id": "dept-1",
+      "type": "Department",
+      "name": "Department 1",
+      "budget": 975885,
+      "teams": [
+        {
+          "@id": "team-1-1",
+          "name": "Team A",
+          "members": [
+            {
+              "@id": "member-1",
+              "name": "Employee 1",
+              "position": "Manager",
+              "salary": 84408
+            },
+            {
+              "@id": "member-2",
+              "name": "Employee 2",
+              "position": "Developer",
+              "salary": 60687
+            },
+            {
+              "@id": "member-3",
+              "name": "Employee 3",
+              "position": "Manager",
+              "salary": 41581
+            },
+            {
+              "@id": "member-4",
+              "name": "Employee 4",
+              "position": "Developer",
+              "salary": 59331
+            },
+            {
+              "@id": "member-5",
+              "name": "Employee 5",
+              "position": "Designer",
+              "salary": 58344
+            },
+            {
+              "@id": "member-6",
+              "name": "Employee 6",
+              "position": "Manager",
+              "salary": 77964
+            },
+            {
+              "@id": "member-7",
+              "name": "Employee 7",
+              "position": "Developer",
+              "salary": 77863
+            },
+            {
+              "@id": "member-8",
+              "name": "Employee 8",
+              "position": "Manager",
+              "salary": 77963
+            },
+            {
+              "@id": "member-9",
+              "name": "Employee 9",
+              "position": "Designer",
+              "salary": 87500
+            },
+            {
+              "@id": "member-10",
+              "name": "Employee 10",
+              "position": "Developer",
+              "salary": 94213
+            }
+          ]
+        },
+        {
+          "@id": "team-1-2",
+          "name": "Team B",
+          "members": [
+            {
+              "@id": "member-11",
+              "name": "Employee 11",
+              "position": "Manager",
+              "salary": 74295
+            },
+            {
+              "@id": "member-12",
+              "name": "Employee 12",
+              "position": "Manager",
+              "salary": 46658
+            },
+            {
+              "@id": "member-13",
+              "name": "Employee 13",
+              "position": "Designer",
+              "salary": 53128
+            },
+            {
+              "@id": "member-14",
+              "name": "Employee 14",
+              "position": "Manager",
+              "salary": 80444
+            },
+            {
+              "@id": "member-15",
+              "name": "Employee 15",
+              "position": "Developer",
+              "salary": 91512
+            },
+            {
+              "@id": "member-16",
+              "name": "Employee 16",
+              "position": "Developer",
+              "salary": 80770
+            },
+            {
+              "@id": "member-17",
+              "name": "Employee 17",
+              "position": "Developer",
+              "salary": 80830
+            },
+            {
+              "@id": "member-18",
+              "name": "Employee 18",
+              "position": "Manager",
+              "salary": 79552
+            },
+            {
+              "@id": "member-19",
+              "name": "Employee 19",
+              "position": "Designer",
+              "salary": 58386
+            },
+            {
+              "@id": "member-20",
+              "name": "Employee 20",
+              "position": "Developer",
+              "salary": 84167
+            }
+          ]
+        },
+        {
+          "@id": "team-1-3",
+          "name": "Team C",
+          "members": [
+            {
+              "@id": "member-21",
+              "name": "Employee 21",
+              "position": "Developer",
+              "salary": 55360
+            },
+            {
+              "@id": "member-22",
+              "name": "Employee 22",
+              "position": "Developer",
+              "salary": 78038
+            },
+            {
+              "@id": "member-23",
+              "name": "Employee 23",
+              "position": "Manager",
+              "salary": 86995
+            },
+            {
+              "@id": "member-24",
+              "name": "Employee 24",
+              "position": "Developer",
+              "salary": 41096
+            },
+            {
+              "@id": "member-25",
+              "name": "Employee 25",
+              "position": "Developer",
+              "salary": 93059
+            },
+            {
+              "@id": "member-26",
+              "name": "Employee 26",
+              "position": "Manager",
+              "salary": 56044
+            },
+            {
+              "@id": "member-27",
+              "name": "Employee 27",
+              "position": "Designer",
+              "salary": 52559
+            },
+            {
+              "@id": "member-28",
+              "name": "Employee 28",
+              "position": "Developer",
+              "salary": 75770
+            },
+            {
+              "@id": "member-29",
+              "name": "Employee 29",
+              "position": "Developer",
+              "salary": 45419
+            },
+            {
+              "@id": "member-30",
+              "name": "Employee 30",
+              "position": "Manager",
+              "salary": 48657
+            }
+          ]
+        },
+        {
+          "@id": "team-1-4",
+          "name": "Team D",
+          "members": [
+            {
+              "@id": "member-31",
+              "name": "Employee 31",
+              "position": "Designer",
+              "salary": 88606
+            },
+            {
+              "@id": "member-32",
+              "name": "Employee 32",
+              "position": "Developer",
+              "salary": 47828
+            },
+            {
+              "@id": "member-33",
+              "name": "Employee 33",
+              "position": "Developer",
+              "salary": 65359
+            },
+            {
+              "@id": "member-34",
+              "name": "Employee 34",
+              "position": "Developer",
+              "salary": 65730
+            },
+            {
+              "@id": "member-35",
+              "name": "Employee 35",
+              "position": "Designer",
+              "salary": 87691
+            },
+            {
+              "@id": "member-36",
+              "name": "Employee 36",
+              "position": "Designer",
+              "salary": 66692
+            },
+            {
+              "@id": "member-37",
+              "name": "Employee 37",
+              "position": "Developer",
+              "salary": 85064
+            },
+            {
+              "@id": "member-38",
+              "name": "Employee 38",
+              "position": "Designer",
+              "salary": 48555
+            },
+            {
+              "@id": "member-39",
+              "name": "Employee 39",
+              "position": "Manager",
+              "salary": 41954
+            },
+            {
+              "@id": "member-40",
+              "name": "Employee 40",
+              "position": "Manager",
+              "salary": 69303
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "dept-2",
+      "type": "Department",
+      "name": "Department 2",
+      "budget": 103246,
+      "teams": [
+        {
+          "@id": "team-2-1",
+          "name": "Team A",
+          "members": [
+            {
+              "@id": "member-41",
+              "name": "Employee 41",
+              "position": "Designer",
+              "salary": 80621
+            },
+            {
+              "@id": "member-42",
+              "name": "Employee 42",
+              "position": "Designer",
+              "salary": 49969
+            },
+            {
+              "@id": "member-43",
+              "name": "Employee 43",
+              "position": "Manager",
+              "salary": 56281
+            },
+            {
+              "@id": "member-44",
+              "name": "Employee 44",
+              "position": "Developer",
+              "salary": 68008
+            },
+            {
+              "@id": "member-45",
+              "name": "Employee 45",
+              "position": "Manager",
+              "salary": 64133
+            },
+            {
+              "@id": "member-46",
+              "name": "Employee 46",
+              "position": "Developer",
+              "salary": 41650
+            },
+            {
+              "@id": "member-47",
+              "name": "Employee 47",
+              "position": "Manager",
+              "salary": 98337
+            },
+            {
+              "@id": "member-48",
+              "name": "Employee 48",
+              "position": "Manager",
+              "salary": 48102
+            },
+            {
+              "@id": "member-49",
+              "name": "Employee 49",
+              "position": "Developer",
+              "salary": 92411
+            },
+            {
+              "@id": "member-50",
+              "name": "Employee 50",
+              "position": "Manager",
+              "salary": 95585
+            }
+          ]
+        },
+        {
+          "@id": "team-2-2",
+          "name": "Team B",
+          "members": [
+            {
+              "@id": "member-51",
+              "name": "Employee 51",
+              "position": "Developer",
+              "salary": 98007
+            },
+            {
+              "@id": "member-52",
+              "name": "Employee 52",
+              "position": "Developer",
+              "salary": 72679
+            },
+            {
+              "@id": "member-53",
+              "name": "Employee 53",
+              "position": "Developer",
+              "salary": 56012
+            },
+            {
+              "@id": "member-54",
+              "name": "Employee 54",
+              "position": "Designer",
+              "salary": 60830
+            },
+            {
+              "@id": "member-55",
+              "name": "Employee 55",
+              "position": "Manager",
+              "salary": 64238
+            },
+            {
+              "@id": "member-56",
+              "name": "Employee 56",
+              "position": "Manager",
+              "salary": 81329
+            },
+            {
+              "@id": "member-57",
+              "name": "Employee 57",
+              "position": "Designer",
+              "salary": 52759
+            },
+            {
+              "@id": "member-58",
+              "name": "Employee 58",
+              "position": "Designer",
+              "salary": 41197
+            },
+            {
+              "@id": "member-59",
+              "name": "Employee 59",
+              "position": "Designer",
+              "salary": 75514
+            },
+            {
+              "@id": "member-60",
+              "name": "Employee 60",
+              "position": "Developer",
+              "salary": 54481
+            }
+          ]
+        },
+        {
+          "@id": "team-2-3",
+          "name": "Team C",
+          "members": [
+            {
+              "@id": "member-61",
+              "name": "Employee 61",
+              "position": "Manager",
+              "salary": 79740
+            },
+            {
+              "@id": "member-62",
+              "name": "Employee 62",
+              "position": "Manager",
+              "salary": 95463
+            },
+            {
+              "@id": "member-63",
+              "name": "Employee 63",
+              "position": "Manager",
+              "salary": 43606
+            },
+            {
+              "@id": "member-64",
+              "name": "Employee 64",
+              "position": "Manager",
+              "salary": 71878
+            },
+            {
+              "@id": "member-65",
+              "name": "Employee 65",
+              "position": "Designer",
+              "salary": 44175
+            },
+            {
+              "@id": "member-66",
+              "name": "Employee 66",
+              "position": "Developer",
+              "salary": 59656
+            },
+            {
+              "@id": "member-67",
+              "name": "Employee 67",
+              "position": "Manager",
+              "salary": 42089
+            },
+            {
+              "@id": "member-68",
+              "name": "Employee 68",
+              "position": "Manager",
+              "salary": 43879
+            },
+            {
+              "@id": "member-69",
+              "name": "Employee 69",
+              "position": "Manager",
+              "salary": 97257
+            },
+            {
+              "@id": "member-70",
+              "name": "Employee 70",
+              "position": "Developer",
+              "salary": 88696
+            }
+          ]
+        },
+        {
+          "@id": "team-2-4",
+          "name": "Team D",
+          "members": [
+            {
+              "@id": "member-71",
+              "name": "Employee 71",
+              "position": "Designer",
+              "salary": 61457
+            },
+            {
+              "@id": "member-72",
+              "name": "Employee 72",
+              "position": "Manager",
+              "salary": 97495
+            },
+            {
+              "@id": "member-73",
+              "name": "Employee 73",
+              "position": "Designer",
+              "salary": 94873
+            },
+            {
+              "@id": "member-74",
+              "name": "Employee 74",
+              "position": "Manager",
+              "salary": 42107
+            },
+            {
+              "@id": "member-75",
+              "name": "Employee 75",
+              "position": "Developer",
+              "salary": 73170
+            },
+            {
+              "@id": "member-76",
+              "name": "Employee 76",
+              "position": "Developer",
+              "salary": 82466
+            },
+            {
+              "@id": "member-77",
+              "name": "Employee 77",
+              "position": "Developer",
+              "salary": 52681
+            },
+            {
+              "@id": "member-78",
+              "name": "Employee 78",
+              "position": "Designer",
+              "salary": 41651
+            },
+            {
+              "@id": "member-79",
+              "name": "Employee 79",
+              "position": "Manager",
+              "salary": 87334
+            },
+            {
+              "@id": "member-80",
+              "name": "Employee 80",
+              "position": "Manager",
+              "salary": 97492
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "dept-3",
+      "type": "Department",
+      "name": "Department 3",
+      "budget": 947370,
+      "teams": [
+        {
+          "@id": "team-3-1",
+          "name": "Team A",
+          "members": [
+            {
+              "@id": "member-81",
+              "name": "Employee 81",
+              "position": "Developer",
+              "salary": 65819
+            },
+            {
+              "@id": "member-82",
+              "name": "Employee 82",
+              "position": "Developer",
+              "salary": 69446
+            },
+            {
+              "@id": "member-83",
+              "name": "Employee 83",
+              "position": "Developer",
+              "salary": 59604
+            },
+            {
+              "@id": "member-84",
+              "name": "Employee 84",
+              "position": "Manager",
+              "salary": 48866
+            },
+            {
+              "@id": "member-85",
+              "name": "Employee 85",
+              "position": "Manager",
+              "salary": 96474
+            },
+            {
+              "@id": "member-86",
+              "name": "Employee 86",
+              "position": "Developer",
+              "salary": 95224
+            },
+            {
+              "@id": "member-87",
+              "name": "Employee 87",
+              "position": "Developer",
+              "salary": 60621
+            },
+            {
+              "@id": "member-88",
+              "name": "Employee 88",
+              "position": "Developer",
+              "salary": 82847
+            },
+            {
+              "@id": "member-89",
+              "name": "Employee 89",
+              "position": "Developer",
+              "salary": 60986
+            },
+            {
+              "@id": "member-90",
+              "name": "Employee 90",
+              "position": "Designer",
+              "salary": 59781
+            }
+          ]
+        },
+        {
+          "@id": "team-3-2",
+          "name": "Team B",
+          "members": [
+            {
+              "@id": "member-91",
+              "name": "Employee 91",
+              "position": "Manager",
+              "salary": 81477
+            },
+            {
+              "@id": "member-92",
+              "name": "Employee 92",
+              "position": "Manager",
+              "salary": 62446
+            },
+            {
+              "@id": "member-93",
+              "name": "Employee 93",
+              "position": "Manager",
+              "salary": 61718
+            },
+            {
+              "@id": "member-94",
+              "name": "Employee 94",
+              "position": "Developer",
+              "salary": 67432
+            },
+            {
+              "@id": "member-95",
+              "name": "Employee 95",
+              "position": "Designer",
+              "salary": 86136
+            },
+            {
+              "@id": "member-96",
+              "name": "Employee 96",
+              "position": "Manager",
+              "salary": 46934
+            },
+            {
+              "@id": "member-97",
+              "name": "Employee 97",
+              "position": "Manager",
+              "salary": 44616
+            },
+            {
+              "@id": "member-98",
+              "name": "Employee 98",
+              "position": "Manager",
+              "salary": 99551
+            },
+            {
+              "@id": "member-99",
+              "name": "Employee 99",
+              "position": "Designer",
+              "salary": 94021
+            },
+            {
+              "@id": "member-100",
+              "name": "Employee 100",
+              "position": "Designer",
+              "salary": 68435
+            }
+          ]
+        },
+        {
+          "@id": "team-3-3",
+          "name": "Team C",
+          "members": [
+            {
+              "@id": "member-101",
+              "name": "Employee 101",
+              "position": "Designer",
+              "salary": 69117
+            },
+            {
+              "@id": "member-102",
+              "name": "Employee 102",
+              "position": "Designer",
+              "salary": 52670
+            },
+            {
+              "@id": "member-103",
+              "name": "Employee 103",
+              "position": "Developer",
+              "salary": 52187
+            },
+            {
+              "@id": "member-104",
+              "name": "Employee 104",
+              "position": "Designer",
+              "salary": 45098
+            },
+            {
+              "@id": "member-105",
+              "name": "Employee 105",
+              "position": "Designer",
+              "salary": 79221
+            },
+            {
+              "@id": "member-106",
+              "name": "Employee 106",
+              "position": "Designer",
+              "salary": 96387
+            },
+            {
+              "@id": "member-107",
+              "name": "Employee 107",
+              "position": "Developer",
+              "salary": 88955
+            },
+            {
+              "@id": "member-108",
+              "name": "Employee 108",
+              "position": "Designer",
+              "salary": 43007
+            },
+            {
+              "@id": "member-109",
+              "name": "Employee 109",
+              "position": "Manager",
+              "salary": 79194
+            },
+            {
+              "@id": "member-110",
+              "name": "Employee 110",
+              "position": "Developer",
+              "salary": 59177
+            }
+          ]
+        },
+        {
+          "@id": "team-3-4",
+          "name": "Team D",
+          "members": [
+            {
+              "@id": "member-111",
+              "name": "Employee 111",
+              "position": "Developer",
+              "salary": 69347
+            },
+            {
+              "@id": "member-112",
+              "name": "Employee 112",
+              "position": "Manager",
+              "salary": 44648
+            },
+            {
+              "@id": "member-113",
+              "name": "Employee 113",
+              "position": "Designer",
+              "salary": 64246
+            },
+            {
+              "@id": "member-114",
+              "name": "Employee 114",
+              "position": "Developer",
+              "salary": 63361
+            },
+            {
+              "@id": "member-115",
+              "name": "Employee 115",
+              "position": "Designer",
+              "salary": 42525
+            },
+            {
+              "@id": "member-116",
+              "name": "Employee 116",
+              "position": "Manager",
+              "salary": 99154
+            },
+            {
+              "@id": "member-117",
+              "name": "Employee 117",
+              "position": "Designer",
+              "salary": 90816
+            },
+            {
+              "@id": "member-118",
+              "name": "Employee 118",
+              "position": "Designer",
+              "salary": 92124
+            },
+            {
+              "@id": "member-119",
+              "name": "Employee 119",
+              "position": "Manager",
+              "salary": 46104
+            },
+            {
+              "@id": "member-120",
+              "name": "Employee 120",
+              "position": "Manager",
+              "salary": 70177
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "dept-4",
+      "type": "Department",
+      "name": "Department 4",
+      "budget": 304750,
+      "teams": [
+        {
+          "@id": "team-4-1",
+          "name": "Team A",
+          "members": [
+            {
+              "@id": "member-121",
+              "name": "Employee 121",
+              "position": "Designer",
+              "salary": 77844
+            },
+            {
+              "@id": "member-122",
+              "name": "Employee 122",
+              "position": "Developer",
+              "salary": 96260
+            },
+            {
+              "@id": "member-123",
+              "name": "Employee 123",
+              "position": "Manager",
+              "salary": 81979
+            },
+            {
+              "@id": "member-124",
+              "name": "Employee 124",
+              "position": "Designer",
+              "salary": 64016
+            },
+            {
+              "@id": "member-125",
+              "name": "Employee 125",
+              "position": "Manager",
+              "salary": 43724
+            },
+            {
+              "@id": "member-126",
+              "name": "Employee 126",
+              "position": "Developer",
+              "salary": 60222
+            },
+            {
+              "@id": "member-127",
+              "name": "Employee 127",
+              "position": "Developer",
+              "salary": 75222
+            },
+            {
+              "@id": "member-128",
+              "name": "Employee 128",
+              "position": "Designer",
+              "salary": 71913
+            },
+            {
+              "@id": "member-129",
+              "name": "Employee 129",
+              "position": "Designer",
+              "salary": 80489
+            },
+            {
+              "@id": "member-130",
+              "name": "Employee 130",
+              "position": "Developer",
+              "salary": 49519
+            }
+          ]
+        },
+        {
+          "@id": "team-4-2",
+          "name": "Team B",
+          "members": [
+            {
+              "@id": "member-131",
+              "name": "Employee 131",
+              "position": "Developer",
+              "salary": 76211
+            },
+            {
+              "@id": "member-132",
+              "name": "Employee 132",
+              "position": "Designer",
+              "salary": 51855
+            },
+            {
+              "@id": "member-133",
+              "name": "Employee 133",
+              "position": "Developer",
+              "salary": 85336
+            },
+            {
+              "@id": "member-134",
+              "name": "Employee 134",
+              "position": "Manager",
+              "salary": 70423
+            },
+            {
+              "@id": "member-135",
+              "name": "Employee 135",
+              "position": "Designer",
+              "salary": 77356
+            },
+            {
+              "@id": "member-136",
+              "name": "Employee 136",
+              "position": "Developer",
+              "salary": 60181
+            },
+            {
+              "@id": "member-137",
+              "name": "Employee 137",
+              "position": "Developer",
+              "salary": 47673
+            },
+            {
+              "@id": "member-138",
+              "name": "Employee 138",
+              "position": "Developer",
+              "salary": 67968
+            },
+            {
+              "@id": "member-139",
+              "name": "Employee 139",
+              "position": "Manager",
+              "salary": 95008
+            },
+            {
+              "@id": "member-140",
+              "name": "Employee 140",
+              "position": "Designer",
+              "salary": 88282
+            }
+          ]
+        },
+        {
+          "@id": "team-4-3",
+          "name": "Team C",
+          "members": [
+            {
+              "@id": "member-141",
+              "name": "Employee 141",
+              "position": "Developer",
+              "salary": 90959
+            },
+            {
+              "@id": "member-142",
+              "name": "Employee 142",
+              "position": "Designer",
+              "salary": 69065
+            },
+            {
+              "@id": "member-143",
+              "name": "Employee 143",
+              "position": "Developer",
+              "salary": 77450
+            },
+            {
+              "@id": "member-144",
+              "name": "Employee 144",
+              "position": "Manager",
+              "salary": 97531
+            },
+            {
+              "@id": "member-145",
+              "name": "Employee 145",
+              "position": "Designer",
+              "salary": 86997
+            },
+            {
+              "@id": "member-146",
+              "name": "Employee 146",
+              "position": "Developer",
+              "salary": 66831
+            },
+            {
+              "@id": "member-147",
+              "name": "Employee 147",
+              "position": "Developer",
+              "salary": 65575
+            },
+            {
+              "@id": "member-148",
+              "name": "Employee 148",
+              "position": "Developer",
+              "salary": 70620
+            },
+            {
+              "@id": "member-149",
+              "name": "Employee 149",
+              "position": "Manager",
+              "salary": 94818
+            },
+            {
+              "@id": "member-150",
+              "name": "Employee 150",
+              "position": "Manager",
+              "salary": 80380
+            }
+          ]
+        },
+        {
+          "@id": "team-4-4",
+          "name": "Team D",
+          "members": [
+            {
+              "@id": "member-151",
+              "name": "Employee 151",
+              "position": "Manager",
+              "salary": 44134
+            },
+            {
+              "@id": "member-152",
+              "name": "Employee 152",
+              "position": "Manager",
+              "salary": 81074
+            },
+            {
+              "@id": "member-153",
+              "name": "Employee 153",
+              "position": "Manager",
+              "salary": 40164
+            },
+            {
+              "@id": "member-154",
+              "name": "Employee 154",
+              "position": "Manager",
+              "salary": 88959
+            },
+            {
+              "@id": "member-155",
+              "name": "Employee 155",
+              "position": "Designer",
+              "salary": 60500
+            },
+            {
+              "@id": "member-156",
+              "name": "Employee 156",
+              "position": "Designer",
+              "salary": 51062
+            },
+            {
+              "@id": "member-157",
+              "name": "Employee 157",
+              "position": "Manager",
+              "salary": 94784
+            },
+            {
+              "@id": "member-158",
+              "name": "Employee 158",
+              "position": "Developer",
+              "salary": 94104
+            },
+            {
+              "@id": "member-159",
+              "name": "Employee 159",
+              "position": "Manager",
+              "salary": 98675
+            },
+            {
+              "@id": "member-160",
+              "name": "Employee 160",
+              "position": "Developer",
+              "salary": 51211
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "dept-5",
+      "type": "Department",
+      "name": "Department 5",
+      "budget": 811000,
+      "teams": [
+        {
+          "@id": "team-5-1",
+          "name": "Team A",
+          "members": [
+            {
+              "@id": "member-161",
+              "name": "Employee 161",
+              "position": "Manager",
+              "salary": 79181
+            },
+            {
+              "@id": "member-162",
+              "name": "Employee 162",
+              "position": "Manager",
+              "salary": 41253
+            },
+            {
+              "@id": "member-163",
+              "name": "Employee 163",
+              "position": "Developer",
+              "salary": 78802
+            },
+            {
+              "@id": "member-164",
+              "name": "Employee 164",
+              "position": "Manager",
+              "salary": 90160
+            },
+            {
+              "@id": "member-165",
+              "name": "Employee 165",
+              "position": "Manager",
+              "salary": 92461
+            },
+            {
+              "@id": "member-166",
+              "name": "Employee 166",
+              "position": "Manager",
+              "salary": 87484
+            },
+            {
+              "@id": "member-167",
+              "name": "Employee 167",
+              "position": "Developer",
+              "salary": 46003
+            },
+            {
+              "@id": "member-168",
+              "name": "Employee 168",
+              "position": "Manager",
+              "salary": 60085
+            },
+            {
+              "@id": "member-169",
+              "name": "Employee 169",
+              "position": "Developer",
+              "salary": 90169
+            },
+            {
+              "@id": "member-170",
+              "name": "Employee 170",
+              "position": "Developer",
+              "salary": 69343
+            }
+          ]
+        },
+        {
+          "@id": "team-5-2",
+          "name": "Team B",
+          "members": [
+            {
+              "@id": "member-171",
+              "name": "Employee 171",
+              "position": "Developer",
+              "salary": 70366
+            },
+            {
+              "@id": "member-172",
+              "name": "Employee 172",
+              "position": "Designer",
+              "salary": 90707
+            },
+            {
+              "@id": "member-173",
+              "name": "Employee 173",
+              "position": "Designer",
+              "salary": 69819
+            },
+            {
+              "@id": "member-174",
+              "name": "Employee 174",
+              "position": "Developer",
+              "salary": 66026
+            },
+            {
+              "@id": "member-175",
+              "name": "Employee 175",
+              "position": "Designer",
+              "salary": 58702
+            },
+            {
+              "@id": "member-176",
+              "name": "Employee 176",
+              "position": "Developer",
+              "salary": 85808
+            },
+            {
+              "@id": "member-177",
+              "name": "Employee 177",
+              "position": "Developer",
+              "salary": 49732
+            },
+            {
+              "@id": "member-178",
+              "name": "Employee 178",
+              "position": "Developer",
+              "salary": 50968
+            },
+            {
+              "@id": "member-179",
+              "name": "Employee 179",
+              "position": "Developer",
+              "salary": 73326
+            },
+            {
+              "@id": "member-180",
+              "name": "Employee 180",
+              "position": "Designer",
+              "salary": 53323
+            }
+          ]
+        },
+        {
+          "@id": "team-5-3",
+          "name": "Team C",
+          "members": [
+            {
+              "@id": "member-181",
+              "name": "Employee 181",
+              "position": "Manager",
+              "salary": 48198
+            },
+            {
+              "@id": "member-182",
+              "name": "Employee 182",
+              "position": "Designer",
+              "salary": 44737
+            },
+            {
+              "@id": "member-183",
+              "name": "Employee 183",
+              "position": "Developer",
+              "salary": 68938
+            },
+            {
+              "@id": "member-184",
+              "name": "Employee 184",
+              "position": "Developer",
+              "salary": 99328
+            },
+            {
+              "@id": "member-185",
+              "name": "Employee 185",
+              "position": "Designer",
+              "salary": 79246
+            },
+            {
+              "@id": "member-186",
+              "name": "Employee 186",
+              "position": "Developer",
+              "salary": 68709
+            },
+            {
+              "@id": "member-187",
+              "name": "Employee 187",
+              "position": "Developer",
+              "salary": 67910
+            },
+            {
+              "@id": "member-188",
+              "name": "Employee 188",
+              "position": "Manager",
+              "salary": 92859
+            },
+            {
+              "@id": "member-189",
+              "name": "Employee 189",
+              "position": "Developer",
+              "salary": 58421
+            },
+            {
+              "@id": "member-190",
+              "name": "Employee 190",
+              "position": "Designer",
+              "salary": 66574
+            }
+          ]
+        },
+        {
+          "@id": "team-5-4",
+          "name": "Team D",
+          "members": [
+            {
+              "@id": "member-191",
+              "name": "Employee 191",
+              "position": "Designer",
+              "salary": 46383
+            },
+            {
+              "@id": "member-192",
+              "name": "Employee 192",
+              "position": "Developer",
+              "salary": 98335
+            },
+            {
+              "@id": "member-193",
+              "name": "Employee 193",
+              "position": "Developer",
+              "salary": 60695
+            },
+            {
+              "@id": "member-194",
+              "name": "Employee 194",
+              "position": "Developer",
+              "salary": 46766
+            },
+            {
+              "@id": "member-195",
+              "name": "Employee 195",
+              "position": "Manager",
+              "salary": 74497
+            },
+            {
+              "@id": "member-196",
+              "name": "Employee 196",
+              "position": "Designer",
+              "salary": 74850
+            },
+            {
+              "@id": "member-197",
+              "name": "Employee 197",
+              "position": "Designer",
+              "salary": 68050
+            },
+            {
+              "@id": "member-198",
+              "name": "Employee 198",
+              "position": "Designer",
+              "salary": 59851
+            },
+            {
+              "@id": "member-199",
+              "name": "Employee 199",
+              "position": "Manager",
+              "salary": 40533
+            },
+            {
+              "@id": "member-200",
+              "name": "Employee 200",
+              "position": "Manager",
+              "salary": 75359
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

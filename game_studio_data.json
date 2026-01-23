@@ -1,0 +1,3505 @@
+{
+  "@id": "studio-main",
+  "type": "GameStudio",
+  "name": "Pixel Dreams Interactive",
+  "founded": "15.03.2015",
+  "headquarters": "Belgrade, Serbia",
+  "total_employees": 60,
+  "total_projects": 30,
+  "annual_revenue": 8500000,
+  "employees": [
+    {
+      "@id": "emp-1",
+      "type": "Employee",
+      "name": "Olivia Garcia",
+      "job_title": "Concept Artist",
+      "salary": 93800,
+      "hire_date": "21.01.2021",
+      "experience_years": 9,
+      "skill_level": 2,
+      "current_project": "proj-2"
+    },
+    {
+      "@id": "emp-2",
+      "type": "Employee",
+      "name": "Kate Martin",
+      "job_title": "Concept Artist",
+      "salary": 74378,
+      "hire_date": "29.05.2021",
+      "experience_years": 7,
+      "skill_level": 4,
+      "current_project": "proj-26"
+    },
+    {
+      "@id": "emp-3",
+      "type": "Employee",
+      "name": "Sarah Anderson",
+      "job_title": "Game Designer",
+      "salary": 78757,
+      "hire_date": "21.09.2020",
+      "experience_years": 8,
+      "skill_level": 10,
+      "current_project": "proj-10",
+      "equipment": [
+        "eq-49"
+      ]
+    },
+    {
+      "@id": "emp-4",
+      "type": "Employee",
+      "name": "David Johnson",
+      "job_title": "Programmer",
+      "salary": 116651,
+      "hire_date": "04.08.2020",
+      "experience_years": 5,
+      "skill_level": 3,
+      "equipment": [
+        "eq-9"
+      ]
+    },
+    {
+      "@id": "emp-5",
+      "type": "Employee",
+      "name": "Chris Smith",
+      "job_title": "Producer",
+      "salary": 86380,
+      "hire_date": "27.09.2020",
+      "experience_years": 15,
+      "skill_level": 5
+    },
+    {
+      "@id": "emp-6",
+      "type": "Employee",
+      "name": "Lisa Moore",
+      "job_title": "QA Tester",
+      "salary": 60457,
+      "hire_date": "23.09.2023",
+      "experience_years": 12,
+      "skill_level": 1
+    },
+    {
+      "@id": "emp-7",
+      "type": "Employee",
+      "name": "Alex Anderson",
+      "job_title": "Concept Artist",
+      "salary": 84935,
+      "hire_date": "09.08.2022",
+      "experience_years": 2,
+      "skill_level": 7,
+      "current_project": "proj-8"
+    },
+    {
+      "@id": "emp-8",
+      "type": "Employee",
+      "name": "Mike Taylor",
+      "job_title": "Programmer",
+      "salary": 66125,
+      "hire_date": "17.08.2022",
+      "experience_years": 15,
+      "skill_level": 8,
+      "current_project": "proj-16"
+    },
+    {
+      "@id": "emp-9",
+      "type": "Employee",
+      "name": "Alex Thomas",
+      "job_title": "3D Artist",
+      "salary": 96622,
+      "hire_date": "06.10.2020",
+      "experience_years": 14,
+      "skill_level": 6,
+      "current_project": "proj-5"
+    },
+    {
+      "@id": "emp-10",
+      "type": "Employee",
+      "name": "John Garcia",
+      "job_title": "Producer",
+      "salary": 56798,
+      "hire_date": "19.08.2025",
+      "experience_years": 2,
+      "skill_level": 8,
+      "current_project": "proj-2",
+      "equipment": [
+        "eq-27"
+      ]
+    },
+    {
+      "@id": "emp-11",
+      "type": "Employee",
+      "name": "Emma Brown",
+      "job_title": "UI/UX Designer",
+      "salary": 76254,
+      "hire_date": "11.09.2020",
+      "experience_years": 6,
+      "skill_level": 4,
+      "equipment": [
+        "eq-11"
+      ]
+    },
+    {
+      "@id": "emp-12",
+      "type": "Employee",
+      "name": "Sophie Smith",
+      "job_title": "Programmer",
+      "salary": 60265,
+      "hire_date": "23.07.2022",
+      "experience_years": 12,
+      "skill_level": 6,
+      "current_project": "proj-16",
+      "equipment": [
+        "eq-22",
+        "eq-23"
+      ]
+    },
+    {
+      "@id": "emp-13",
+      "type": "Employee",
+      "name": "Emma Taylor",
+      "job_title": "QA Tester",
+      "salary": 63697,
+      "hire_date": "26.07.2024",
+      "experience_years": 2,
+      "skill_level": 2,
+      "current_project": "proj-4",
+      "equipment": [
+        "eq-42"
+      ]
+    },
+    {
+      "@id": "emp-14",
+      "type": "Employee",
+      "name": "Kate Brown",
+      "job_title": "Programmer",
+      "salary": 89703,
+      "hire_date": "19.09.2023",
+      "experience_years": 12,
+      "skill_level": 1,
+      "current_project": "proj-17"
+    },
+    {
+      "@id": "emp-15",
+      "type": "Employee",
+      "name": "John Smith",
+      "job_title": "Animator",
+      "salary": 54318,
+      "hire_date": "09.08.2021",
+      "experience_years": 10,
+      "skill_level": 7,
+      "current_project": "proj-7"
+    },
+    {
+      "@id": "emp-16",
+      "type": "Employee",
+      "name": "Nina Taylor",
+      "job_title": "Animator",
+      "salary": 110164,
+      "hire_date": "01.07.2024",
+      "experience_years": 3,
+      "skill_level": 8,
+      "equipment": [
+        "eq-2"
+      ]
+    },
+    {
+      "@id": "emp-17",
+      "type": "Employee",
+      "name": "Lisa White",
+      "job_title": "UI/UX Designer",
+      "salary": 50298,
+      "hire_date": "28.11.2020",
+      "experience_years": 11,
+      "skill_level": 8,
+      "current_project": "proj-17",
+      "equipment": [
+        "eq-31"
+      ]
+    },
+    {
+      "@id": "emp-18",
+      "type": "Employee",
+      "name": "Mia Moore",
+      "job_title": "Concept Artist",
+      "salary": 69731,
+      "hire_date": "24.07.2022",
+      "experience_years": 15,
+      "skill_level": 6
+    },
+    {
+      "@id": "emp-19",
+      "type": "Employee",
+      "name": "Kate Garcia",
+      "job_title": "Animator",
+      "salary": 60097,
+      "hire_date": "15.04.2022",
+      "experience_years": 1,
+      "skill_level": 5,
+      "equipment": [
+        "eq-20",
+        "eq-24",
+        "eq-45"
+      ]
+    },
+    {
+      "@id": "emp-20",
+      "type": "Employee",
+      "name": "Ryan Anderson",
+      "job_title": "Programmer",
+      "salary": 109670,
+      "hire_date": "30.12.2020",
+      "experience_years": 2,
+      "skill_level": 5,
+      "current_project": "proj-4",
+      "equipment": [
+        "eq-48"
+      ]
+    },
+    {
+      "@id": "emp-21",
+      "type": "Employee",
+      "name": "Mia Thomas",
+      "job_title": "3D Artist",
+      "salary": 47695,
+      "hire_date": "06.10.2025",
+      "experience_years": 8,
+      "skill_level": 8,
+      "current_project": "proj-3"
+    },
+    {
+      "@id": "emp-22",
+      "type": "Employee",
+      "name": "Tom Taylor",
+      "job_title": "Level Designer",
+      "salary": 42461,
+      "hire_date": "27.08.2020",
+      "experience_years": 9,
+      "skill_level": 8,
+      "current_project": "proj-27"
+    },
+    {
+      "@id": "emp-23",
+      "type": "Employee",
+      "name": "Tom Jackson",
+      "job_title": "3D Artist",
+      "salary": 41174,
+      "hire_date": "02.11.2023",
+      "experience_years": 1,
+      "skill_level": 10
+    },
+    {
+      "@id": "emp-24",
+      "type": "Employee",
+      "name": "David Moore",
+      "job_title": "Sound Designer",
+      "salary": 50064,
+      "hire_date": "12.08.2024",
+      "experience_years": 6,
+      "skill_level": 10,
+      "equipment": [
+        "eq-25",
+        "eq-32"
+      ]
+    },
+    {
+      "@id": "emp-25",
+      "type": "Employee",
+      "name": "Nina Anderson",
+      "job_title": "Programmer",
+      "salary": 42754,
+      "hire_date": "04.08.2020",
+      "experience_years": 8,
+      "skill_level": 8
+    },
+    {
+      "@id": "emp-26",
+      "type": "Employee",
+      "name": "Olivia Smith",
+      "job_title": "UI/UX Designer",
+      "salary": 75655,
+      "hire_date": "08.06.2022",
+      "experience_years": 9,
+      "skill_level": 10,
+      "current_project": "proj-14",
+      "equipment": [
+        "eq-16"
+      ]
+    },
+    {
+      "@id": "emp-27",
+      "type": "Employee",
+      "name": "Mia Harris",
+      "job_title": "Animator",
+      "salary": 57712,
+      "hire_date": "04.08.2025",
+      "experience_years": 9,
+      "skill_level": 10
+    },
+    {
+      "@id": "emp-28",
+      "type": "Employee",
+      "name": "Ryan Wilson",
+      "job_title": "Sound Designer",
+      "salary": 73377,
+      "hire_date": "08.03.2024",
+      "experience_years": 14,
+      "skill_level": 4,
+      "current_project": "proj-24",
+      "equipment": [
+        "eq-36"
+      ]
+    },
+    {
+      "@id": "emp-29",
+      "type": "Employee",
+      "name": "Ben Smith",
+      "job_title": "Producer",
+      "salary": 54941,
+      "hire_date": "05.04.2025",
+      "experience_years": 15,
+      "skill_level": 4
+    },
+    {
+      "@id": "emp-30",
+      "type": "Employee",
+      "name": "Zoe Wilson",
+      "job_title": "Level Designer",
+      "salary": 102870,
+      "hire_date": "29.01.2025",
+      "experience_years": 9,
+      "skill_level": 6,
+      "current_project": "proj-15"
+    },
+    {
+      "@id": "emp-31",
+      "type": "Employee",
+      "name": "John Garcia",
+      "job_title": "UI/UX Designer",
+      "salary": 103314,
+      "hire_date": "23.11.2022",
+      "experience_years": 10,
+      "skill_level": 9,
+      "current_project": "proj-18",
+      "equipment": [
+        "eq-40",
+        "eq-43"
+      ]
+    },
+    {
+      "@id": "emp-32",
+      "type": "Employee",
+      "name": "John Davis",
+      "job_title": "Producer",
+      "salary": 100408,
+      "hire_date": "03.12.2024",
+      "experience_years": 10,
+      "skill_level": 1,
+      "current_project": "proj-30",
+      "equipment": [
+        "eq-17"
+      ]
+    },
+    {
+      "@id": "emp-33",
+      "type": "Employee",
+      "name": "Zoe Thomas",
+      "job_title": "Producer",
+      "salary": 111901,
+      "hire_date": "10.12.2024",
+      "experience_years": 6,
+      "skill_level": 2,
+      "current_project": "proj-1",
+      "equipment": [
+        "eq-38"
+      ]
+    },
+    {
+      "@id": "emp-34",
+      "type": "Employee",
+      "name": "Alex Smith",
+      "job_title": "Concept Artist",
+      "salary": 57317,
+      "hire_date": "27.08.2022",
+      "experience_years": 15,
+      "skill_level": 2
+    },
+    {
+      "@id": "emp-35",
+      "type": "Employee",
+      "name": "David White",
+      "job_title": "QA Tester",
+      "salary": 57175,
+      "hire_date": "27.09.2025",
+      "experience_years": 2,
+      "skill_level": 8
+    },
+    {
+      "@id": "emp-36",
+      "type": "Employee",
+      "name": "Chris Wilson",
+      "job_title": "UI/UX Designer",
+      "salary": 55145,
+      "hire_date": "06.11.2023",
+      "experience_years": 4,
+      "skill_level": 8,
+      "current_project": "proj-8"
+    },
+    {
+      "@id": "emp-37",
+      "type": "Employee",
+      "name": "Nina Harris",
+      "job_title": "Sound Designer",
+      "salary": 79881,
+      "hire_date": "24.10.2022",
+      "experience_years": 14,
+      "skill_level": 4,
+      "current_project": "proj-24",
+      "equipment": [
+        "eq-30"
+      ]
+    },
+    {
+      "@id": "emp-38",
+      "type": "Employee",
+      "name": "Lisa Johnson",
+      "job_title": "QA Tester",
+      "salary": 51867,
+      "hire_date": "28.05.2023",
+      "experience_years": 14,
+      "skill_level": 3,
+      "current_project": "proj-10"
+    },
+    {
+      "@id": "emp-39",
+      "type": "Employee",
+      "name": "Lisa Moore",
+      "job_title": "QA Tester",
+      "salary": 46496,
+      "hire_date": "17.12.2023",
+      "experience_years": 15,
+      "skill_level": 4,
+      "equipment": [
+        "eq-8",
+        "eq-46",
+        "eq-47"
+      ]
+    },
+    {
+      "@id": "emp-40",
+      "type": "Employee",
+      "name": "Lisa Martin",
+      "job_title": "3D Artist",
+      "salary": 61354,
+      "hire_date": "21.01.2023",
+      "experience_years": 9,
+      "skill_level": 6,
+      "current_project": "proj-21"
+    },
+    {
+      "@id": "emp-41",
+      "type": "Employee",
+      "name": "Kate Thomas",
+      "job_title": "Level Designer",
+      "salary": 81478,
+      "hire_date": "04.03.2024",
+      "experience_years": 11,
+      "skill_level": 9,
+      "current_project": "proj-11",
+      "equipment": [
+        "eq-33"
+      ]
+    },
+    {
+      "@id": "emp-42",
+      "type": "Employee",
+      "name": "Anna White",
+      "job_title": "Producer",
+      "salary": 73363,
+      "hire_date": "27.03.2025",
+      "experience_years": 8,
+      "skill_level": 4,
+      "current_project": "proj-2"
+    },
+    {
+      "@id": "emp-43",
+      "type": "Employee",
+      "name": "Ryan Garcia",
+      "job_title": "Level Designer",
+      "salary": 118402,
+      "hire_date": "14.02.2024",
+      "experience_years": 2,
+      "skill_level": 10,
+      "current_project": "proj-20",
+      "equipment": [
+        "eq-12",
+        "eq-15"
+      ]
+    },
+    {
+      "@id": "emp-44",
+      "type": "Employee",
+      "name": "Zoe Harris",
+      "job_title": "3D Artist",
+      "salary": 112800,
+      "hire_date": "08.12.2024",
+      "experience_years": 10,
+      "skill_level": 5,
+      "current_project": "proj-6",
+      "equipment": [
+        "eq-10",
+        "eq-14"
+      ]
+    },
+    {
+      "@id": "emp-45",
+      "type": "Employee",
+      "name": "Mark Taylor",
+      "job_title": "Game Designer",
+      "salary": 72308,
+      "hire_date": "21.03.2022",
+      "experience_years": 14,
+      "skill_level": 3,
+      "current_project": "proj-7",
+      "equipment": [
+        "eq-7"
+      ]
+    },
+    {
+      "@id": "emp-46",
+      "type": "Employee",
+      "name": "Ben Martin",
+      "job_title": "Producer",
+      "salary": 44882,
+      "hire_date": "06.10.2020",
+      "experience_years": 13,
+      "skill_level": 4,
+      "current_project": "proj-10"
+    },
+    {
+      "@id": "emp-47",
+      "type": "Employee",
+      "name": "Chris Smith",
+      "job_title": "Animator",
+      "salary": 93245,
+      "hire_date": "22.08.2025",
+      "experience_years": 8,
+      "skill_level": 4,
+      "current_project": "proj-13",
+      "equipment": [
+        "eq-28"
+      ]
+    },
+    {
+      "@id": "emp-48",
+      "type": "Employee",
+      "name": "Nina Brown",
+      "job_title": "UI/UX Designer",
+      "salary": 65087,
+      "hire_date": "26.05.2022",
+      "experience_years": 12,
+      "skill_level": 10,
+      "current_project": "proj-24",
+      "equipment": [
+        "eq-37"
+      ]
+    },
+    {
+      "@id": "emp-49",
+      "type": "Employee",
+      "name": "David Davis",
+      "job_title": "Level Designer",
+      "salary": 42965,
+      "hire_date": "09.11.2020",
+      "experience_years": 2,
+      "skill_level": 8,
+      "current_project": "proj-28"
+    },
+    {
+      "@id": "emp-50",
+      "type": "Employee",
+      "name": "John Wilson",
+      "job_title": "Producer",
+      "salary": 74684,
+      "hire_date": "14.05.2023",
+      "experience_years": 8,
+      "skill_level": 10,
+      "current_project": "proj-16",
+      "equipment": [
+        "eq-18",
+        "eq-44"
+      ]
+    },
+    {
+      "@id": "emp-51",
+      "type": "Employee",
+      "name": "Zoe Thomas",
+      "job_title": "Programmer",
+      "salary": 82486,
+      "hire_date": "28.04.2025",
+      "experience_years": 5,
+      "skill_level": 8,
+      "current_project": "proj-2"
+    },
+    {
+      "@id": "emp-52",
+      "type": "Employee",
+      "name": "Nina Moore",
+      "job_title": "Game Designer",
+      "salary": 58621,
+      "hire_date": "30.03.2023",
+      "experience_years": 11,
+      "skill_level": 2,
+      "current_project": "proj-8"
+    },
+    {
+      "@id": "emp-53",
+      "type": "Employee",
+      "name": "Mark Davis",
+      "job_title": "Game Designer",
+      "salary": 82888,
+      "hire_date": "26.10.2025",
+      "experience_years": 15,
+      "skill_level": 6,
+      "current_project": "proj-22",
+      "equipment": [
+        "eq-5"
+      ]
+    },
+    {
+      "@id": "emp-54",
+      "type": "Employee",
+      "name": "Lisa Johnson",
+      "job_title": "Programmer",
+      "salary": 64242,
+      "hire_date": "19.06.2023",
+      "experience_years": 1,
+      "skill_level": 6
+    },
+    {
+      "@id": "emp-55",
+      "type": "Employee",
+      "name": "Mike Johnson",
+      "job_title": "QA Tester",
+      "salary": 80375,
+      "hire_date": "02.07.2021",
+      "experience_years": 10,
+      "skill_level": 8,
+      "current_project": "proj-1"
+    },
+    {
+      "@id": "emp-56",
+      "type": "Employee",
+      "name": "Sophie Harris",
+      "job_title": "3D Artist",
+      "salary": 105051,
+      "hire_date": "07.05.2023",
+      "experience_years": 2,
+      "skill_level": 5,
+      "current_project": "proj-5"
+    },
+    {
+      "@id": "emp-57",
+      "type": "Employee",
+      "name": "Nina Harris",
+      "job_title": "Programmer",
+      "salary": 84632,
+      "hire_date": "22.04.2025",
+      "experience_years": 4,
+      "skill_level": 1,
+      "current_project": "proj-1",
+      "equipment": [
+        "eq-19",
+        "eq-21"
+      ]
+    },
+    {
+      "@id": "emp-58",
+      "type": "Employee",
+      "name": "Mike Wilson",
+      "job_title": "Game Designer",
+      "salary": 112661,
+      "hire_date": "14.11.2022",
+      "experience_years": 6,
+      "skill_level": 4,
+      "equipment": [
+        "eq-50"
+      ]
+    },
+    {
+      "@id": "emp-59",
+      "type": "Employee",
+      "name": "John Taylor",
+      "job_title": "Programmer",
+      "salary": 69307,
+      "hire_date": "19.02.2024",
+      "experience_years": 3,
+      "skill_level": 3,
+      "current_project": "proj-13"
+    },
+    {
+      "@id": "emp-60",
+      "type": "Employee",
+      "name": "Mike Garcia",
+      "job_title": "QA Tester",
+      "salary": 69146,
+      "hire_date": "25.01.2022",
+      "experience_years": 13,
+      "skill_level": 1,
+      "current_project": "proj-10"
+    }
+  ],
+  "projects": [
+    {
+      "@id": "proj-1",
+      "type": "GameProject",
+      "name": "Project Shadow 1",
+      "genre": "Strategy",
+      "budget": 2547697,
+      "start_date": "03.05.2025",
+      "status": "Released",
+      "target_platform": "PlayStation",
+      "team": [
+        {
+          "@id": "assignment-proj-1-emp-4",
+          "employee": "emp-4",
+          "role_in_project": "Contractor",
+          "hours_allocated": 102
+        },
+        {
+          "@id": "assignment-proj-1-emp-30",
+          "employee": "emp-30",
+          "role_in_project": "Junior",
+          "hours_allocated": 56
+        },
+        {
+          "@id": "assignment-proj-1-emp-51",
+          "employee": "emp-51",
+          "role_in_project": "Senior",
+          "hours_allocated": 101
+        },
+        {
+          "@id": "assignment-proj-1-emp-60",
+          "employee": "emp-60",
+          "role_in_project": "Lead",
+          "hours_allocated": 65
+        },
+        {
+          "@id": "assignment-proj-1-emp-38",
+          "employee": "emp-38",
+          "role_in_project": "Senior",
+          "hours_allocated": 131
+        }
+      ]
+    },
+    {
+      "@id": "proj-2",
+      "type": "GameProject",
+      "name": "Project Dragon 2",
+      "genre": "Strategy",
+      "budget": 479900,
+      "start_date": "07.06.2025",
+      "status": "Planning",
+      "target_platform": "Xbox",
+      "team": [
+        {
+          "@id": "assignment-proj-2-emp-48",
+          "employee": "emp-48",
+          "role_in_project": "Contractor",
+          "hours_allocated": 64
+        },
+        {
+          "@id": "assignment-proj-2-emp-24",
+          "employee": "emp-24",
+          "role_in_project": "Lead",
+          "hours_allocated": 58
+        },
+        {
+          "@id": "assignment-proj-2-emp-30",
+          "employee": "emp-30",
+          "role_in_project": "Contractor",
+          "hours_allocated": 130
+        },
+        {
+          "@id": "assignment-proj-2-emp-44",
+          "employee": "emp-44",
+          "role_in_project": "Junior",
+          "hours_allocated": 38
+        },
+        {
+          "@id": "assignment-proj-2-emp-47",
+          "employee": "emp-47",
+          "role_in_project": "Lead",
+          "hours_allocated": 77
+        }
+      ]
+    },
+    {
+      "@id": "proj-3",
+      "type": "GameProject",
+      "name": "Project Crystal 3",
+      "genre": "Puzzle",
+      "budget": 1587757,
+      "start_date": "22.03.2024",
+      "status": "Released",
+      "target_platform": "PlayStation",
+      "team": [
+        {
+          "@id": "assignment-proj-3-emp-42",
+          "employee": "emp-42",
+          "role_in_project": "Junior",
+          "hours_allocated": 65
+        },
+        {
+          "@id": "assignment-proj-3-emp-8",
+          "employee": "emp-8",
+          "role_in_project": "Senior",
+          "hours_allocated": 128
+        },
+        {
+          "@id": "assignment-proj-3-emp-18",
+          "employee": "emp-18",
+          "role_in_project": "Senior",
+          "hours_allocated": 40
+        },
+        {
+          "@id": "assignment-proj-3-emp-34",
+          "employee": "emp-34",
+          "role_in_project": "Senior",
+          "hours_allocated": 135
+        }
+      ]
+    },
+    {
+      "@id": "proj-4",
+      "type": "GameProject",
+      "name": "Project Dragon 4",
+      "genre": "Puzzle",
+      "budget": 4121417,
+      "start_date": "19.07.2025",
+      "status": "Cancelled",
+      "target_platform": "Mobile",
+      "team": [
+        {
+          "@id": "assignment-proj-4-emp-10",
+          "employee": "emp-10",
+          "role_in_project": "Lead",
+          "hours_allocated": 74
+        },
+        {
+          "@id": "assignment-proj-4-emp-4",
+          "employee": "emp-4",
+          "role_in_project": "Junior",
+          "hours_allocated": 25
+        },
+        {
+          "@id": "assignment-proj-4-emp-1",
+          "employee": "emp-1",
+          "role_in_project": "Junior",
+          "hours_allocated": 104
+        },
+        {
+          "@id": "assignment-proj-4-emp-9",
+          "employee": "emp-9",
+          "role_in_project": "Senior",
+          "hours_allocated": 37
+        }
+      ]
+    },
+    {
+      "@id": "proj-5",
+      "type": "GameProject",
+      "name": "Project Neon 5",
+      "genre": "Platformer",
+      "budget": 4237777,
+      "start_date": "05.04.2025",
+      "status": "Planning",
+      "target_platform": "Multi-platform",
+      "team": [
+        {
+          "@id": "assignment-proj-5-emp-41",
+          "employee": "emp-41",
+          "role_in_project": "Contractor",
+          "hours_allocated": 97
+        },
+        {
+          "@id": "assignment-proj-5-emp-34",
+          "employee": "emp-34",
+          "role_in_project": "Senior",
+          "hours_allocated": 143
+        },
+        {
+          "@id": "assignment-proj-5-emp-47",
+          "employee": "emp-47",
+          "role_in_project": "Junior",
+          "hours_allocated": 154
+        },
+        {
+          "@id": "assignment-proj-5-emp-30",
+          "employee": "emp-30",
+          "role_in_project": "Lead",
+          "hours_allocated": 143
+        }
+      ]
+    },
+    {
+      "@id": "proj-6",
+      "type": "GameProject",
+      "name": "Project Ancient 6",
+      "genre": "Racing",
+      "budget": 2841833,
+      "start_date": "29.11.2024",
+      "status": "Cancelled",
+      "target_platform": "Multi-platform",
+      "team": [
+        {
+          "@id": "assignment-proj-6-emp-21",
+          "employee": "emp-21",
+          "role_in_project": "Contractor",
+          "hours_allocated": 140
+        },
+        {
+          "@id": "assignment-proj-6-emp-9",
+          "employee": "emp-9",
+          "role_in_project": "Senior",
+          "hours_allocated": 33
+        },
+        {
+          "@id": "assignment-proj-6-emp-14",
+          "employee": "emp-14",
+          "role_in_project": "Senior",
+          "hours_allocated": 63
+        }
+      ]
+    },
+    {
+      "@id": "proj-7",
+      "type": "GameProject",
+      "name": "Project Crystal 7",
+      "genre": "RPG",
+      "budget": 979950,
+      "start_date": "23.01.2025",
+      "status": "Planning",
+      "target_platform": "Multi-platform",
+      "team": [
+        {
+          "@id": "assignment-proj-7-emp-35",
+          "employee": "emp-35",
+          "role_in_project": "Contractor",
+          "hours_allocated": 121
+        },
+        {
+          "@id": "assignment-proj-7-emp-8",
+          "employee": "emp-8",
+          "role_in_project": "Contractor",
+          "hours_allocated": 154
+        },
+        {
+          "@id": "assignment-proj-7-emp-46",
+          "employee": "emp-46",
+          "role_in_project": "Contractor",
+          "hours_allocated": 96
+        },
+        {
+          "@id": "assignment-proj-7-emp-16",
+          "employee": "emp-16",
+          "role_in_project": "Contractor",
+          "hours_allocated": 159
+        },
+        {
+          "@id": "assignment-proj-7-emp-30",
+          "employee": "emp-30",
+          "role_in_project": "Junior",
+          "hours_allocated": 112
+        }
+      ]
+    },
+    {
+      "@id": "proj-8",
+      "type": "GameProject",
+      "name": "Project Neon 8",
+      "genre": "Racing",
+      "budget": 4559099,
+      "start_date": "24.01.2024",
+      "status": "Cancelled",
+      "target_platform": "Multi-platform",
+      "team": [
+        {
+          "@id": "assignment-proj-8-emp-44",
+          "employee": "emp-44",
+          "role_in_project": "Lead",
+          "hours_allocated": 145
+        },
+        {
+          "@id": "assignment-proj-8-emp-17",
+          "employee": "emp-17",
+          "role_in_project": "Lead",
+          "hours_allocated": 23
+        },
+        {
+          "@id": "assignment-proj-8-emp-50",
+          "employee": "emp-50",
+          "role_in_project": "Lead",
+          "hours_allocated": 114
+        },
+        {
+          "@id": "assignment-proj-8-emp-6",
+          "employee": "emp-6",
+          "role_in_project": "Junior",
+          "hours_allocated": 159
+        }
+      ]
+    },
+    {
+      "@id": "proj-9",
+      "type": "GameProject",
+      "name": "Project Dragon 9",
+      "genre": "RPG",
+      "budget": 3227279,
+      "start_date": "13.06.2024",
+      "status": "Cancelled",
+      "target_platform": "Multi-platform",
+      "team": [
+        {
+          "@id": "assignment-proj-9-emp-28",
+          "employee": "emp-28",
+          "role_in_project": "Lead",
+          "hours_allocated": 36
+        },
+        {
+          "@id": "assignment-proj-9-emp-42",
+          "employee": "emp-42",
+          "role_in_project": "Senior",
+          "hours_allocated": 44
+        },
+        {
+          "@id": "assignment-proj-9-emp-27",
+          "employee": "emp-27",
+          "role_in_project": "Lead",
+          "hours_allocated": 30
+        },
+        {
+          "@id": "assignment-proj-9-emp-56",
+          "employee": "emp-56",
+          "role_in_project": "Contractor",
+          "hours_allocated": 100
+        },
+        {
+          "@id": "assignment-proj-9-emp-45",
+          "employee": "emp-45",
+          "role_in_project": "Junior",
+          "hours_allocated": 38
+        }
+      ]
+    },
+    {
+      "@id": "proj-10",
+      "type": "GameProject",
+      "name": "Project Crystal 10",
+      "genre": "Platformer",
+      "budget": 3685523,
+      "start_date": "27.07.2025",
+      "status": "Released",
+      "target_platform": "PC",
+      "team": [
+        {
+          "@id": "assignment-proj-10-emp-31",
+          "employee": "emp-31",
+          "role_in_project": "Contractor",
+          "hours_allocated": 68
+        },
+        {
+          "@id": "assignment-proj-10-emp-35",
+          "employee": "emp-35",
+          "role_in_project": "Lead",
+          "hours_allocated": 121
+        },
+        {
+          "@id": "assignment-proj-10-emp-38",
+          "employee": "emp-38",
+          "role_in_project": "Junior",
+          "hours_allocated": 88
+        },
+        {
+          "@id": "assignment-proj-10-emp-45",
+          "employee": "emp-45",
+          "role_in_project": "Contractor",
+          "hours_allocated": 100
+        },
+        {
+          "@id": "assignment-proj-10-emp-39",
+          "employee": "emp-39",
+          "role_in_project": "Senior",
+          "hours_allocated": 32
+        },
+        {
+          "@id": "assignment-proj-10-emp-37",
+          "employee": "emp-37",
+          "role_in_project": "Contractor",
+          "hours_allocated": 54
+        },
+        {
+          "@id": "assignment-proj-10-emp-51",
+          "employee": "emp-51",
+          "role_in_project": "Contractor",
+          "hours_allocated": 59
+        },
+        {
+          "@id": "assignment-proj-10-emp-42",
+          "employee": "emp-42",
+          "role_in_project": "Senior",
+          "hours_allocated": 80
+        }
+      ]
+    },
+    {
+      "@id": "proj-11",
+      "type": "GameProject",
+      "name": "Project Dragon 11",
+      "genre": "RPG",
+      "budget": 4027226,
+      "start_date": "18.07.2025",
+      "status": "Testing",
+      "target_platform": "Xbox",
+      "team": [
+        {
+          "@id": "assignment-proj-11-emp-2",
+          "employee": "emp-2",
+          "role_in_project": "Junior",
+          "hours_allocated": 150
+        },
+        {
+          "@id": "assignment-proj-11-emp-57",
+          "employee": "emp-57",
+          "role_in_project": "Junior",
+          "hours_allocated": 156
+        },
+        {
+          "@id": "assignment-proj-11-emp-15",
+          "employee": "emp-15",
+          "role_in_project": "Senior",
+          "hours_allocated": 123
+        },
+        {
+          "@id": "assignment-proj-11-emp-24",
+          "employee": "emp-24",
+          "role_in_project": "Junior",
+          "hours_allocated": 44
+        },
+        {
+          "@id": "assignment-proj-11-emp-44",
+          "employee": "emp-44",
+          "role_in_project": "Junior",
+          "hours_allocated": 82
+        },
+        {
+          "@id": "assignment-proj-11-emp-18",
+          "employee": "emp-18",
+          "role_in_project": "Senior",
+          "hours_allocated": 100
+        }
+      ]
+    },
+    {
+      "@id": "proj-12",
+      "type": "GameProject",
+      "name": "Project Neon 12",
+      "genre": "Puzzle",
+      "budget": 2639513,
+      "start_date": "26.01.2024",
+      "status": "Released",
+      "target_platform": "Xbox",
+      "team": [
+        {
+          "@id": "assignment-proj-12-emp-23",
+          "employee": "emp-23",
+          "role_in_project": "Junior",
+          "hours_allocated": 35
+        },
+        {
+          "@id": "assignment-proj-12-emp-1",
+          "employee": "emp-1",
+          "role_in_project": "Senior",
+          "hours_allocated": 155
+        },
+        {
+          "@id": "assignment-proj-12-emp-15",
+          "employee": "emp-15",
+          "role_in_project": "Junior",
+          "hours_allocated": 131
+        },
+        {
+          "@id": "assignment-proj-12-emp-52",
+          "employee": "emp-52",
+          "role_in_project": "Contractor",
+          "hours_allocated": 130
+        },
+        {
+          "@id": "assignment-proj-12-emp-54",
+          "employee": "emp-54",
+          "role_in_project": "Lead",
+          "hours_allocated": 106
+        },
+        {
+          "@id": "assignment-proj-12-emp-38",
+          "employee": "emp-38",
+          "role_in_project": "Contractor",
+          "hours_allocated": 135
+        },
+        {
+          "@id": "assignment-proj-12-emp-29",
+          "employee": "emp-29",
+          "role_in_project": "Junior",
+          "hours_allocated": 154
+        }
+      ]
+    },
+    {
+      "@id": "proj-13",
+      "type": "GameProject",
+      "name": "Project Neon 13",
+      "genre": "Platformer",
+      "budget": 4387631,
+      "start_date": "18.06.2025",
+      "status": "In Development",
+      "target_platform": "Multi-platform",
+      "team": [
+        {
+          "@id": "assignment-proj-13-emp-5",
+          "employee": "emp-5",
+          "role_in_project": "Senior",
+          "hours_allocated": 156
+        },
+        {
+          "@id": "assignment-proj-13-emp-59",
+          "employee": "emp-59",
+          "role_in_project": "Senior",
+          "hours_allocated": 75
+        },
+        {
+          "@id": "assignment-proj-13-emp-4",
+          "employee": "emp-4",
+          "role_in_project": "Junior",
+          "hours_allocated": 74
+        },
+        {
+          "@id": "assignment-proj-13-emp-54",
+          "employee": "emp-54",
+          "role_in_project": "Lead",
+          "hours_allocated": 54
+        },
+        {
+          "@id": "assignment-proj-13-emp-60",
+          "employee": "emp-60",
+          "role_in_project": "Contractor",
+          "hours_allocated": 155
+        },
+        {
+          "@id": "assignment-proj-13-emp-49",
+          "employee": "emp-49",
+          "role_in_project": "Lead",
+          "hours_allocated": 33
+        },
+        {
+          "@id": "assignment-proj-13-emp-55",
+          "employee": "emp-55",
+          "role_in_project": "Lead",
+          "hours_allocated": 106
+        },
+        {
+          "@id": "assignment-proj-13-emp-41",
+          "employee": "emp-41",
+          "role_in_project": "Contractor",
+          "hours_allocated": 100
+        }
+      ]
+    },
+    {
+      "@id": "proj-14",
+      "type": "GameProject",
+      "name": "Project Crystal 14",
+      "genre": "FPS",
+      "budget": 4767121,
+      "start_date": "26.08.2025",
+      "status": "Released",
+      "target_platform": "Mobile",
+      "team": [
+        {
+          "@id": "assignment-proj-14-emp-41",
+          "employee": "emp-41",
+          "role_in_project": "Lead",
+          "hours_allocated": 84
+        },
+        {
+          "@id": "assignment-proj-14-emp-34",
+          "employee": "emp-34",
+          "role_in_project": "Senior",
+          "hours_allocated": 150
+        },
+        {
+          "@id": "assignment-proj-14-emp-38",
+          "employee": "emp-38",
+          "role_in_project": "Contractor",
+          "hours_allocated": 58
+        },
+        {
+          "@id": "assignment-proj-14-emp-59",
+          "employee": "emp-59",
+          "role_in_project": "Senior",
+          "hours_allocated": 154
+        },
+        {
+          "@id": "assignment-proj-14-emp-10",
+          "employee": "emp-10",
+          "role_in_project": "Lead",
+          "hours_allocated": 36
+        }
+      ]
+    },
+    {
+      "@id": "proj-15",
+      "type": "GameProject",
+      "name": "Project Shadow 15",
+      "genre": "Strategy",
+      "budget": 2973603,
+      "start_date": "14.11.2024",
+      "status": "Planning",
+      "target_platform": "Mobile",
+      "team": [
+        {
+          "@id": "assignment-proj-15-emp-7",
+          "employee": "emp-7",
+          "role_in_project": "Junior",
+          "hours_allocated": 50
+        },
+        {
+          "@id": "assignment-proj-15-emp-17",
+          "employee": "emp-17",
+          "role_in_project": "Junior",
+          "hours_allocated": 77
+        },
+        {
+          "@id": "assignment-proj-15-emp-48",
+          "employee": "emp-48",
+          "role_in_project": "Junior",
+          "hours_allocated": 54
+        },
+        {
+          "@id": "assignment-proj-15-emp-46",
+          "employee": "emp-46",
+          "role_in_project": "Lead",
+          "hours_allocated": 20
+        },
+        {
+          "@id": "assignment-proj-15-emp-24",
+          "employee": "emp-24",
+          "role_in_project": "Lead",
+          "hours_allocated": 52
+        },
+        {
+          "@id": "assignment-proj-15-emp-13",
+          "employee": "emp-13",
+          "role_in_project": "Lead",
+          "hours_allocated": 52
+        },
+        {
+          "@id": "assignment-proj-15-emp-4",
+          "employee": "emp-4",
+          "role_in_project": "Senior",
+          "hours_allocated": 129
+        }
+      ]
+    },
+    {
+      "@id": "proj-16",
+      "type": "GameProject",
+      "name": "Project Cyber 16",
+      "genre": "Adventure",
+      "budget": 3111950,
+      "start_date": "17.10.2025",
+      "status": "Testing",
+      "target_platform": "PlayStation",
+      "team": [
+        {
+          "@id": "assignment-proj-16-emp-23",
+          "employee": "emp-23",
+          "role_in_project": "Contractor",
+          "hours_allocated": 24
+        },
+        {
+          "@id": "assignment-proj-16-emp-8",
+          "employee": "emp-8",
+          "role_in_project": "Junior",
+          "hours_allocated": 24
+        },
+        {
+          "@id": "assignment-proj-16-emp-2",
+          "employee": "emp-2",
+          "role_in_project": "Contractor",
+          "hours_allocated": 66
+        }
+      ]
+    },
+    {
+      "@id": "proj-17",
+      "type": "GameProject",
+      "name": "Project Crystal 17",
+      "genre": "Platformer",
+      "budget": 3865385,
+      "start_date": "20.10.2024",
+      "status": "Released",
+      "target_platform": "PC",
+      "team": [
+        {
+          "@id": "assignment-proj-17-emp-9",
+          "employee": "emp-9",
+          "role_in_project": "Lead",
+          "hours_allocated": 93
+        },
+        {
+          "@id": "assignment-proj-17-emp-16",
+          "employee": "emp-16",
+          "role_in_project": "Junior",
+          "hours_allocated": 40
+        },
+        {
+          "@id": "assignment-proj-17-emp-4",
+          "employee": "emp-4",
+          "role_in_project": "Senior",
+          "hours_allocated": 60
+        },
+        {
+          "@id": "assignment-proj-17-emp-38",
+          "employee": "emp-38",
+          "role_in_project": "Senior",
+          "hours_allocated": 158
+        },
+        {
+          "@id": "assignment-proj-17-emp-21",
+          "employee": "emp-21",
+          "role_in_project": "Junior",
+          "hours_allocated": 67
+        },
+        {
+          "@id": "assignment-proj-17-emp-14",
+          "employee": "emp-14",
+          "role_in_project": "Senior",
+          "hours_allocated": 52
+        },
+        {
+          "@id": "assignment-proj-17-emp-8",
+          "employee": "emp-8",
+          "role_in_project": "Senior",
+          "hours_allocated": 54
+        }
+      ]
+    },
+    {
+      "@id": "proj-18",
+      "type": "GameProject",
+      "name": "Project Ancient 18",
+      "genre": "Racing",
+      "budget": 3377448,
+      "start_date": "06.02.2025",
+      "status": "Testing",
+      "target_platform": "PC",
+      "team": [
+        {
+          "@id": "assignment-proj-18-emp-3",
+          "employee": "emp-3",
+          "role_in_project": "Senior",
+          "hours_allocated": 153
+        },
+        {
+          "@id": "assignment-proj-18-emp-43",
+          "employee": "emp-43",
+          "role_in_project": "Contractor",
+          "hours_allocated": 128
+        },
+        {
+          "@id": "assignment-proj-18-emp-37",
+          "employee": "emp-37",
+          "role_in_project": "Junior",
+          "hours_allocated": 113
+        },
+        {
+          "@id": "assignment-proj-18-emp-19",
+          "employee": "emp-19",
+          "role_in_project": "Senior",
+          "hours_allocated": 23
+        },
+        {
+          "@id": "assignment-proj-18-emp-14",
+          "employee": "emp-14",
+          "role_in_project": "Senior",
+          "hours_allocated": 78
+        },
+        {
+          "@id": "assignment-proj-18-emp-50",
+          "employee": "emp-50",
+          "role_in_project": "Lead",
+          "hours_allocated": 66
+        }
+      ]
+    },
+    {
+      "@id": "proj-19",
+      "type": "GameProject",
+      "name": "Project Shadow 19",
+      "genre": "FPS",
+      "budget": 2951203,
+      "start_date": "16.09.2024",
+      "status": "In Development",
+      "target_platform": "PlayStation",
+      "team": [
+        {
+          "@id": "assignment-proj-19-emp-9",
+          "employee": "emp-9",
+          "role_in_project": "Lead",
+          "hours_allocated": 134
+        },
+        {
+          "@id": "assignment-proj-19-emp-59",
+          "employee": "emp-59",
+          "role_in_project": "Lead",
+          "hours_allocated": 54
+        },
+        {
+          "@id": "assignment-proj-19-emp-23",
+          "employee": "emp-23",
+          "role_in_project": "Senior",
+          "hours_allocated": 141
+        },
+        {
+          "@id": "assignment-proj-19-emp-46",
+          "employee": "emp-46",
+          "role_in_project": "Contractor",
+          "hours_allocated": 34
+        }
+      ]
+    },
+    {
+      "@id": "proj-20",
+      "type": "GameProject",
+      "name": "Project Crystal 20",
+      "genre": "FPS",
+      "budget": 4843821,
+      "start_date": "01.07.2024",
+      "status": "Cancelled",
+      "target_platform": "Mobile",
+      "team": [
+        {
+          "@id": "assignment-proj-20-emp-11",
+          "employee": "emp-11",
+          "role_in_project": "Contractor",
+          "hours_allocated": 25
+        },
+        {
+          "@id": "assignment-proj-20-emp-38",
+          "employee": "emp-38",
+          "role_in_project": "Senior",
+          "hours_allocated": 131
+        },
+        {
+          "@id": "assignment-proj-20-emp-18",
+          "employee": "emp-18",
+          "role_in_project": "Senior",
+          "hours_allocated": 44
+        },
+        {
+          "@id": "assignment-proj-20-emp-8",
+          "employee": "emp-8",
+          "role_in_project": "Junior",
+          "hours_allocated": 84
+        },
+        {
+          "@id": "assignment-proj-20-emp-40",
+          "employee": "emp-40",
+          "role_in_project": "Contractor",
+          "hours_allocated": 71
+        },
+        {
+          "@id": "assignment-proj-20-emp-29",
+          "employee": "emp-29",
+          "role_in_project": "Senior",
+          "hours_allocated": 25
+        }
+      ]
+    },
+    {
+      "@id": "proj-21",
+      "type": "GameProject",
+      "name": "Project Cyber 21",
+      "genre": "Adventure",
+      "budget": 805706,
+      "start_date": "23.04.2024",
+      "status": "In Development",
+      "target_platform": "Nintendo Switch",
+      "team": [
+        {
+          "@id": "assignment-proj-21-emp-48",
+          "employee": "emp-48",
+          "role_in_project": "Senior",
+          "hours_allocated": 60
+        },
+        {
+          "@id": "assignment-proj-21-emp-58",
+          "employee": "emp-58",
+          "role_in_project": "Senior",
+          "hours_allocated": 47
+        },
+        {
+          "@id": "assignment-proj-21-emp-7",
+          "employee": "emp-7",
+          "role_in_project": "Contractor",
+          "hours_allocated": 74
+        }
+      ]
+    },
+    {
+      "@id": "proj-22",
+      "type": "GameProject",
+      "name": "Project Shadow 22",
+      "genre": "RPG",
+      "budget": 3648743,
+      "start_date": "17.07.2025",
+      "status": "Cancelled",
+      "target_platform": "PC",
+      "team": [
+        {
+          "@id": "assignment-proj-22-emp-19",
+          "employee": "emp-19",
+          "role_in_project": "Senior",
+          "hours_allocated": 144
+        },
+        {
+          "@id": "assignment-proj-22-emp-49",
+          "employee": "emp-49",
+          "role_in_project": "Lead",
+          "hours_allocated": 84
+        },
+        {
+          "@id": "assignment-proj-22-emp-9",
+          "employee": "emp-9",
+          "role_in_project": "Contractor",
+          "hours_allocated": 160
+        },
+        {
+          "@id": "assignment-proj-22-emp-13",
+          "employee": "emp-13",
+          "role_in_project": "Contractor",
+          "hours_allocated": 104
+        },
+        {
+          "@id": "assignment-proj-22-emp-45",
+          "employee": "emp-45",
+          "role_in_project": "Junior",
+          "hours_allocated": 151
+        },
+        {
+          "@id": "assignment-proj-22-emp-58",
+          "employee": "emp-58",
+          "role_in_project": "Lead",
+          "hours_allocated": 139
+        },
+        {
+          "@id": "assignment-proj-22-emp-37",
+          "employee": "emp-37",
+          "role_in_project": "Contractor",
+          "hours_allocated": 57
+        },
+        {
+          "@id": "assignment-proj-22-emp-50",
+          "employee": "emp-50",
+          "role_in_project": "Senior",
+          "hours_allocated": 151
+        }
+      ]
+    },
+    {
+      "@id": "proj-23",
+      "type": "GameProject",
+      "name": "Project Dragon 23",
+      "genre": "Racing",
+      "budget": 3905301,
+      "start_date": "01.07.2025",
+      "status": "Released",
+      "target_platform": "Xbox",
+      "team": [
+        {
+          "@id": "assignment-proj-23-emp-23",
+          "employee": "emp-23",
+          "role_in_project": "Contractor",
+          "hours_allocated": 72
+        },
+        {
+          "@id": "assignment-proj-23-emp-58",
+          "employee": "emp-58",
+          "role_in_project": "Contractor",
+          "hours_allocated": 34
+        },
+        {
+          "@id": "assignment-proj-23-emp-32",
+          "employee": "emp-32",
+          "role_in_project": "Contractor",
+          "hours_allocated": 80
+        },
+        {
+          "@id": "assignment-proj-23-emp-54",
+          "employee": "emp-54",
+          "role_in_project": "Lead",
+          "hours_allocated": 114
+        },
+        {
+          "@id": "assignment-proj-23-emp-2",
+          "employee": "emp-2",
+          "role_in_project": "Senior",
+          "hours_allocated": 81
+        },
+        {
+          "@id": "assignment-proj-23-emp-53",
+          "employee": "emp-53",
+          "role_in_project": "Contractor",
+          "hours_allocated": 123
+        },
+        {
+          "@id": "assignment-proj-23-emp-36",
+          "employee": "emp-36",
+          "role_in_project": "Junior",
+          "hours_allocated": 64
+        }
+      ]
+    },
+    {
+      "@id": "proj-24",
+      "type": "GameProject",
+      "name": "Project Cyber 24",
+      "genre": "Platformer",
+      "budget": 3905300,
+      "start_date": "09.03.2024",
+      "status": "In Development",
+      "target_platform": "Multi-platform",
+      "team": [
+        {
+          "@id": "assignment-proj-24-emp-45",
+          "employee": "emp-45",
+          "role_in_project": "Junior",
+          "hours_allocated": 103
+        },
+        {
+          "@id": "assignment-proj-24-emp-29",
+          "employee": "emp-29",
+          "role_in_project": "Senior",
+          "hours_allocated": 87
+        },
+        {
+          "@id": "assignment-proj-24-emp-48",
+          "employee": "emp-48",
+          "role_in_project": "Junior",
+          "hours_allocated": 29
+        },
+        {
+          "@id": "assignment-proj-24-emp-19",
+          "employee": "emp-19",
+          "role_in_project": "Senior",
+          "hours_allocated": 152
+        },
+        {
+          "@id": "assignment-proj-24-emp-58",
+          "employee": "emp-58",
+          "role_in_project": "Lead",
+          "hours_allocated": 132
+        },
+        {
+          "@id": "assignment-proj-24-emp-37",
+          "employee": "emp-37",
+          "role_in_project": "Contractor",
+          "hours_allocated": 101
+        },
+        {
+          "@id": "assignment-proj-24-emp-4",
+          "employee": "emp-4",
+          "role_in_project": "Senior",
+          "hours_allocated": 43
+        }
+      ]
+    },
+    {
+      "@id": "proj-25",
+      "type": "GameProject",
+      "name": "Project Phoenix 25",
+      "genre": "Puzzle",
+      "budget": 404884,
+      "start_date": "23.03.2025",
+      "status": "In Development",
+      "target_platform": "Multi-platform",
+      "team": [
+        {
+          "@id": "assignment-proj-25-emp-51",
+          "employee": "emp-51",
+          "role_in_project": "Contractor",
+          "hours_allocated": 100
+        },
+        {
+          "@id": "assignment-proj-25-emp-21",
+          "employee": "emp-21",
+          "role_in_project": "Junior",
+          "hours_allocated": 97
+        },
+        {
+          "@id": "assignment-proj-25-emp-33",
+          "employee": "emp-33",
+          "role_in_project": "Contractor",
+          "hours_allocated": 83
+        },
+        {
+          "@id": "assignment-proj-25-emp-5",
+          "employee": "emp-5",
+          "role_in_project": "Junior",
+          "hours_allocated": 123
+        },
+        {
+          "@id": "assignment-proj-25-emp-58",
+          "employee": "emp-58",
+          "role_in_project": "Junior",
+          "hours_allocated": 149
+        }
+      ]
+    },
+    {
+      "@id": "proj-26",
+      "type": "GameProject",
+      "name": "Project Phoenix 26",
+      "genre": "Platformer",
+      "budget": 4007732,
+      "start_date": "10.02.2024",
+      "status": "Cancelled",
+      "target_platform": "Xbox",
+      "team": [
+        {
+          "@id": "assignment-proj-26-emp-56",
+          "employee": "emp-56",
+          "role_in_project": "Contractor",
+          "hours_allocated": 22
+        },
+        {
+          "@id": "assignment-proj-26-emp-34",
+          "employee": "emp-34",
+          "role_in_project": "Contractor",
+          "hours_allocated": 151
+        },
+        {
+          "@id": "assignment-proj-26-emp-21",
+          "employee": "emp-21",
+          "role_in_project": "Junior",
+          "hours_allocated": 136
+        }
+      ]
+    },
+    {
+      "@id": "proj-27",
+      "type": "GameProject",
+      "name": "Project Shadow 27",
+      "genre": "Strategy",
+      "budget": 384507,
+      "start_date": "06.08.2024",
+      "status": "Planning",
+      "target_platform": "PlayStation",
+      "team": [
+        {
+          "@id": "assignment-proj-27-emp-56",
+          "employee": "emp-56",
+          "role_in_project": "Senior",
+          "hours_allocated": 60
+        },
+        {
+          "@id": "assignment-proj-27-emp-58",
+          "employee": "emp-58",
+          "role_in_project": "Contractor",
+          "hours_allocated": 129
+        },
+        {
+          "@id": "assignment-proj-27-emp-46",
+          "employee": "emp-46",
+          "role_in_project": "Contractor",
+          "hours_allocated": 152
+        },
+        {
+          "@id": "assignment-proj-27-emp-36",
+          "employee": "emp-36",
+          "role_in_project": "Contractor",
+          "hours_allocated": 58
+        }
+      ]
+    },
+    {
+      "@id": "proj-28",
+      "type": "GameProject",
+      "name": "Project Shadow 28",
+      "genre": "FPS",
+      "budget": 1869340,
+      "start_date": "09.02.2025",
+      "status": "Testing",
+      "target_platform": "Mobile",
+      "team": [
+        {
+          "@id": "assignment-proj-28-emp-1",
+          "employee": "emp-1",
+          "role_in_project": "Junior",
+          "hours_allocated": 51
+        },
+        {
+          "@id": "assignment-proj-28-emp-19",
+          "employee": "emp-19",
+          "role_in_project": "Senior",
+          "hours_allocated": 135
+        },
+        {
+          "@id": "assignment-proj-28-emp-53",
+          "employee": "emp-53",
+          "role_in_project": "Lead",
+          "hours_allocated": 143
+        },
+        {
+          "@id": "assignment-proj-28-emp-31",
+          "employee": "emp-31",
+          "role_in_project": "Lead",
+          "hours_allocated": 69
+        }
+      ]
+    },
+    {
+      "@id": "proj-29",
+      "type": "GameProject",
+      "name": "Project Ancient 29",
+      "genre": "Racing",
+      "budget": 3383342,
+      "start_date": "20.05.2024",
+      "status": "Cancelled",
+      "target_platform": "PlayStation",
+      "team": [
+        {
+          "@id": "assignment-proj-29-emp-1",
+          "employee": "emp-1",
+          "role_in_project": "Senior",
+          "hours_allocated": 51
+        },
+        {
+          "@id": "assignment-proj-29-emp-46",
+          "employee": "emp-46",
+          "role_in_project": "Contractor",
+          "hours_allocated": 92
+        },
+        {
+          "@id": "assignment-proj-29-emp-47",
+          "employee": "emp-47",
+          "role_in_project": "Junior",
+          "hours_allocated": 39
+        },
+        {
+          "@id": "assignment-proj-29-emp-33",
+          "employee": "emp-33",
+          "role_in_project": "Senior",
+          "hours_allocated": 100
+        },
+        {
+          "@id": "assignment-proj-29-emp-8",
+          "employee": "emp-8",
+          "role_in_project": "Lead",
+          "hours_allocated": 72
+        }
+      ]
+    },
+    {
+      "@id": "proj-30",
+      "type": "GameProject",
+      "name": "Project Shadow 30",
+      "genre": "Puzzle",
+      "budget": 1528105,
+      "start_date": "09.05.2024",
+      "status": "Cancelled",
+      "target_platform": "Xbox",
+      "team": [
+        {
+          "@id": "assignment-proj-30-emp-8",
+          "employee": "emp-8",
+          "role_in_project": "Senior",
+          "hours_allocated": 20
+        },
+        {
+          "@id": "assignment-proj-30-emp-58",
+          "employee": "emp-58",
+          "role_in_project": "Lead",
+          "hours_allocated": 109
+        },
+        {
+          "@id": "assignment-proj-30-emp-4",
+          "employee": "emp-4",
+          "role_in_project": "Lead",
+          "hours_allocated": 155
+        },
+        {
+          "@id": "assignment-proj-30-emp-53",
+          "employee": "emp-53",
+          "role_in_project": "Lead",
+          "hours_allocated": 97
+        },
+        {
+          "@id": "assignment-proj-30-emp-35",
+          "employee": "emp-35",
+          "role_in_project": "Contractor",
+          "hours_allocated": 81
+        },
+        {
+          "@id": "assignment-proj-30-emp-9",
+          "employee": "emp-9",
+          "role_in_project": "Contractor",
+          "hours_allocated": 27
+        },
+        {
+          "@id": "assignment-proj-30-emp-5",
+          "employee": "emp-5",
+          "role_in_project": "Senior",
+          "hours_allocated": 81
+        }
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "@id": "char-1",
+      "type": "GameCharacter",
+      "name": "Mage A",
+      "class": "Paladin",
+      "level": 10,
+      "health": 662,
+      "mana": 402,
+      "attack_power": 19,
+      "belongs_to_project": "proj-3"
+    },
+    {
+      "@id": "char-2",
+      "type": "GameCharacter",
+      "name": "Archer B",
+      "class": "Mage",
+      "level": 97,
+      "health": 844,
+      "mana": 29,
+      "attack_power": 14,
+      "belongs_to_project": "proj-13"
+    },
+    {
+      "@id": "char-3",
+      "type": "GameCharacter",
+      "name": "Hero C",
+      "class": "Ranger",
+      "level": 93,
+      "health": 648,
+      "mana": 25,
+      "attack_power": 66,
+      "belongs_to_project": "proj-30"
+    },
+    {
+      "@id": "char-4",
+      "type": "GameCharacter",
+      "name": "Archer D",
+      "class": "Mage",
+      "level": 13,
+      "health": 948,
+      "mana": 410,
+      "attack_power": 108,
+      "belongs_to_project": "proj-12"
+    },
+    {
+      "@id": "char-5",
+      "type": "GameCharacter",
+      "name": "Archer E",
+      "class": "Mage",
+      "level": 97,
+      "health": 635,
+      "mana": 434,
+      "attack_power": 83,
+      "belongs_to_project": "proj-20"
+    },
+    {
+      "@id": "char-6",
+      "type": "GameCharacter",
+      "name": "Rogue F",
+      "class": "Necromancer",
+      "level": 38,
+      "health": 569,
+      "mana": 22,
+      "attack_power": 42,
+      "belongs_to_project": "proj-16"
+    },
+    {
+      "@id": "char-7",
+      "type": "GameCharacter",
+      "name": "Mage G",
+      "class": "Mage",
+      "level": 76,
+      "health": 995,
+      "mana": 251,
+      "attack_power": 34,
+      "belongs_to_project": "proj-29",
+      "ally": "char-4"
+    },
+    {
+      "@id": "char-8",
+      "type": "GameCharacter",
+      "name": "Rogue H",
+      "class": "Rogue",
+      "level": 82,
+      "health": 327,
+      "mana": 77,
+      "attack_power": 102,
+      "belongs_to_project": "proj-29",
+      "ally": "char-1"
+    },
+    {
+      "@id": "char-9",
+      "type": "GameCharacter",
+      "name": "Mage I",
+      "class": "Ranger",
+      "level": 29,
+      "health": 985,
+      "mana": 27,
+      "attack_power": 159,
+      "belongs_to_project": "proj-13",
+      "enemy": "char-7"
+    },
+    {
+      "@id": "char-10",
+      "type": "GameCharacter",
+      "name": "Hero J",
+      "class": "Rogue",
+      "level": 43,
+      "health": 159,
+      "mana": 184,
+      "attack_power": 127,
+      "belongs_to_project": "proj-10",
+      "ally": "char-9"
+    },
+    {
+      "@id": "char-11",
+      "type": "GameCharacter",
+      "name": "Hero K",
+      "class": "Paladin",
+      "level": 50,
+      "health": 762,
+      "mana": 343,
+      "attack_power": 126,
+      "belongs_to_project": "proj-27"
+    },
+    {
+      "@id": "char-12",
+      "type": "GameCharacter",
+      "name": "Knight L",
+      "class": "Mage",
+      "level": 75,
+      "health": 92,
+      "mana": 286,
+      "attack_power": 198,
+      "belongs_to_project": "proj-3",
+      "ally": "char-8"
+    },
+    {
+      "@id": "char-13",
+      "type": "GameCharacter",
+      "name": "Archer M",
+      "class": "Paladin",
+      "level": 47,
+      "health": 230,
+      "mana": 176,
+      "attack_power": 134,
+      "belongs_to_project": "proj-18",
+      "ally": "char-8"
+    },
+    {
+      "@id": "char-14",
+      "type": "GameCharacter",
+      "name": "Knight N",
+      "class": "Ranger",
+      "level": 27,
+      "health": 69,
+      "mana": 257,
+      "attack_power": 176,
+      "belongs_to_project": "proj-11",
+      "ally": "char-3",
+      "enemy": "char-13"
+    },
+    {
+      "@id": "char-15",
+      "type": "GameCharacter",
+      "name": "Hero O",
+      "class": "Necromancer",
+      "level": 72,
+      "health": 689,
+      "mana": 251,
+      "attack_power": 197,
+      "belongs_to_project": "proj-23",
+      "ally": "char-1",
+      "enemy": "char-2"
+    },
+    {
+      "@id": "char-16",
+      "type": "GameCharacter",
+      "name": "Knight P",
+      "class": "Rogue",
+      "level": 88,
+      "health": 547,
+      "mana": 469,
+      "attack_power": 181,
+      "belongs_to_project": "proj-18",
+      "ally": "char-11"
+    },
+    {
+      "@id": "char-17",
+      "type": "GameCharacter",
+      "name": "Hero Q",
+      "class": "Ranger",
+      "level": 70,
+      "health": 985,
+      "mana": 278,
+      "attack_power": 127,
+      "belongs_to_project": "proj-23"
+    },
+    {
+      "@id": "char-18",
+      "type": "GameCharacter",
+      "name": "Hero R",
+      "class": "Mage",
+      "level": 77,
+      "health": 734,
+      "mana": 362,
+      "attack_power": 32,
+      "belongs_to_project": "proj-19"
+    },
+    {
+      "@id": "char-19",
+      "type": "GameCharacter",
+      "name": "Knight S",
+      "class": "Necromancer",
+      "level": 70,
+      "health": 841,
+      "mana": 318,
+      "attack_power": 168,
+      "belongs_to_project": "proj-30",
+      "enemy": "char-6"
+    },
+    {
+      "@id": "char-20",
+      "type": "GameCharacter",
+      "name": "Demon T",
+      "class": "Paladin",
+      "level": 17,
+      "health": 151,
+      "mana": 370,
+      "attack_power": 190,
+      "belongs_to_project": "proj-27",
+      "ally": "char-5",
+      "enemy": "char-2"
+    },
+    {
+      "@id": "char-21",
+      "type": "GameCharacter",
+      "name": "Mage U",
+      "class": "Paladin",
+      "level": 98,
+      "health": 699,
+      "mana": 114,
+      "attack_power": 118,
+      "belongs_to_project": "proj-15",
+      "ally": "char-8"
+    },
+    {
+      "@id": "char-22",
+      "type": "GameCharacter",
+      "name": "Knight V",
+      "class": "Rogue",
+      "level": 66,
+      "health": 500,
+      "mana": 235,
+      "attack_power": 187,
+      "belongs_to_project": "proj-20",
+      "ally": "char-11"
+    },
+    {
+      "@id": "char-23",
+      "type": "GameCharacter",
+      "name": "Hero W",
+      "class": "Necromancer",
+      "level": 74,
+      "health": 778,
+      "mana": 90,
+      "attack_power": 140,
+      "belongs_to_project": "proj-1"
+    },
+    {
+      "@id": "char-24",
+      "type": "GameCharacter",
+      "name": "Hero X",
+      "class": "Paladin",
+      "level": 83,
+      "health": 85,
+      "mana": 117,
+      "attack_power": 60,
+      "belongs_to_project": "proj-17"
+    },
+    {
+      "@id": "char-25",
+      "type": "GameCharacter",
+      "name": "Rogue Y",
+      "class": "Paladin",
+      "level": 41,
+      "health": 575,
+      "mana": 399,
+      "attack_power": 185,
+      "belongs_to_project": "proj-24"
+    },
+    {
+      "@id": "char-26",
+      "type": "GameCharacter",
+      "name": "Warrior Z",
+      "class": "Necromancer",
+      "level": 72,
+      "health": 137,
+      "mana": 286,
+      "attack_power": 114,
+      "belongs_to_project": "proj-27"
+    },
+    {
+      "@id": "char-27",
+      "type": "GameCharacter",
+      "name": "Warrior A",
+      "class": "Warrior",
+      "level": 83,
+      "health": 54,
+      "mana": 126,
+      "attack_power": 112,
+      "belongs_to_project": "proj-29"
+    },
+    {
+      "@id": "char-28",
+      "type": "GameCharacter",
+      "name": "Rogue B",
+      "class": "Rogue",
+      "level": 72,
+      "health": 528,
+      "mana": 347,
+      "attack_power": 66,
+      "belongs_to_project": "proj-15",
+      "ally": "char-23"
+    },
+    {
+      "@id": "char-29",
+      "type": "GameCharacter",
+      "name": "Knight C",
+      "class": "Warrior",
+      "level": 71,
+      "health": 727,
+      "mana": 221,
+      "attack_power": 77,
+      "belongs_to_project": "proj-15",
+      "ally": "char-3"
+    },
+    {
+      "@id": "char-30",
+      "type": "GameCharacter",
+      "name": "Demon D",
+      "class": "Ranger",
+      "level": 34,
+      "health": 418,
+      "mana": 428,
+      "attack_power": 14,
+      "belongs_to_project": "proj-14",
+      "ally": "char-10"
+    },
+    {
+      "@id": "char-31",
+      "type": "GameCharacter",
+      "name": "Hero E",
+      "class": "Rogue",
+      "level": 19,
+      "health": 293,
+      "mana": 79,
+      "attack_power": 52,
+      "belongs_to_project": "proj-23",
+      "ally": "char-3",
+      "enemy": "char-26"
+    },
+    {
+      "@id": "char-32",
+      "type": "GameCharacter",
+      "name": "Archer F",
+      "class": "Rogue",
+      "level": 58,
+      "health": 462,
+      "mana": 207,
+      "attack_power": 25,
+      "belongs_to_project": "proj-11"
+    },
+    {
+      "@id": "char-33",
+      "type": "GameCharacter",
+      "name": "Archer G",
+      "class": "Mage",
+      "level": 37,
+      "health": 393,
+      "mana": 462,
+      "attack_power": 131,
+      "belongs_to_project": "proj-26"
+    },
+    {
+      "@id": "char-34",
+      "type": "GameCharacter",
+      "name": "Hero H",
+      "class": "Rogue",
+      "level": 48,
+      "health": 695,
+      "mana": 259,
+      "attack_power": 167,
+      "belongs_to_project": "proj-14"
+    },
+    {
+      "@id": "char-35",
+      "type": "GameCharacter",
+      "name": "Archer I",
+      "class": "Necromancer",
+      "level": 33,
+      "health": 676,
+      "mana": 155,
+      "attack_power": 72,
+      "belongs_to_project": "proj-30",
+      "ally": "char-31"
+    },
+    {
+      "@id": "char-36",
+      "type": "GameCharacter",
+      "name": "Warrior J",
+      "class": "Paladin",
+      "level": 37,
+      "health": 234,
+      "mana": 130,
+      "attack_power": 118,
+      "belongs_to_project": "proj-24"
+    },
+    {
+      "@id": "char-37",
+      "type": "GameCharacter",
+      "name": "Hero K",
+      "class": "Ranger",
+      "level": 35,
+      "health": 324,
+      "mana": 56,
+      "attack_power": 143,
+      "belongs_to_project": "proj-14",
+      "ally": "char-17",
+      "enemy": "char-11"
+    },
+    {
+      "@id": "char-38",
+      "type": "GameCharacter",
+      "name": "Archer L",
+      "class": "Paladin",
+      "level": 64,
+      "health": 874,
+      "mana": 200,
+      "attack_power": 19,
+      "belongs_to_project": "proj-18",
+      "enemy": "char-33"
+    },
+    {
+      "@id": "char-39",
+      "type": "GameCharacter",
+      "name": "Demon M",
+      "class": "Ranger",
+      "level": 15,
+      "health": 512,
+      "mana": 8,
+      "attack_power": 65,
+      "belongs_to_project": "proj-11",
+      "ally": "char-4"
+    },
+    {
+      "@id": "char-40",
+      "type": "GameCharacter",
+      "name": "Knight N",
+      "class": "Mage",
+      "level": 14,
+      "health": 848,
+      "mana": 488,
+      "attack_power": 181,
+      "belongs_to_project": "proj-9"
+    },
+    {
+      "@id": "char-41",
+      "type": "GameCharacter",
+      "name": "Hero O",
+      "class": "Paladin",
+      "level": 63,
+      "health": 772,
+      "mana": 192,
+      "attack_power": 102,
+      "belongs_to_project": "proj-30",
+      "ally": "char-29",
+      "enemy": "char-2"
+    },
+    {
+      "@id": "char-42",
+      "type": "GameCharacter",
+      "name": "Archer P",
+      "class": "Warrior",
+      "level": 76,
+      "health": 153,
+      "mana": 482,
+      "attack_power": 70,
+      "belongs_to_project": "proj-19"
+    },
+    {
+      "@id": "char-43",
+      "type": "GameCharacter",
+      "name": "Knight Q",
+      "class": "Paladin",
+      "level": 94,
+      "health": 792,
+      "mana": 416,
+      "attack_power": 153,
+      "belongs_to_project": "proj-10",
+      "ally": "char-42"
+    },
+    {
+      "@id": "char-44",
+      "type": "GameCharacter",
+      "name": "Warrior R",
+      "class": "Necromancer",
+      "level": 31,
+      "health": 143,
+      "mana": 28,
+      "attack_power": 138,
+      "belongs_to_project": "proj-2",
+      "ally": "char-2",
+      "enemy": "char-13"
+    },
+    {
+      "@id": "char-45",
+      "type": "GameCharacter",
+      "name": "Knight S",
+      "class": "Ranger",
+      "level": 53,
+      "health": 320,
+      "mana": 133,
+      "attack_power": 156,
+      "belongs_to_project": "proj-17"
+    },
+    {
+      "@id": "char-46",
+      "type": "GameCharacter",
+      "name": "Demon T",
+      "class": "Warrior",
+      "level": 63,
+      "health": 242,
+      "mana": 162,
+      "attack_power": 175,
+      "belongs_to_project": "proj-13",
+      "ally": "char-18"
+    },
+    {
+      "@id": "char-47",
+      "type": "GameCharacter",
+      "name": "Knight U",
+      "class": "Necromancer",
+      "level": 34,
+      "health": 376,
+      "mana": 318,
+      "attack_power": 114,
+      "belongs_to_project": "proj-20"
+    },
+    {
+      "@id": "char-48",
+      "type": "GameCharacter",
+      "name": "Mage V",
+      "class": "Necromancer",
+      "level": 13,
+      "health": 444,
+      "mana": 441,
+      "attack_power": 178,
+      "belongs_to_project": "proj-17",
+      "ally": "char-40",
+      "enemy": "char-4"
+    },
+    {
+      "@id": "char-49",
+      "type": "GameCharacter",
+      "name": "Rogue W",
+      "class": "Rogue",
+      "level": 19,
+      "health": 628,
+      "mana": 106,
+      "attack_power": 169,
+      "belongs_to_project": "proj-20",
+      "ally": "char-16"
+    },
+    {
+      "@id": "char-50",
+      "type": "GameCharacter",
+      "name": "Hero X",
+      "class": "Warrior",
+      "level": 84,
+      "health": 488,
+      "mana": 417,
+      "attack_power": 168,
+      "belongs_to_project": "proj-15"
+    },
+    {
+      "@id": "char-51",
+      "type": "GameCharacter",
+      "name": "Rogue Y",
+      "class": "Rogue",
+      "level": 85,
+      "health": 217,
+      "mana": 103,
+      "attack_power": 177,
+      "belongs_to_project": "proj-12",
+      "ally": "char-35"
+    },
+    {
+      "@id": "char-52",
+      "type": "GameCharacter",
+      "name": "Archer Z",
+      "class": "Rogue",
+      "level": 51,
+      "health": 480,
+      "mana": 406,
+      "attack_power": 189,
+      "belongs_to_project": "proj-14",
+      "ally": "char-15"
+    },
+    {
+      "@id": "char-53",
+      "type": "GameCharacter",
+      "name": "Mage A",
+      "class": "Necromancer",
+      "level": 43,
+      "health": 411,
+      "mana": 3,
+      "attack_power": 10,
+      "belongs_to_project": "proj-5"
+    },
+    {
+      "@id": "char-54",
+      "type": "GameCharacter",
+      "name": "Hero B",
+      "class": "Rogue",
+      "level": 71,
+      "health": 285,
+      "mana": 311,
+      "attack_power": 60,
+      "belongs_to_project": "proj-12"
+    },
+    {
+      "@id": "char-55",
+      "type": "GameCharacter",
+      "name": "Mage C",
+      "class": "Warrior",
+      "level": 18,
+      "health": 774,
+      "mana": 17,
+      "attack_power": 145,
+      "belongs_to_project": "proj-20"
+    },
+    {
+      "@id": "char-56",
+      "type": "GameCharacter",
+      "name": "Warrior D",
+      "class": "Necromancer",
+      "level": 48,
+      "health": 164,
+      "mana": 94,
+      "attack_power": 170,
+      "belongs_to_project": "proj-20"
+    },
+    {
+      "@id": "char-57",
+      "type": "GameCharacter",
+      "name": "Knight E",
+      "class": "Mage",
+      "level": 8,
+      "health": 862,
+      "mana": 421,
+      "attack_power": 186,
+      "belongs_to_project": "proj-15"
+    },
+    {
+      "@id": "char-58",
+      "type": "GameCharacter",
+      "name": "Warrior F",
+      "class": "Rogue",
+      "level": 42,
+      "health": 379,
+      "mana": 251,
+      "attack_power": 113,
+      "belongs_to_project": "proj-21",
+      "ally": "char-49"
+    },
+    {
+      "@id": "char-59",
+      "type": "GameCharacter",
+      "name": "Mage G",
+      "class": "Mage",
+      "level": 30,
+      "health": 886,
+      "mana": 462,
+      "attack_power": 139,
+      "belongs_to_project": "proj-28"
+    },
+    {
+      "@id": "char-60",
+      "type": "GameCharacter",
+      "name": "Demon H",
+      "class": "Necromancer",
+      "level": 46,
+      "health": 712,
+      "mana": 36,
+      "attack_power": 159,
+      "belongs_to_project": "proj-18"
+    },
+    {
+      "@id": "char-61",
+      "type": "GameCharacter",
+      "name": "Rogue I",
+      "class": "Necromancer",
+      "level": 82,
+      "health": 459,
+      "mana": 269,
+      "attack_power": 92,
+      "belongs_to_project": "proj-18"
+    },
+    {
+      "@id": "char-62",
+      "type": "GameCharacter",
+      "name": "Mage J",
+      "class": "Rogue",
+      "level": 26,
+      "health": 570,
+      "mana": 412,
+      "attack_power": 192,
+      "belongs_to_project": "proj-6",
+      "enemy": "char-61"
+    },
+    {
+      "@id": "char-63",
+      "type": "GameCharacter",
+      "name": "Hero K",
+      "class": "Paladin",
+      "level": 35,
+      "health": 738,
+      "mana": 104,
+      "attack_power": 83,
+      "belongs_to_project": "proj-22",
+      "ally": "char-13"
+    },
+    {
+      "@id": "char-64",
+      "type": "GameCharacter",
+      "name": "Knight L",
+      "class": "Ranger",
+      "level": 44,
+      "health": 667,
+      "mana": 229,
+      "attack_power": 184,
+      "belongs_to_project": "proj-3",
+      "ally": "char-52"
+    },
+    {
+      "@id": "char-65",
+      "type": "GameCharacter",
+      "name": "Rogue M",
+      "class": "Mage",
+      "level": 2,
+      "health": 139,
+      "mana": 141,
+      "attack_power": 150,
+      "belongs_to_project": "proj-5"
+    },
+    {
+      "@id": "char-66",
+      "type": "GameCharacter",
+      "name": "Rogue N",
+      "class": "Warrior",
+      "level": 55,
+      "health": 498,
+      "mana": 237,
+      "attack_power": 114,
+      "belongs_to_project": "proj-30"
+    },
+    {
+      "@id": "char-67",
+      "type": "GameCharacter",
+      "name": "Archer O",
+      "class": "Warrior",
+      "level": 14,
+      "health": 246,
+      "mana": 448,
+      "attack_power": 118,
+      "belongs_to_project": "proj-23",
+      "ally": "char-45",
+      "enemy": "char-16"
+    },
+    {
+      "@id": "char-68",
+      "type": "GameCharacter",
+      "name": "Mage P",
+      "class": "Necromancer",
+      "level": 77,
+      "health": 718,
+      "mana": 258,
+      "attack_power": 143,
+      "belongs_to_project": "proj-3",
+      "ally": "char-17",
+      "enemy": "char-50"
+    },
+    {
+      "@id": "char-69",
+      "type": "GameCharacter",
+      "name": "Rogue Q",
+      "class": "Paladin",
+      "level": 24,
+      "health": 212,
+      "mana": 309,
+      "attack_power": 190,
+      "belongs_to_project": "proj-2",
+      "ally": "char-57"
+    },
+    {
+      "@id": "char-70",
+      "type": "GameCharacter",
+      "name": "Warrior R",
+      "class": "Ranger",
+      "level": 95,
+      "health": 716,
+      "mana": 204,
+      "attack_power": 63,
+      "belongs_to_project": "proj-11"
+    },
+    {
+      "@id": "char-71",
+      "type": "GameCharacter",
+      "name": "Archer S",
+      "class": "Warrior",
+      "level": 60,
+      "health": 422,
+      "mana": 46,
+      "attack_power": 139,
+      "belongs_to_project": "proj-16",
+      "ally": "char-61"
+    },
+    {
+      "@id": "char-72",
+      "type": "GameCharacter",
+      "name": "Warrior T",
+      "class": "Warrior",
+      "level": 33,
+      "health": 814,
+      "mana": 242,
+      "attack_power": 200,
+      "belongs_to_project": "proj-10",
+      "ally": "char-50"
+    },
+    {
+      "@id": "char-73",
+      "type": "GameCharacter",
+      "name": "Knight U",
+      "class": "Paladin",
+      "level": 17,
+      "health": 237,
+      "mana": 13,
+      "attack_power": 120,
+      "belongs_to_project": "proj-12"
+    },
+    {
+      "@id": "char-74",
+      "type": "GameCharacter",
+      "name": "Hero V",
+      "class": "Necromancer",
+      "level": 24,
+      "health": 929,
+      "mana": 337,
+      "attack_power": 93,
+      "belongs_to_project": "proj-10"
+    },
+    {
+      "@id": "char-75",
+      "type": "GameCharacter",
+      "name": "Knight W",
+      "class": "Warrior",
+      "level": 7,
+      "health": 782,
+      "mana": 92,
+      "attack_power": 133,
+      "belongs_to_project": "proj-7",
+      "ally": "char-38",
+      "enemy": "char-65"
+    },
+    {
+      "@id": "char-76",
+      "type": "GameCharacter",
+      "name": "Rogue X",
+      "class": "Mage",
+      "level": 10,
+      "health": 430,
+      "mana": 327,
+      "attack_power": 124,
+      "belongs_to_project": "proj-15",
+      "ally": "char-8"
+    },
+    {
+      "@id": "char-77",
+      "type": "GameCharacter",
+      "name": "Archer Y",
+      "class": "Rogue",
+      "level": 1,
+      "health": 247,
+      "mana": 88,
+      "attack_power": 195,
+      "belongs_to_project": "proj-29",
+      "enemy": "char-57"
+    },
+    {
+      "@id": "char-78",
+      "type": "GameCharacter",
+      "name": "Rogue Z",
+      "class": "Mage",
+      "level": 9,
+      "health": 882,
+      "mana": 368,
+      "attack_power": 20,
+      "belongs_to_project": "proj-13",
+      "ally": "char-44"
+    },
+    {
+      "@id": "char-79",
+      "type": "GameCharacter",
+      "name": "Warrior A",
+      "class": "Mage",
+      "level": 73,
+      "health": 670,
+      "mana": 409,
+      "attack_power": 111,
+      "belongs_to_project": "proj-28",
+      "ally": "char-18",
+      "enemy": "char-7"
+    },
+    {
+      "@id": "char-80",
+      "type": "GameCharacter",
+      "name": "Demon B",
+      "class": "Rogue",
+      "level": 71,
+      "health": 69,
+      "mana": 61,
+      "attack_power": 121,
+      "belongs_to_project": "proj-17"
+    }
+  ],
+  "equipment": [
+    {
+      "@id": "eq-1",
+      "type": "Equipment",
+      "name": "VR Headset #1",
+      "equipment_type": "MIDI Keyboard",
+      "purchase_date": "14.02.2024",
+      "cost": 8761,
+      "condition": "Good",
+      "assigned_to": null
+    },
+    {
+      "@id": "eq-2",
+      "type": "Equipment",
+      "name": "High-end GPU #2",
+      "equipment_type": "Gaming Console",
+      "purchase_date": "09.10.2025",
+      "cost": 10787,
+      "condition": "Fair",
+      "assigned_to": "emp-16"
+    },
+    {
+      "@id": "eq-3",
+      "type": "Equipment",
+      "name": "Graphics Tablet #3",
+      "equipment_type": "MIDI Keyboard",
+      "purchase_date": "08.01.2024",
+      "cost": 7527,
+      "condition": "Good",
+      "assigned_to": null
+    },
+    {
+      "@id": "eq-4",
+      "type": "Equipment",
+      "name": "Motion Capture Suit #4",
+      "equipment_type": "Gaming Console",
+      "purchase_date": "20.07.2022",
+      "cost": 6350,
+      "condition": "Fair",
+      "assigned_to": null
+    },
+    {
+      "@id": "eq-5",
+      "type": "Equipment",
+      "name": "VR Headset #5",
+      "equipment_type": "Gaming Console",
+      "purchase_date": "17.11.2021",
+      "cost": 3902,
+      "condition": "Needs Repair",
+      "assigned_to": "emp-53"
+    },
+    {
+      "@id": "eq-6",
+      "type": "Equipment",
+      "name": "MIDI Keyboard #6",
+      "equipment_type": "VR Headset",
+      "purchase_date": "18.08.2022",
+      "cost": 8739,
+      "condition": "Good",
+      "assigned_to": null
+    },
+    {
+      "@id": "eq-7",
+      "type": "Equipment",
+      "name": "VR Headset #7",
+      "equipment_type": "Graphics Tablet",
+      "purchase_date": "22.04.2022",
+      "cost": 7606,
+      "condition": "Fair",
+      "assigned_to": "emp-45"
+    },
+    {
+      "@id": "eq-8",
+      "type": "Equipment",
+      "name": "VR Headset #8",
+      "equipment_type": "Motion Capture Suit",
+      "purchase_date": "03.02.2021",
+      "cost": 2672,
+      "condition": "Needs Repair",
+      "assigned_to": "emp-39"
+    },
+    {
+      "@id": "eq-9",
+      "type": "Equipment",
+      "name": "High-end GPU #9",
+      "equipment_type": "Workstation",
+      "purchase_date": "10.02.2025",
+      "cost": 2380,
+      "condition": "Needs Repair",
+      "assigned_to": "emp-4"
+    },
+    {
+      "@id": "eq-10",
+      "type": "Equipment",
+      "name": "Workstation #10",
+      "equipment_type": "MIDI Keyboard",
+      "purchase_date": "09.12.2021",
+      "cost": 8168,
+      "condition": "Excellent",
+      "assigned_to": "emp-44"
+    },
+    {
+      "@id": "eq-11",
+      "type": "Equipment",
+      "name": "High-end GPU #11",
+      "equipment_type": "Graphics Tablet",
+      "purchase_date": "06.01.2022",
+      "cost": 11370,
+      "condition": "Excellent",
+      "assigned_to": "emp-11"
+    },
+    {
+      "@id": "eq-12",
+      "type": "Equipment",
+      "name": "Workstation #12",
+      "equipment_type": "Gaming Console",
+      "purchase_date": "22.12.2021",
+      "cost": 5391,
+      "condition": "Needs Repair",
+      "assigned_to": "emp-43"
+    },
+    {
+      "@id": "eq-13",
+      "type": "Equipment",
+      "name": "Gaming Console #13",
+      "equipment_type": "Graphics Tablet",
+      "purchase_date": "27.10.2023",
+      "cost": 9072,
+      "condition": "Fair",
+      "assigned_to": null
+    },
+    {
+      "@id": "eq-14",
+      "type": "Equipment",
+      "name": "Gaming Console #14",
+      "equipment_type": "Audio Interface",
+      "purchase_date": "12.12.2021",
+      "cost": 3951,
+      "condition": "Fair",
+      "assigned_to": "emp-44"
+    },
+    {
+      "@id": "eq-15",
+      "type": "Equipment",
+      "name": "Motion Capture Suit #15",
+      "equipment_type": "Gaming Console",
+      "purchase_date": "09.02.2025",
+      "cost": 14536,
+      "condition": "Excellent",
+      "assigned_to": "emp-43"
+    },
+    {
+      "@id": "eq-16",
+      "type": "Equipment",
+      "name": "High-end GPU #16",
+      "equipment_type": "Workstation",
+      "purchase_date": "10.12.2023",
+      "cost": 3072,
+      "condition": "Needs Repair",
+      "assigned_to": "emp-26"
+    },
+    {
+      "@id": "eq-17",
+      "type": "Equipment",
+      "name": "MIDI Keyboard #17",
+      "equipment_type": "High-end GPU",
+      "purchase_date": "23.05.2023",
+      "cost": 3303,
+      "condition": "Needs Repair",
+      "assigned_to": "emp-32"
+    },
+    {
+      "@id": "eq-18",
+      "type": "Equipment",
+      "name": "Gaming Console #18",
+      "equipment_type": "Graphics Tablet",
+      "purchase_date": "02.01.2022",
+      "cost": 4150,
+      "condition": "Good",
+      "assigned_to": "emp-50"
+    },
+    {
+      "@id": "eq-19",
+      "type": "Equipment",
+      "name": "Workstation #19",
+      "equipment_type": "Workstation",
+      "purchase_date": "04.03.2024",
+      "cost": 2003,
+      "condition": "Fair",
+      "assigned_to": "emp-57"
+    },
+    {
+      "@id": "eq-20",
+      "type": "Equipment",
+      "name": "Audio Interface #20",
+      "equipment_type": "Motion Capture Suit",
+      "purchase_date": "21.02.2025",
+      "cost": 13184,
+      "condition": "Fair",
+      "assigned_to": "emp-19"
+    },
+    {
+      "@id": "eq-21",
+      "type": "Equipment",
+      "name": "Graphics Tablet #21",
+      "equipment_type": "Audio Interface",
+      "purchase_date": "25.07.2025",
+      "cost": 9133,
+      "condition": "Fair",
+      "assigned_to": "emp-57"
+    },
+    {
+      "@id": "eq-22",
+      "type": "Equipment",
+      "name": "Audio Interface #22",
+      "equipment_type": "VR Headset",
+      "purchase_date": "27.03.2021",
+      "cost": 1632,
+      "condition": "Fair",
+      "assigned_to": "emp-12"
+    },
+    {
+      "@id": "eq-23",
+      "type": "Equipment",
+      "name": "Graphics Tablet #23",
+      "equipment_type": "Graphics Tablet",
+      "purchase_date": "25.06.2022",
+      "cost": 13011,
+      "condition": "Good",
+      "assigned_to": "emp-12"
+    },
+    {
+      "@id": "eq-24",
+      "type": "Equipment",
+      "name": "Workstation #24",
+      "equipment_type": "High-end GPU",
+      "purchase_date": "12.01.2025",
+      "cost": 7408,
+      "condition": "Needs Repair",
+      "assigned_to": "emp-19"
+    },
+    {
+      "@id": "eq-25",
+      "type": "Equipment",
+      "name": "High-end GPU #25",
+      "equipment_type": "High-end GPU",
+      "purchase_date": "25.09.2021",
+      "cost": 14324,
+      "condition": "Good",
+      "assigned_to": "emp-24"
+    },
+    {
+      "@id": "eq-26",
+      "type": "Equipment",
+      "name": "VR Headset #26",
+      "equipment_type": "Graphics Tablet",
+      "purchase_date": "10.03.2021",
+      "cost": 13402,
+      "condition": "Fair",
+      "assigned_to": null
+    },
+    {
+      "@id": "eq-27",
+      "type": "Equipment",
+      "name": "MIDI Keyboard #27",
+      "equipment_type": "Workstation",
+      "purchase_date": "18.03.2024",
+      "cost": 11757,
+      "condition": "Excellent",
+      "assigned_to": "emp-10"
+    },
+    {
+      "@id": "eq-28",
+      "type": "Equipment",
+      "name": "Graphics Tablet #28",
+      "equipment_type": "Audio Interface",
+      "purchase_date": "24.01.2025",
+      "cost": 7142,
+      "condition": "Fair",
+      "assigned_to": "emp-47"
+    },
+    {
+      "@id": "eq-29",
+      "type": "Equipment",
+      "name": "High-end GPU #29",
+      "equipment_type": "Workstation",
+      "purchase_date": "11.02.2024",
+      "cost": 10040,
+      "condition": "Fair",
+      "assigned_to": null
+    },
+    {
+      "@id": "eq-30",
+      "type": "Equipment",
+      "name": "Workstation #30",
+      "equipment_type": "High-end GPU",
+      "purchase_date": "28.01.2022",
+      "cost": 12658,
+      "condition": "Fair",
+      "assigned_to": "emp-37"
+    },
+    {
+      "@id": "eq-31",
+      "type": "Equipment",
+      "name": "Motion Capture Suit #31",
+      "equipment_type": "Gaming Console",
+      "purchase_date": "29.01.2025",
+      "cost": 8475,
+      "condition": "Excellent",
+      "assigned_to": "emp-17"
+    },
+    {
+      "@id": "eq-32",
+      "type": "Equipment",
+      "name": "Motion Capture Suit #32",
+      "equipment_type": "Workstation",
+      "purchase_date": "10.08.2021",
+      "cost": 5380,
+      "condition": "Good",
+      "assigned_to": "emp-24"
+    },
+    {
+      "@id": "eq-33",
+      "type": "Equipment",
+      "name": "MIDI Keyboard #33",
+      "equipment_type": "Motion Capture Suit",
+      "purchase_date": "03.10.2024",
+      "cost": 2457,
+      "condition": "Needs Repair",
+      "assigned_to": "emp-41"
+    },
+    {
+      "@id": "eq-34",
+      "type": "Equipment",
+      "name": "Audio Interface #34",
+      "equipment_type": "Gaming Console",
+      "purchase_date": "15.06.2022",
+      "cost": 2174,
+      "condition": "Good",
+      "assigned_to": null
+    },
+    {
+      "@id": "eq-35",
+      "type": "Equipment",
+      "name": "VR Headset #35",
+      "equipment_type": "Gaming Console",
+      "purchase_date": "02.01.2025",
+      "cost": 12101,
+      "condition": "Excellent",
+      "assigned_to": null
+    },
+    {
+      "@id": "eq-36",
+      "type": "Equipment",
+      "name": "Graphics Tablet #36",
+      "equipment_type": "Audio Interface",
+      "purchase_date": "29.11.2024",
+      "cost": 8102,
+      "condition": "Good",
+      "assigned_to": "emp-28"
+    },
+    {
+      "@id": "eq-37",
+      "type": "Equipment",
+      "name": "Audio Interface #37",
+      "equipment_type": "High-end GPU",
+      "purchase_date": "10.11.2025",
+      "cost": 8547,
+      "condition": "Good",
+      "assigned_to": "emp-48"
+    },
+    {
+      "@id": "eq-38",
+      "type": "Equipment",
+      "name": "High-end GPU #38",
+      "equipment_type": "MIDI Keyboard",
+      "purchase_date": "29.09.2022",
+      "cost": 10449,
+      "condition": "Excellent",
+      "assigned_to": "emp-33"
+    },
+    {
+      "@id": "eq-39",
+      "type": "Equipment",
+      "name": "High-end GPU #39",
+      "equipment_type": "Audio Interface",
+      "purchase_date": "23.05.2021",
+      "cost": 6160,
+      "condition": "Excellent",
+      "assigned_to": null
+    },
+    {
+      "@id": "eq-40",
+      "type": "Equipment",
+      "name": "Audio Interface #40",
+      "equipment_type": "VR Headset",
+      "purchase_date": "13.11.2024",
+      "cost": 13622,
+      "condition": "Fair",
+      "assigned_to": "emp-31"
+    },
+    {
+      "@id": "eq-41",
+      "type": "Equipment",
+      "name": "MIDI Keyboard #41",
+      "equipment_type": "Workstation",
+      "purchase_date": "13.09.2024",
+      "cost": 688,
+      "condition": "Excellent",
+      "assigned_to": null
+    },
+    {
+      "@id": "eq-42",
+      "type": "Equipment",
+      "name": "Motion Capture Suit #42",
+      "equipment_type": "Workstation",
+      "purchase_date": "07.11.2025",
+      "cost": 2170,
+      "condition": "Good",
+      "assigned_to": "emp-13"
+    },
+    {
+      "@id": "eq-43",
+      "type": "Equipment",
+      "name": "MIDI Keyboard #43",
+      "equipment_type": "Graphics Tablet",
+      "purchase_date": "12.07.2022",
+      "cost": 11925,
+      "condition": "Needs Repair",
+      "assigned_to": "emp-31"
+    },
+    {
+      "@id": "eq-44",
+      "type": "Equipment",
+      "name": "Motion Capture Suit #44",
+      "equipment_type": "Audio Interface",
+      "purchase_date": "02.11.2023",
+      "cost": 6027,
+      "condition": "Needs Repair",
+      "assigned_to": "emp-50"
+    },
+    {
+      "@id": "eq-45",
+      "type": "Equipment",
+      "name": "Audio Interface #45",
+      "equipment_type": "Graphics Tablet",
+      "purchase_date": "01.02.2022",
+      "cost": 8535,
+      "condition": "Excellent",
+      "assigned_to": "emp-19"
+    },
+    {
+      "@id": "eq-46",
+      "type": "Equipment",
+      "name": "High-end GPU #46",
+      "equipment_type": "VR Headset",
+      "purchase_date": "13.06.2024",
+      "cost": 9163,
+      "condition": "Fair",
+      "assigned_to": "emp-39"
+    },
+    {
+      "@id": "eq-47",
+      "type": "Equipment",
+      "name": "High-end GPU #47",
+      "equipment_type": "MIDI Keyboard",
+      "purchase_date": "19.11.2022",
+      "cost": 2971,
+      "condition": "Good",
+      "assigned_to": "emp-39"
+    },
+    {
+      "@id": "eq-48",
+      "type": "Equipment",
+      "name": "Graphics Tablet #48",
+      "equipment_type": "Graphics Tablet",
+      "purchase_date": "21.08.2023",
+      "cost": 13066,
+      "condition": "Good",
+      "assigned_to": "emp-20"
+    },
+    {
+      "@id": "eq-49",
+      "type": "Equipment",
+      "name": "High-end GPU #49",
+      "equipment_type": "Workstation",
+      "purchase_date": "10.07.2024",
+      "cost": 7122,
+      "condition": "Needs Repair",
+      "assigned_to": "emp-3"
+    },
+    {
+      "@id": "eq-50",
+      "type": "Equipment",
+      "name": "MIDI Keyboard #50",
+      "equipment_type": "Workstation",
+      "purchase_date": "11.07.2024",
+      "cost": 11184,
+      "condition": "Excellent",
+      "assigned_to": "emp-58"
+    }
+  ]
+}
