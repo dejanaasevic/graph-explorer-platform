@@ -10,3 +10,6 @@ dependencies = ["graph-api>=0.0.1"]
 
 [project.entry-points."graph.data_source"]
 json_data_source = "json_data_source.json_data_source:JsonDataSource"
+
+[tool.setuptools.data-files]
+data = ["*.json"]

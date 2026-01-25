@@ -16,6 +16,7 @@ class BlockVisualizer(VisualizerPlugin):
                 graph_str += f"\t{key}: {node.attributes[key]}\n"
         for edge in graph.get_edges():
             graph_str += f"\t{edge.id}\n"
+            graph_str += f"\t{edge.source.id} - {edge.target.id}\n"
             for key in edge.attributes:
                 graph_str += f"\t{key}: {edge.attributes[key]}\n"
         return graph_str
