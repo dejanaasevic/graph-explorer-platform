@@ -1,9 +1,9 @@
 import uuid
 from typing import List, Dict
 
-from api.src.api.model import Graph
-from api.src.api.model.graph import Node
-from core.src.use_cases.query_parser import FilterExpression, Parser
+from api.model import Graph
+from api.model import Node
+from use_cases.query_parser import FilterExpression, Parser
 
 
 class QueryEngine:
