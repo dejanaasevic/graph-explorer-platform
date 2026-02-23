@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "graph-explorer"
+version = "0.1.0"
+description = "Django web interface for graph exploration"
+dependencies = [
+    "Django>=5.1",
+    "graph-core>=0.0.1",
+    "graph-api>=0.0.1"
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
