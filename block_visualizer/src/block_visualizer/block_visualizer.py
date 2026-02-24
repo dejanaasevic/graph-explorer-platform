@@ -68,7 +68,7 @@ class BlockVisualizer(VisualizerPlugin):
             });
             
             var force = d3.layout.force()
-                .size([7680, 4320])
+                .size([480, 270])
                 .nodes(d3.values(nodes))
                 .links(edges)
                 .on("tick", tick)

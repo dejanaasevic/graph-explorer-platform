@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'style.css' %}"/>
+        <script type="text/javascript" src="https://d3js.org/d3.v3.js"></script>
+        <title>Graph Explorer</title>
+    </head>
+    <body>
+        <div id="grid">
+            <div id="tree-view" class="grid-item"> Tree View </div>
+            <div id="bird-view" class="grid-item"> Bird View </div>
+            <div id="toolbar" class="grid-item"> Toolbar </div>
+            <div id="main-view" class="grid-item">
+                <svg>
+                    <g id="graph">
+                    </g>
+                </svg>
+                {{ graph | safe }}
+            </div>
+            <div id="cli" class="grid-item"> CLI </div>
+        </div>
+    </body>
+</html>
