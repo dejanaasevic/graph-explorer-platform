@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "graph-xml-data-source"
+version = "0.0.1"
+description = "XML data source plugin for graph visualization"
+dependencies = ["graph-api>=0.0.1"]
+
+[project.entry-points."graph.data_source"]
+xml_data_source = "xml_data_source.xml_data_source:XmlDataSource"
+
+[tool.setuptools.data-files]
+data = ["*.xml"]
