@@ -1,0 +1,2239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GameStudio>
+    <Projects>
+        <Project id="proj-001" name="Stellar Siege" status="In Development">
+            <genre>Sci-Fi Shooter</genre>
+            <budget>8500000</budget>
+            <startDate>15.03.2023.</startDate>
+            <targetPlatform>PC, PS5, Xbox</targetPlatform>
+        </Project>
+        <Project id="proj-002" name="Dragon Realms" status="Pre-production">
+            <genre>Fantasy RPG</genre>
+            <budget>12000000</budget>
+            <startDate>10.01.2024.</startDate>
+            <targetPlatform>PC, Console</targetPlatform>
+        </Project>
+        <Project id="proj-003" name="Neon Racer X" status="In Development">
+            <genre>Racing</genre>
+            <budget>5500000</budget>
+            <startDate>05.06.2023.</startDate>
+            <targetPlatform>Mobile, Switch</targetPlatform>
+        </Project>
+        <Project id="proj-004" name="Mystery Mansion" status="Alpha">
+            <genre>Puzzle Adventure</genre>
+            <budget>3200000</budget>
+            <startDate>20.09.2022.</startDate>
+            <targetPlatform>PC, Mobile</targetPlatform>
+        </Project>
+        <Project id="proj-005" name="Zombie Outbreak" status="In Development">
+            <genre>Survival Horror</genre>
+            <budget>7200000</budget>
+            <startDate>08.11.2023.</startDate>
+            <targetPlatform>PC, PS5</targetPlatform>
+        </Project>
+        <Project id="proj-006" name="Kingdom Builder" status="Beta">
+            <genre>Strategy</genre>
+            <budget>4800000</budget>
+            <startDate>12.02.2023.</startDate>
+            <targetPlatform>PC, Mobile</targetPlatform>
+        </Project>
+        <Project id="proj-007" name="Cyber Heist" status="In Development">
+            <genre>Action Stealth</genre>
+            <budget>6800000</budget>
+            <startDate>25.04.2023.</startDate>
+            <targetPlatform>PC, Xbox</targetPlatform>
+        </Project>
+        <Project id="proj-008" name="Farm Life VR" status="Pre-production">
+            <genre>Simulation</genre>
+            <budget>2900000</budget>
+            <startDate>14.07.2024.</startDate>
+            <targetPlatform>VR</targetPlatform>
+        </Project>
+        <Project id="proj-009" name="Space Traders" status="In Development">
+            <genre>Simulation</genre>
+            <budget>4100000</budget>
+            <startDate>03.10.2023.</startDate>
+            <targetPlatform>PC, Mobile</targetPlatform>
+        </Project>
+        <Project id="proj-010" name="Wizard's Duel" status="Alpha">
+            <genre>Fighting</genre>
+            <budget>3900000</budget>
+            <startDate>19.12.2022.</startDate>
+            <targetPlatform>PC, Console</targetPlatform>
+        </Project>
+        <Project id="proj-011" name="Underwater Quest" status="In Development">
+            <genre>Adventure</genre>
+            <budget>5300000</budget>
+            <startDate>07.05.2023.</startDate>
+            <targetPlatform>Mobile, Switch</targetPlatform>
+        </Project>
+        <Project id="proj-012" name="Alien Invasion" status="Beta">
+            <genre>Shooter</genre>
+            <budget>6300000</budget>
+            <startDate>22.08.2022.</startDate>
+            <targetPlatform>PC, PS5</targetPlatform>
+        </Project>
+        <Project id="proj-013" name="Medieval Wars" status="In Development">
+            <genre>Strategy</genre>
+            <budget>5900000</budget>
+            <startDate>11.01.2024.</startDate>
+            <targetPlatform>PC, Xbox</targetPlatform>
+        </Project>
+        <Project id="proj-014" name="Dance Revolution" status="Pre-production">
+            <genre>Rhythm</genre>
+            <budget>2700000</budget>
+            <startDate>28.02.2024.</startDate>
+            <targetPlatform>Mobile, VR</targetPlatform>
+        </Project>
+        <Project id="proj-015" name="Pirate's Curse" status="Alpha">
+            <genre>Action Adventure</genre>
+            <budget>5800000</budget>
+            <startDate>16.06.2023.</startDate>
+            <targetPlatform>PC, Console</targetPlatform>
+        </Project>
+        <Project id="proj-016" name="Robot Factory" status="In Development">
+            <genre>Puzzle</genre>
+            <budget>3400000</budget>
+            <startDate>04.09.2023.</startDate>
+            <targetPlatform>Mobile, Switch</targetPlatform>
+        </Project>
+        <Project id="proj-017" name="Vampire Hunter" status="Beta">
+            <genre>Action RPG</genre>
+            <budget>6700000</budget>
+            <startDate>13.03.2023.</startDate>
+            <targetPlatform>PC, PS5</targetPlatform>
+        </Project>
+        <Project id="proj-018" name="Construction Sim" status="In Development">
+            <genre>Simulation</genre>
+            <budget>3600000</budget>
+            <startDate>21.07.2023.</startDate>
+            <targetPlatform>PC, Mobile</targetPlatform>
+        </Project>
+        <Project id="proj-019" name="Magic Academy" status="Pre-production">
+            <genre>RPG</genre>
+            <budget>7800000</budget>
+            <startDate>09.10.2023.</startDate>
+            <targetPlatform>PC, Console</targetPlatform>
+        </Project>
+        <Project id="proj-020" name="Jungle Runner" status="In Development">
+            <genre>Platformer</genre>
+            <budget>3100000</budget>
+            <startDate>18.12.2023.</startDate>
+            <targetPlatform>Mobile, Switch</targetPlatform>
+        </Project>
+        <Project id="proj-021" name="Time Traveler" status="Alpha">
+            <genre>Adventure</genre>
+            <budget>4900000</budget>
+            <startDate>27.04.2023.</startDate>
+            <targetPlatform>PC, VR</targetPlatform>
+        </Project>
+        <Project id="proj-022" name="Mythical Creatures" status="In Development">
+            <genre>Collection RPG</genre>
+            <budget>4500000</budget>
+            <startDate>15.08.2023.</startDate>
+            <targetPlatform>Mobile</targetPlatform>
+        </Project>
+    </Projects>
+
+    <Employees>
+        <!-- Cycle 1: emp-001, emp-002, emp-003, emp-004, emp-005, emp-006, emp-007, emp-008, emp-009, emp-010 form a cycle -->
+        <Employee id="emp-001" reportsTo="emp-002" assignedProject="proj-001">
+            <full_name>Sarah Chen</full_name>
+            <role>Lead Designer</role>
+            <salary>125000</salary>
+            <hire_date>12.03.2018.</hire_date>
+            <years_of_experience>12</years_of_experience>
+            <skill_level>9</skill_level>
+        </Employee>
+        <Employee id="emp-002" reportsTo="emp-003" assignedProject="proj-002">
+            <full_name>Michael Rodriguez</full_name>
+            <role>Senior Programmer</role>
+            <salary>118000</salary>
+            <hire_date>05.07.2019.</hire_date>
+            <years_of_experience>8</years_of_experience>
+            <skill_level>8</skill_level>
+        </Employee>
+        <Employee id="emp-003" reportsTo="emp-004" assignedProject="proj-003">
+            <full_name>James Wilson</full_name>
+            <role>Art Director</role>
+            <salary>135000</salary>
+            <hire_date>20.01.2017.</hire_date>
+            <years_of_experience>14</years_of_experience>
+            <skill_level>10</skill_level>
+        </Employee>
+        <Employee id="emp-004" reportsTo="emp-005" assignedProject="proj-004">
+            <full_name>Emily Thompson</full_name>
+            <role>Producer</role>
+            <salary>142000</salary>
+            <hire_date>08.09.2016.</hire_date>
+            <years_of_experience>15</years_of_experience>
+            <skill_level>9</skill_level>
+        </Employee>
+        <Employee id="emp-005" reportsTo="emp-006" assignedProject="proj-005">
+            <full_name>David Kim</full_name>
+            <role>Technical Director</role>
+            <salary>158000</salary>
+            <hire_date>14.11.2015.</hire_date>
+            <years_of_experience>16</years_of_experience>
+            <skill_level>10</skill_level>
+        </Employee>
+        <Employee id="emp-006" reportsTo="emp-007" assignedProject="proj-006">
+            <full_name>Lisa Brown</full_name>
+            <role>QA Lead</role>
+            <salary>98000</salary>
+            <hire_date>22.04.2020.</hire_date>
+            <years_of_experience>6</years_of_experience>
+            <skill_level>7</skill_level>
+        </Employee>
+        <Employee id="emp-007" reportsTo="emp-008" assignedProject="proj-007">
+            <full_name>Robert Taylor</full_name>
+            <role>Game Designer</role>
+            <salary>112000</salary>
+            <hire_date>17.06.2019.</hire_date>
+            <years_of_experience>7</years_of_experience>
+            <skill_level>8</skill_level>
+        </Employee>
+        <Employee id="emp-008" reportsTo="emp-009" assignedProject="proj-008">
+            <full_name>Jennifer Lee</full_name>
+            <role>Sound Designer</role>
+            <salary>95000</salary>
+            <hire_date>09.08.2021.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>7</skill_level>
+        </Employee>
+        <Employee id="emp-009" reportsTo="emp-010" assignedProject="proj-009">
+            <full_name>William Davis</full_name>
+            <role>Network Engineer</role>
+            <salary>108000</salary>
+            <hire_date>03.12.2020.</hire_date>
+            <years_of_experience>5</years_of_experience>
+            <skill_level>6</skill_level>
+        </Employee>
+        <Employee id="emp-010" reportsTo="emp-001" assignedProject="proj-010">
+            <full_name>Maria Garcia</full_name>
+            <role>UI Designer</role>
+            <salary>89000</salary>
+            <hire_date>25.02.2022.</hire_date>
+            <years_of_experience>3</years_of_experience>
+            <skill_level>6</skill_level>
+        </Employee>
+
+        <!-- Cycle 2: emp-011 through emp-020 -->
+        <Employee id="emp-011" reportsTo="emp-012" assignedProject="proj-011">
+            <full_name>Daniel Martinez</full_name>
+            <role>Senior Artist</role>
+            <salary>102000</salary>
+            <hire_date>11.05.2018.</hire_date>
+            <years_of_experience>9</years_of_experience>
+            <skill_level>8</skill_level>
+        </Employee>
+        <Employee id="emp-012" reportsTo="emp-013" assignedProject="proj-012">
+            <full_name>Jessica Anderson</full_name>
+            <role>Game Programmer</role>
+            <salary>115000</salary>
+            <hire_date>19.10.2019.</hire_date>
+            <years_of_experience>6</years_of_experience>
+            <skill_level>7</skill_level>
+        </Employee>
+        <Employee id="emp-013" reportsTo="emp-014" assignedProject="proj-013">
+            <full_name>Thomas White</full_name>
+            <role>Level Designer</role>
+            <salary>97000</salary>
+            <hire_date>07.03.2020.</hire_date>
+            <years_of_experience>5</years_of_experience>
+            <skill_level>6</skill_level>
+        </Employee>
+        <Employee id="emp-014" reportsTo="emp-015" assignedProject="proj-014">
+            <full_name>Patricia Moore</full_name>
+            <role>Marketing Specialist</role>
+            <salary>88000</salary>
+            <hire_date>14.07.2021.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>5</skill_level>
+        </Employee>
+        <Employee id="emp-015" reportsTo="emp-016" assignedProject="proj-015">
+            <full_name>John Jackson</full_name>
+            <role>Community Manager</role>
+            <salary>82000</salary>
+            <hire_date>22.09.2020.</hire_date>
+            <years_of_experience>5</years_of_experience>
+            <skill_level>5</skill_level>
+        </Employee>
+        <Employee id="emp-016" reportsTo="emp-017" assignedProject="proj-016">
+            <full_name>Nancy Martin</full_name>
+            <role>Technical Artist</role>
+            <salary>105000</salary>
+            <hire_date>16.04.2019.</hire_date>
+            <years_of_experience>7</years_of_experience>
+            <skill_level>8</skill_level>
+        </Employee>
+        <Employee id="emp-017" reportsTo="emp-018" assignedProject="proj-017">
+            <full_name>Charles Lee</full_name>
+            <role>AI Programmer</role>
+            <salary>112000</salary>
+            <hire_date>28.11.2018.</hire_date>
+            <years_of_experience>8</years_of_experience>
+            <skill_level>8</skill_level>
+        </Employee>
+        <Employee id="emp-018" reportsTo="emp-019" assignedProject="proj-018">
+            <full_name>Karen Harris</full_name>
+            <role>Animator</role>
+            <salary>94000</salary>
+            <hire_date>05.06.2021.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>7</skill_level>
+        </Employee>
+        <Employee id="emp-019" reportsTo="emp-020" assignedProject="proj-019">
+            <full_name>Steven Clark</full_name>
+            <role>Database Admin</role>
+            <salary>99000</salary>
+            <hire_date>12.02.2020.</hire_date>
+            <years_of_experience>6</years_of_experience>
+            <skill_level>6</skill_level>
+        </Employee>
+        <Employee id="emp-020" reportsTo="emp-011" assignedProject="proj-020">
+            <full_name>Donna Lewis</full_name>
+            <role>Writer</role>
+            <salary>87000</salary>
+            <hire_date>21.08.2022.</hire_date>
+            <years_of_experience>3</years_of_experience>
+            <skill_level>5</skill_level>
+        </Employee>
+
+        <!-- Regular employees (non-cycle) -->
+        <Employee id="emp-021" reportsTo="emp-005" assignedProject="proj-001">
+            <full_name>Kevin Walker</full_name>
+            <role>Programmer</role>
+            <salary>95000</salary>
+            <hire_date>08.03.2021.</hire_date>
+            <years_of_experience>5</years_of_experience>
+            <skill_level>6</skill_level>
+        </Employee>
+        <Employee id="emp-022" reportsTo="emp-005" assignedProject="proj-001">
+            <full_name>Laura Hall</full_name>
+            <role>Programmer</role>
+            <salary>92000</salary>
+            <hire_date>17.07.2020.</hire_date>
+            <years_of_experience>6</years_of_experience>
+            <skill_level>7</skill_level>
+        </Employee>
+        <Employee id="emp-023" reportsTo="emp-004" assignedProject="proj-002">
+            <full_name>Jason Young</full_name>
+            <role>Artist</role>
+            <salary>88000</salary>
+            <hire_date>23.09.2021.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>5</skill_level>
+        </Employee>
+        <Employee id="emp-024" reportsTo="emp-004" assignedProject="proj-002">
+            <full_name>Michelle King</full_name>
+            <role>Artist</role>
+            <salary>89000</salary>
+            <hire_date>14.11.2019.</hire_date>
+            <years_of_experience>6</years_of_experience>
+            <skill_level>7</skill_level>
+        </Employee>
+        <Employee id="emp-025" reportsTo="emp-003" assignedProject="proj-003">
+            <full_name>Gregory Wright</full_name>
+            <role>Sound Engineer</role>
+            <salary>91000</salary>
+            <hire_date>05.04.2020.</hire_date>
+            <years_of_experience>5</years_of_experience>
+            <skill_level>6</skill_level>
+        </Employee>
+        <Employee id="emp-026" reportsTo="emp-003" assignedProject="proj-003">
+            <full_name>Angela Scott</full_name>
+            <role>Composer</role>
+            <salary>97000</salary>
+            <hire_date>19.12.2018.</hire_date>
+            <years_of_experience>7</years_of_experience>
+            <skill_level>8</skill_level>
+        </Employee>
+        <Employee id="emp-027" reportsTo="emp-002" assignedProject="proj-004">
+            <full_name>Frank Green</full_name>
+            <role>QA Tester</role>
+            <salary>72000</salary>
+            <hire_date>11.02.2022.</hire_date>
+            <years_of_experience>3</years_of_experience>
+            <skill_level>4</skill_level>
+        </Employee>
+        <Employee id="emp-028" reportsTo="emp-002" assignedProject="proj-004">
+            <full_name>Rebecca Adams</full_name>
+            <role>QA Tester</role>
+            <salary>71000</salary>
+            <hire_date>28.06.2021.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>4</skill_level>
+        </Employee>
+        <Employee id="emp-029" reportsTo="emp-001" assignedProject="proj-005">
+            <full_name>Edward Baker</full_name>
+            <role>UI Designer</role>
+            <salary>86000</salary>
+            <hire_date>16.03.2020.</hire_date>
+            <years_of_experience>5</years_of_experience>
+            <skill_level>6</skill_level>
+        </Employee>
+        <Employee id="emp-030" reportsTo="emp-001" assignedProject="proj-005">
+            <full_name>Brenda Nelson</full_name>
+            <role>UX Researcher</role>
+            <salary>93000</salary>
+            <hire_date>07.08.2019.</hire_date>
+            <years_of_experience>6</years_of_experience>
+            <skill_level>7</skill_level>
+        </Employee>
+
+        <!-- Add many more employees to reach 200+ -->
+        <!-- emp-031 to emp-050 -->
+        <Employee id="emp-031" reportsTo="emp-008" assignedProject="proj-006">
+            <full_name>Raymond Carter</full_name>
+            <role>Programmer</role>
+            <salary>94000</salary>
+            <hire_date>22.01.2021.</hire_date>
+            <years_of_experience>5</years_of_experience>
+            <skill_level>6</skill_level>
+        </Employee>
+        <Employee id="emp-032" reportsTo="emp-008" assignedProject="proj-006">
+            <full_name>Sharon Mitchell</full_name>
+            <role>Programmer</role>
+            <salary>91000</salary>
+            <hire_date>09.05.2020.</hire_date>
+            <years_of_experience>6</years_of_experience>
+            <skill_level>7</skill_level>
+        </Employee>
+        <Employee id="emp-033" reportsTo="emp-009" assignedProject="proj-007">
+            <full_name>Jerry Perez</full_name>
+            <role>Artist</role>
+            <salary>85000</salary>
+            <hire_date>18.10.2021.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>5</skill_level>
+        </Employee>
+        <Employee id="emp-034" reportsTo="emp-009" assignedProject="proj-007">
+            <full_name>Christina Roberts</full_name>
+            <role>Artist</role>
+            <salary>88000</salary>
+            <hire_date>03.12.2019.</hire_date>
+            <years_of_experience>6</years_of_experience>
+            <skill_level>7</skill_level>
+        </Employee>
+        <Employee id="emp-035" reportsTo="emp-010" assignedProject="proj-008">
+            <full_name>Dennis Turner</full_name>
+            <role>Sound Designer</role>
+            <salary>89000</salary>
+            <hire_date>14.07.2020.</hire_date>
+            <years_of_experience>5</years_of_experience>
+            <skill_level>6</skill_level>
+        </Employee>
+        <Employee id="emp-036" reportsTo="emp-010" assignedProject="proj-008">
+            <full_name>Helen Phillips</full_name>
+            <role>Sound Engineer</role>
+            <salary>92000</salary>
+            <hire_date>27.02.2019.</hire_date>
+            <years_of_experience>7</years_of_experience>
+            <skill_level>8</skill_level>
+        </Employee>
+        <Employee id="emp-037" reportsTo="emp-011" assignedProject="proj-009">
+            <full_name>Ronald Campbell</full_name>
+            <role>QA Tester</role>
+            <salary>70000</salary>
+            <hire_date>06.04.2022.</hire_date>
+            <years_of_experience>2</years_of_experience>
+            <skill_level>3</skill_level>
+        </Employee>
+        <Employee id="emp-038" reportsTo="emp-011" assignedProject="proj-009">
+            <full_name>Donna Parker</full_name>
+            <role>QA Tester</role>
+            <salary>69000</salary>
+            <hire_date>19.08.2021.</hire_date>
+            <years_of_experience>3</years_of_experience>
+            <skill_level>4</skill_level>
+        </Employee>
+        <Employee id="emp-039" reportsTo="emp-012" assignedProject="proj-010">
+            <full_name>Paul Evans</full_name>
+            <role>Technical Writer</role>
+            <salary>78000</salary>
+            <hire_date>11.11.2020.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>5</skill_level>
+        </Employee>
+        <Employee id="emp-040" reportsTo="emp-012" assignedProject="proj-010">
+            <full_name>Carol Edwards</full_name>
+            <role>Documentation Specialist</role>
+            <salary>81000</salary>
+            <hire_date>23.03.2019.</hire_date>
+            <years_of_experience>6</years_of_experience>
+            <skill_level>6</skill_level>
+        </Employee>
+        <Employee id="emp-041" reportsTo="emp-013" assignedProject="proj-011">
+            <full_name>Steven Collins</full_name>
+            <role>Programmer</role>
+            <salary>95000</salary>
+            <hire_date>15.05.2021.</hire_date>
+            <years_of_experience>5</years_of_experience>
+            <skill_level>6</skill_level>
+        </Employee>
+        <Employee id="emp-042" reportsTo="emp-013" assignedProject="proj-011">
+            <full_name>Kenneth Stewart</full_name>
+            <role>Programmer</role>
+            <salary>93000</salary>
+            <hire_date>28.09.2020.</hire_date>
+            <years_of_experience>6</years_of_experience>
+            <skill_level>7</skill_level>
+        </Employee>
+        <Employee id="emp-043" reportsTo="emp-014" assignedProject="proj-012">
+            <full_name>Dorothy Sanchez</full_name>
+            <role>Artist</role>
+            <salary>86000</salary>
+            <hire_date>07.12.2021.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>5</skill_level>
+        </Employee>
+        <Employee id="emp-044" reportsTo="emp-014" assignedProject="proj-012">
+            <full_name>Anthony Morris</full_name>
+            <role>Artist</role>
+            <salary>89000</salary>
+            <hire_date>16.02.2020.</hire_date>
+            <years_of_experience>6</years_of_experience>
+            <skill_level>7</skill_level>
+        </Employee>
+        <Employee id="emp-045" reportsTo="emp-015" assignedProject="proj-013">
+            <full_name>Mark Rogers</full_name>
+            <role>Sound Designer</role>
+            <salary>88000</salary>
+            <hire_date>25.06.2021.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>5</skill_level>
+        </Employee>
+        <Employee id="emp-046" reportsTo="emp-015" assignedProject="proj-013">
+            <full_name>Betty Reed</full_name>
+            <role>Composer</role>
+            <salary>95000</salary>
+            <hire_date>04.10.2019.</hire_date>
+            <years_of_experience>7</years_of_experience>
+            <skill_level>8</skill_level>
+        </Employee>
+        <Employee id="emp-047" reportsTo="emp-016" assignedProject="proj-014">
+            <full_name>Helen Cook</full_name>
+            <role>QA Tester</role>
+            <salary>71000</salary>
+            <hire_date>13.03.2022.</hire_date>
+            <years_of_experience>2</years_of_experience>
+            <skill_level>3</skill_level>
+        </Employee>
+        <Employee id="emp-048" reportsTo="emp-016" assignedProject="proj-014">
+            <full_name>Sandra Morgan</full_name>
+            <role>QA Tester</role>
+            <salary>72000</salary>
+            <hire_date>22.07.2021.</hire_date>
+            <years_of_experience>3</years_of_experience>
+            <skill_level>4</skill_level>
+        </Employee>
+        <Employee id="emp-049" reportsTo="emp-017" assignedProject="proj-015">
+            <full_name>George Bell</full_name>
+            <role>UI Designer</role>
+            <salary>84000</salary>
+            <hire_date>01.09.2020.</hire_date>
+            <years_of_experience>5</years_of_experience>
+            <skill_level>6</skill_level>
+        </Employee>
+        <Employee id="emp-050" reportsTo="emp-017" assignedProject="proj-015">
+            <full_name>Lisa Murphy</full_name>
+            <role>UX Designer</role>
+            <salary>90000</salary>
+            <hire_date>12.11.2018.</hire_date>
+            <years_of_experience>7</years_of_experience>
+            <skill_level>8</skill_level>
+        </Employee>
+
+        <!-- Continue with more employees to reach 200 -->
+        <!-- emp-051 to emp-070 -->
+        <Employee id="emp-051" reportsTo="emp-018" assignedProject="proj-016">
+            <full_name>Timothy Bailey</full_name>
+            <role>Programmer</role>
+            <salary>92000</salary>
+            <hire_date>08.04.2021.</hire_date>
+            <years_of_experience>5</years_of_experience>
+            <skill_level>6</skill_level>
+        </Employee>
+        <Employee id="emp-052" reportsTo="emp-018" assignedProject="proj-016">
+            <full_name>Nancy Rivera</full_name>
+            <role>Programmer</role>
+            <salary>94000</salary>
+            <hire_date>17.08.2020.</hire_date>
+            <years_of_experience>6</years_of_experience>
+            <skill_level>7</skill_level>
+        </Employee>
+        <Employee id="emp-053" reportsTo="emp-019" assignedProject="proj-017">
+            <full_name>Jeffrey Cooper</full_name>
+            <role>Artist</role>
+            <salary>87000</salary>
+            <hire_date>26.10.2021.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>5</skill_level>
+        </Employee>
+        <Employee id="emp-054" reportsTo="emp-019" assignedProject="proj-017">
+            <full_name>Amy Richardson</full_name>
+            <role>Artist</role>
+            <salary>88000</salary>
+            <hire_date>05.12.2019.</hire_date>
+            <years_of_experience>6</years_of_experience>
+            <skill_level>7</skill_level>
+        </Employee>
+        <Employee id="emp-055" reportsTo="emp-020" assignedProject="proj-018">
+            <full_name>Jacob Cox</full_name>
+            <role>Sound Designer</role>
+            <salary>89000</salary>
+            <hire_date>14.02.2021.</hire_date>
+            <years_of_experience>5</years_of_experience>
+            <skill_level>6</skill_level>
+        </Employee>
+        <Employee id="emp-056" reportsTo="emp-020" assignedProject="proj-018">
+            <full_name>Ruth Howard</full_name>
+            <role>Sound Engineer</role>
+            <salary>93000</salary>
+            <hire_date>23.05.2020.</hire_date>
+            <years_of_experience>6</years_of_experience>
+            <skill_level>7</skill_level>
+        </Employee>
+        <Employee id="emp-057" reportsTo="emp-021" assignedProject="proj-019">
+            <full_name>Brian Ward</full_name>
+            <role>QA Tester</role>
+            <salary>70000</salary>
+            <hire_date>01.07.2022.</hire_date>
+            <years_of_experience>2</years_of_experience>
+            <skill_level>3</skill_level>
+        </Employee>
+        <Employee id="emp-058" reportsTo="emp-021" assignedProject="proj-019">
+            <full_name>Diane Torres</full_name>
+            <role>QA Tester</role>
+            <salary>71000</salary>
+            <hire_date>10.09.2021.</hire_date>
+            <years_of_experience>3</years_of_experience>
+            <skill_level>4</skill_level>
+        </Employee>
+        <Employee id="emp-059" reportsTo="emp-022" assignedProject="proj-020">
+            <full_name>Gary Peterson</full_name>
+            <role>Technical Artist</role>
+            <salary>95000</salary>
+            <hire_date>19.11.2019.</hire_date>
+            <years_of_experience>6</years_of_experience>
+            <skill_level>7</skill_level>
+        </Employee>
+        <Employee id="emp-060" reportsTo="emp-022" assignedProject="proj-020">
+            <full_name>Janet Gray</full_name>
+            <role>Technical Artist</role>
+            <salary>97000</salary>
+            <hire_date>28.03.2020.</hire_date>
+            <years_of_experience>5</years_of_experience>
+            <skill_level>6</skill_level>
+        </Employee>
+        <Employee id="emp-061" reportsTo="emp-023" assignedProject="proj-001">
+            <full_name>Lawrence Ramirez</full_name>
+            <role>Programmer</role>
+            <salary>93000</salary>
+            <hire_date>06.06.2021.</hire_date>
+            <years_of_experience>5</years_of_experience>
+            <skill_level>6</skill_level>
+        </Employee>
+        <Employee id="emp-062" reportsTo="emp-023" assignedProject="proj-001">
+            <full_name>Alice Foster</full_name>
+            <role>Programmer</role>
+            <salary>94000</salary>
+            <hire_date>15.08.2020.</hire_date>
+            <years_of_experience>6</years_of_experience>
+            <skill_level>7</skill_level>
+        </Employee>
+        <Employee id="emp-063" reportsTo="emp-024" assignedProject="proj-002">
+            <full_name>Ann Butler</full_name>
+            <role>Artist</role>
+            <salary>86000</salary>
+            <hire_date>24.10.2021.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>5</skill_level>
+        </Employee>
+        <Employee id="emp-064" reportsTo="emp-024" assignedProject="proj-002">
+            <full_name>Ryan Barnes</full_name>
+            <role>Artist</role>
+            <salary>89000</salary>
+            <hire_date>03.12.2019.</hire_date>
+            <years_of_experience>6</years_of_experience>
+            <skill_level>7</skill_level>
+        </Employee>
+        <Employee id="emp-065" reportsTo="emp-025" assignedProject="proj-003">
+            <full_name>Katherine Ross</full_name>
+            <role>Sound Designer</role>
+            <salary>88000</salary>
+            <hire_date>12.02.2021.</hire_date>
+            <years_of_experience>5</years_of_experience>
+            <skill_level>6</skill_level>
+        </Employee>
+        <Employee id="emp-066" reportsTo="emp-025" assignedProject="proj-003">
+            <full_name>Bruce Henderson</full_name>
+            <role>Sound Engineer</role>
+            <salary>92000</salary>
+            <hire_date>21.05.2020.</hire_date>
+            <years_of_experience>6</years_of_experience>
+            <skill_level>7</skill_level>
+        </Employee>
+        <Employee id="emp-067" reportsTo="emp-026" assignedProject="proj-004">
+            <full_name>Judy Coleman</full_name>
+            <role>QA Tester</role>
+            <salary>69000</salary>
+            <hire_date>30.06.2022.</hire_date>
+            <years_of_experience>2</years_of_experience>
+            <skill_level>3</skill_level>
+        </Employee>
+        <Employee id="emp-068" reportsTo="emp-026" assignedProject="proj-004">
+            <full_name>Billy Jenkins</full_name>
+            <role>QA Tester</role>
+            <salary>70000</salary>
+            <hire_date>09.08.2021.</hire_date>
+            <years_of_experience>3</years_of_experience>
+            <skill_level>4</skill_level>
+        </Employee>
+        <Employee id="emp-069" reportsTo="emp-027" assignedProject="proj-005">
+            <full_name>Andrea Perry</full_name>
+            <role>UI Designer</role>
+            <salary>85000</salary>
+            <hire_date>18.09.2020.</hire_date>
+            <years_of_experience>5</years_of_experience>
+            <skill_level>6</skill_level>
+        </Employee>
+        <Employee id="emp-070" reportsTo="emp-027" assignedProject="proj-005">
+            <full_name>Martha Powell</full_name>
+            <role>UX Designer</role>
+            <salary>89000</salary>
+            <hire_date>27.11.2018.</hire_date>
+            <years_of_experience>7</years_of_experience>
+            <skill_level>8</skill_level>
+        </Employee>
+
+        <!-- Continue adding employees to reach 200+ -->
+        <!-- emp-071 to emp-090 -->
+        <Employee id="emp-071" reportsTo="emp-028" assignedProject="proj-006">
+            <full_name>Roy Long</full_name>
+            <role>Programmer</role>
+            <salary>93000</salary>
+            <hire_date>05.01.2021.</hire_date>
+            <years_of_experience>5</years_of_experience>
+            <skill_level>6</skill_level>
+        </Employee>
+        <Employee id="emp-072" reportsTo="emp-028" assignedProject="proj-006">
+            <full_name>Janice Patterson</full_name>
+            <role>Programmer</role>
+            <salary>94000</salary>
+            <hire_date>14.04.2020.</hire_date>
+            <years_of_experience>6</years_of_experience>
+            <skill_level>7</skill_level>
+        </Employee>
+        <Employee id="emp-073" reportsTo="emp-029" assignedProject="proj-007">
+            <full_name>Kelly Hughes</full_name>
+            <role>Artist</role>
+            <salary>86000</salary>
+            <hire_date>23.07.2021.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>5</skill_level>
+        </Employee>
+        <Employee id="emp-074" reportsTo="emp-029" assignedProject="proj-007">
+            <full_name>Howard Flores</full_name>
+            <role>Artist</role>
+            <salary>87000</salary>
+            <hire_date>01.09.2019.</hire_date>
+            <years_of_experience>6</years_of_experience>
+            <skill_level>7</skill_level>
+        </Employee>
+        <Employee id="emp-075" reportsTo="emp-030" assignedProject="proj-008">
+            <full_name>Christine Washington</full_name>
+            <role>Sound Designer</role>
+            <salary>88000</salary>
+            <hire_date>10.10.2020.</hire_date>
+            <years_of_experience>5</years_of_experience>
+            <skill_level>6</skill_level>
+        </Employee>
+        <Employee id="emp-076" reportsTo="emp-030" assignedProject="proj-008">
+            <full_name>Carlos Butler</full_name>
+            <role>Sound Engineer</role>
+            <salary>91000</salary>
+            <hire_date>19.12.2019.</hire_date>
+            <years_of_experience>6</years_of_experience>
+            <skill_level>7</skill_level>
+        </Employee>
+        <Employee id="emp-077" reportsTo="emp-031" assignedProject="proj-009">
+            <full_name>Shawn Simmons</full_name>
+            <role>QA Tester</role>
+            <salary>70000</salary>
+            <hire_date>28.02.2022.</hire_date>
+            <years_of_experience>2</years_of_experience>
+            <skill_level>3</skill_level>
+        </Employee>
+        <Employee id="emp-078" reportsTo="emp-031" assignedProject="proj-009">
+            <full_name>Julie Foster</full_name>
+            <role>QA Tester</role>
+            <salary>71000</salary>
+            <hire_date>07.05.2021.</hire_date>
+            <years_of_experience>3</years_of_experience>
+            <skill_level>4</skill_level>
+        </Employee>
+        <Employee id="emp-079" reportsTo="emp-032" assignedProject="proj-010">
+            <full_name>Russell Gonzales</full_name>
+            <role>Technical Artist</role>
+            <salary>94000</salary>
+            <hire_date>16.06.2020.</hire_date>
+            <years_of_experience>5</years_of_experience>
+            <skill_level>6</skill_level>
+        </Employee>
+        <Employee id="emp-080" reportsTo="emp-032" assignedProject="proj-010">
+            <full_name>Evelyn Bryant</full_name>
+            <role>Technical Artist</role>
+            <salary>96000</salary>
+            <hire_date>25.08.2019.</hire_date>
+            <years_of_experience>7</years_of_experience>
+            <skill_level>8</skill_level>
+        </Employee>
+        <Employee id="emp-081" reportsTo="emp-033" assignedProject="proj-011">
+            <full_name>Albert Alexander</full_name>
+            <role>Programmer</role>
+            <salary>92000</salary>
+            <hire_date>03.10.2021.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>5</skill_level>
+        </Employee>
+        <Employee id="emp-082" reportsTo="emp-033" assignedProject="proj-011">
+            <full_name>Geraldine Russell</full_name>
+            <role>Programmer</role>
+            <salary>94000</salary>
+            <hire_date>12.11.2020.</hire_date>
+            <years_of_experience>5</years_of_experience>
+            <skill_level>6</skill_level>
+        </Employee>
+        <Employee id="emp-083" reportsTo="emp-034" assignedProject="proj-012">
+            <full_name>Lois Griffin</full_name>
+            <role>Artist</role>
+            <salary>85000</salary>
+            <hire_date>21.12.2021.</hire_date>
+            <years_of_experience>3</years_of_experience>
+            <skill_level>4</skill_level>
+        </Employee>
+        <Employee id="emp-084" reportsTo="emp-034" assignedProject="proj-012">
+            <full_name>Eugene Diaz</full_name>
+            <role>Artist</role>
+            <salary>88000</salary>
+            <hire_date>30.01.2020.</hire_date>
+            <years_of_experience>5</years_of_experience>
+            <skill_level>6</skill_level>
+        </Employee>
+        <Employee id="emp-085" reportsTo="emp-035" assignedProject="proj-013">
+            <full_name>Phyllis Hayes</full_name>
+            <role>Sound Designer</role>
+            <salary>87000</salary>
+            <hire_date>08.03.2021.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>5</skill_level>
+        </Employee>
+        <Employee id="emp-086" reportsTo="emp-035" assignedProject="proj-013">
+            <full_name>Ralph Myers</full_name>
+            <role>Sound Engineer</role>
+            <salary>90000</salary>
+            <hire_date>17.04.2020.</hire_date>
+            <years_of_experience>5</years_of_experience>
+            <skill_level>6</skill_level>
+        </Employee>
+        <Employee id="emp-087" reportsTo="emp-036" assignedProject="proj-014">
+            <full_name>Norma Ford</full_name>
+            <role>QA Tester</role>
+            <salary>69000</salary>
+            <hire_date>26.05.2022.</hire_date>
+            <years_of_experience>1</years_of_experience>
+            <skill_level>2</skill_level>
+        </Employee>
+        <Employee id="emp-088" reportsTo="emp-036" assignedProject="proj-014">
+            <full_name>Carl Hamilton</full_name>
+            <role>QA Tester</role>
+            <salary>70000</salary>
+            <hire_date>04.07.2021.</hire_date>
+            <years_of_experience>2</years_of_experience>
+            <skill_level>3</skill_level>
+        </Employee>
+        <Employee id="emp-089" reportsTo="emp-037" assignedProject="proj-015">
+            <full_name>Tina Graham</full_name>
+            <role>UI Designer</role>
+            <salary>83000</salary>
+            <hire_date>13.08.2020.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>5</skill_level>
+        </Employee>
+        <Employee id="emp-090" reportsTo="emp-037" assignedProject="proj-015">
+            <full_name>Wayne Sullivan</full_name>
+            <role>UX Designer</role>
+            <salary>87000</salary>
+            <hire_date>22.09.2019.</hire_date>
+            <years_of_experience>5</years_of_experience>
+            <skill_level>6</skill_level>
+        </Employee>
+
+        <!-- Continue adding employees to reach 200+ -->
+        <!-- emp-091 to emp-110 -->
+        <Employee id="emp-091" reportsTo="emp-038" assignedProject="proj-016">
+            <full_name>Lillian Wallace</full_name>
+            <role>Programmer</role>
+            <salary>91000</salary>
+            <hire_date>01.10.2021.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>5</skill_level>
+        </Employee>
+        <Employee id="emp-092" reportsTo="emp-038" assignedProject="proj-016">
+            <full_name>Glenn Woods</full_name>
+            <role>Programmer</role>
+            <salary>93000</salary>
+            <hire_date>10.11.2020.</hire_date>
+            <years_of_experience>5</years_of_experience>
+            <skill_level>6</skill_level>
+        </Employee>
+        <Employee id="emp-093" reportsTo="emp-039" assignedProject="proj-017">
+            <full_name>Jean Cole</full_name>
+            <role>Artist</role>
+            <salary>84000</salary>
+            <hire_date>19.12.2021.</hire_date>
+            <years_of_experience>3</years_of_experience>
+            <skill_level>4</skill_level>
+        </Employee>
+        <Employee id="emp-094" reportsTo="emp-039" assignedProject="proj-017">
+            <full_name>Harry West</full_name>
+            <role>Artist</role>
+            <salary>86000</salary>
+            <hire_date>28.01.2020.</hire_date>
+            <years_of_experience>5</years_of_experience>
+            <skill_level>6</skill_level>
+        </Employee>
+        <Employee id="emp-095" reportsTo="emp-040" assignedProject="proj-018">
+            <full_name>Doris Jordan</full_name>
+            <role>Sound Designer</role>
+            <salary>86000</salary>
+            <hire_date>06.03.2021.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>5</skill_level>
+        </Employee>
+        <Employee id="emp-096" reportsTo="emp-040" assignedProject="proj-018">
+            <full_name>Peter Owens</full_name>
+            <role>Sound Engineer</role>
+            <salary>89000</salary>
+            <hire_date>15.04.2020.</hire_date>
+            <years_of_experience>5</years_of_experience>
+            <skill_level>6</skill_level>
+        </Employee>
+        <Employee id="emp-097" reportsTo="emp-041" assignedProject="proj-019">
+            <full_name>Marie Reynolds</full_name>
+            <role>QA Tester</role>
+            <salary>68000</salary>
+            <hire_date>24.05.2022.</hire_date>
+            <years_of_experience>1</years_of_experience>
+            <skill_level>2</skill_level>
+        </Employee>
+        <Employee id="emp-098" reportsTo="emp-041" assignedProject="proj-019">
+            <full_name>Ernest Fisher</full_name>
+            <role>QA Tester</role>
+            <salary>69000</salary>
+            <hire_date>02.07.2021.</hire_date>
+            <years_of_experience>2</years_of_experience>
+            <skill_level>3</skill_level>
+        </Employee>
+        <Employee id="emp-099" reportsTo="emp-042" assignedProject="proj-020">
+            <full_name>Joyce Ellis</full_name>
+            <role>Technical Artist</role>
+            <salary>93000</salary>
+            <hire_date>11.08.2020.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>5</skill_level>
+        </Employee>
+        <Employee id="emp-100" reportsTo="emp-042" assignedProject="proj-020">
+            <full_name>Lawrence Harrison</full_name>
+            <role>Technical Artist</role>
+            <salary>95000</salary>
+            <hire_date>20.09.2019.</hire_date>
+            <years_of_experience>6</years_of_experience>
+            <skill_level>7</skill_level>
+        </Employee>
+
+        <!-- Continue adding employees to reach 200+ -->
+        <!-- emp-101 to emp-150 (summarized for brevity but included in count) -->
+        <Employee id="emp-101" reportsTo="emp-001" assignedProject="proj-001">
+            <full_name>Victor Murray</full_name>
+            <role>Programmer</role>
+            <salary>92000</salary>
+            <hire_date>15.01.2020.</hire_date>
+            <years_of_experience>5</years_of_experience>
+            <skill_level>6</skill_level>
+        </Employee>
+        <Employee id="emp-102" reportsTo="emp-002" assignedProject="proj-002">
+            <full_name>Victoria Freeman</full_name>
+            <role>Programmer</role>
+            <salary>94000</salary>
+            <hire_date>22.03.2019.</hire_date>
+            <years_of_experience>6</years_of_experience>
+            <skill_level>7</skill_level>
+        </Employee>
+        <Employee id="emp-103" reportsTo="emp-003" assignedProject="proj-003">
+            <full_name>Russell Wells</full_name>
+            <role>Artist</role>
+            <salary>86000</salary>
+            <hire_date>18.05.2021.</hire_date>
+            <years_of_experience>3</years_of_experience>
+            <skill_level>4</skill_level>
+        </Employee>
+        <Employee id="emp-104" reportsTo="emp-004" assignedProject="proj-004">
+            <full_name>Ruby Warren</full_name>
+            <role>Artist</role>
+            <salary>87000</salary>
+            <hire_date>07.07.2020.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>5</skill_level>
+        </Employee>
+        <Employee id="emp-105" reportsTo="emp-005" assignedProject="proj-005">
+            <full_name>Alan Tucker</full_name>
+            <role>Sound Designer</role>
+            <salary>85000</salary>
+            <hire_date>26.08.2019.</hire_date>
+            <years_of_experience>5</years_of_experience>
+            <skill_level>6</skill_level>
+        </Employee>
+        <!-- Continue pattern to reach 200 employees -->
+        <Employee id="emp-106" reportsTo="emp-006" assignedProject="proj-006">
+            <full_name>Bonnie Hunter</full_name>
+            <role>Sound Engineer</role>
+            <salary>88000</salary>
+            <hire_date>14.09.2020.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>5</skill_level>
+        </Employee>
+        <Employee id="emp-107" reportsTo="emp-007" assignedProject="proj-007">
+            <full_name>Jimmy Arnold</full_name>
+            <role>QA Tester</role>
+            <salary>69000</salary>
+            <hire_date>03.10.2021.</hire_date>
+            <years_of_experience>2</years_of_experience>
+            <skill_level>3</skill_level>
+        </Employee>
+        <Employee id="emp-108" reportsTo="emp-008" assignedProject="proj-008">
+            <full_name>Debra Spencer</full_name>
+            <role>QA Tester</role>
+            <salary>70000</salary>
+            <hire_date>22.11.2020.</hire_date>
+            <years_of_experience>3</years_of_experience>
+            <skill_level>4</skill_level>
+        </Employee>
+        <Employee id="emp-109" reportsTo="emp-009" assignedProject="proj-009">
+            <full_name>Terry Daniels</full_name>
+            <role>UI Designer</role>
+            <salary>84000</salary>
+            <hire_date>11.12.2019.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>5</skill_level>
+        </Employee>
+        <Employee id="emp-110" reportsTo="emp-010" assignedProject="proj-010">
+            <full_name>Catherine Price</full_name>
+            <role>UX Designer</role>
+            <salary>88000</salary>
+            <hire_date>30.01.2021.</hire_date>
+            <years_of_experience>3</years_of_experience>
+            <skill_level>4</skill_level>
+        </Employee>
+        <!-- Add more employees up to 200+ -->
+        <!-- emp-111 to emp-200 -->
+        <Employee id="emp-111" reportsTo="emp-011" assignedProject="proj-011">
+            <full_name>Samuel Boyd</full_name>
+            <role>Programmer</role>
+            <salary>91000</salary>
+            <hire_date>18.02.2020.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>5</skill_level>
+        </Employee>
+        <Employee id="emp-112" reportsTo="emp-012" assignedProject="proj-012">
+            <full_name>Diana Stone</full_name>
+            <role>Programmer</role>
+            <salary>93000</salary>
+            <hire_date>07.03.2019.</hire_date>
+            <years_of_experience>5</years_of_experience>
+            <skill_level>6</skill_level>
+        </Employee>
+        <Employee id="emp-113" reportsTo="emp-013" assignedProject="proj-013">
+            <full_name>Benjamin Oliver</full_name>
+            <role>Artist</role>
+            <salary>85000</salary>
+            <hire_date>26.04.2021.</hire_date>
+            <years_of_experience>2</years_of_experience>
+            <skill_level>3</skill_level>
+        </Employee>
+        <Employee id="emp-114" reportsTo="emp-014" assignedProject="proj-014">
+            <full_name>Mildred Fox</full_name>
+            <role>Artist</role>
+            <salary>86000</salary>
+            <hire_date>15.05.2020.</hire_date>
+            <years_of_experience>3</years_of_experience>
+            <skill_level>4</skill_level>
+        </Employee>
+        <Employee id="emp-115" reportsTo="emp-015" assignedProject="proj-015">
+            <full_name>Clarence Riley</full_name>
+            <role>Sound Designer</role>
+            <salary>84000</salary>
+            <hire_date>04.06.2019.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>5</skill_level>
+        </Employee>
+        <Employee id="emp-116" reportsTo="emp-016" assignedProject="proj-016">
+            <full_name>Marilyn Payne</full_name>
+            <role>Sound Engineer</role>
+            <salary>87000</salary>
+            <hire_date>23.07.2020.</hire_date>
+            <years_of_experience>3</years_of_experience>
+            <skill_level>4</skill_level>
+        </Employee>
+        <Employee id="emp-117" reportsTo="emp-017" assignedProject="proj-017">
+            <full_name>Johnnie Berry</full_name>
+            <role>QA Tester</role>
+            <salary>68000</salary>
+            <hire_date>12.08.2021.</hire_date>
+            <years_of_experience>2</years_of_experience>
+            <skill_level>3</skill_level>
+        </Employee>
+        <Employee id="emp-118" reportsTo="emp-018" assignedProject="proj-018">
+            <full_name>Annie Matthews</full_name>
+            <role>QA Tester</role>
+            <salary>69000</salary>
+            <hire_date>01.09.2020.</hire_date>
+            <years_of_experience>3</years_of_experience>
+            <skill_level>4</skill_level>
+        </Employee>
+        <Employee id="emp-119" reportsTo="emp-019" assignedProject="proj-019">
+            <full_name>Jon Arnold</full_name>
+            <role>Technical Artist</role>
+            <salary>92000</salary>
+            <hire_date>20.10.2019.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>5</skill_level>
+        </Employee>
+        <Employee id="emp-120" reportsTo="emp-020" assignedProject="proj-020">
+            <full_name>Beverly Wagner</full_name>
+            <role>Technical Artist</role>
+            <salary>94000</salary>
+            <hire_date>09.11.2020.</hire_date>
+            <years_of_experience>3</years_of_experience>
+            <skill_level>4</skill_level>
+        </Employee>
+        <!-- Continue pattern to reach 200 -->
+        <Employee id="emp-121" reportsTo="emp-021" assignedProject="proj-001">
+            <full_name>Frederick Willis</full_name>
+            <role>Programmer</role>
+            <salary>90000</salary>
+            <hire_date>28.12.2019.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>5</skill_level>
+        </Employee>
+        <Employee id="emp-122" reportsTo="emp-022" assignedProject="proj-002">
+            <full_name>Ella Ray</full_name>
+            <role>Programmer</role>
+            <salary>92000</salary>
+            <hire_date>16.01.2021.</hire_date>
+            <years_of_experience>3</years_of_experience>
+            <skill_level>4</skill_level>
+        </Employee>
+        <Employee id="emp-123" reportsTo="emp-023" assignedProject="proj-003">
+            <full_name>Glen Watkins</full_name>
+            <role>Artist</role>
+            <salary>83000</salary>
+            <hire_date>05.02.2020.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>5</skill_level>
+        </Employee>
+        <Employee id="emp-124" reportsTo="emp-024" assignedProject="proj-004">
+            <full_name>Lynn Olson</full_name>
+            <role>Artist</role>
+            <salary>84000</salary>
+            <hire_date>24.03.2019.</hire_date>
+            <years_of_experience>5</years_of_experience>
+            <skill_level>6</skill_level>
+        </Employee>
+        <Employee id="emp-125" reportsTo="emp-025" assignedProject="proj-005">
+            <full_name>Eddie Carroll</full_name>
+            <role>Sound Designer</role>
+            <salary>82000</salary>
+            <hire_date>13.04.2021.</hire_date>
+            <years_of_experience>2</years_of_experience>
+            <skill_level>3</skill_level>
+        </Employee>
+        <Employee id="emp-126" reportsTo="emp-026" assignedProject="proj-006">
+            <full_name>Micheal Duncan</full_name>
+            <role>Sound Engineer</role>
+            <salary>85000</salary>
+            <hire_date>02.05.2020.</hire_date>
+            <years_of_experience>3</years_of_experience>
+            <skill_level>4</skill_level>
+        </Employee>
+        <Employee id="emp-127" reportsTo="emp-027" assignedProject="proj-007">
+            <full_name>Melanie Snyder</full_name>
+            <role>QA Tester</role>
+            <salary>67000</salary>
+            <hire_date>21.06.2021.</hire_date>
+            <years_of_experience>2</years_of_experience>
+            <skill_level>3</skill_level>
+        </Employee>
+        <Employee id="emp-128" reportsTo="emp-028" assignedProject="proj-008">
+            <full_name>Rodney Wells</full_name>
+            <role>QA Tester</role>
+            <salary>68000</salary>
+            <hire_date>10.07.2020.</hire_date>
+            <years_of_experience>3</years_of_experience>
+            <skill_level>4</skill_level>
+        </Employee>
+        <Employee id="emp-129" reportsTo="emp-029" assignedProject="proj-009">
+            <full_name>Hazel Dunn</full_name>
+            <role>UI Designer</role>
+            <salary>82000</salary>
+            <hire_date>29.08.2019.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>5</skill_level>
+        </Employee>
+        <Employee id="emp-130" reportsTo="emp-030" assignedProject="proj-010">
+            <full_name>Marshall Pierce</full_name>
+            <role>UX Designer</role>
+            <salary>85000</salary>
+            <hire_date>17.09.2020.</hire_date>
+            <years_of_experience>3</years_of_experience>
+            <skill_level>4</skill_level>
+        </Employee>
+        <Employee id="emp-131" reportsTo="emp-031" assignedProject="proj-011">
+            <full_name>Marian Wallace</full_name>
+            <role>Programmer</role>
+            <salary>89000</salary>
+            <hire_date>06.10.2019.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>5</skill_level>
+        </Employee>
+        <Employee id="emp-132" reportsTo="emp-032" assignedProject="proj-012">
+            <full_name>Maxine Cole</full_name>
+            <role>Programmer</role>
+            <salary>91000</salary>
+            <hire_date>25.11.2020.</hire_date>
+            <years_of_experience>3</years_of_experience>
+            <skill_level>4</skill_level>
+        </Employee>
+        <Employee id="emp-133" reportsTo="emp-033" assignedProject="proj-013">
+            <full_name>Clifton Hayes</full_name>
+            <role>Artist</role>
+            <salary>82000</salary>
+            <hire_date>14.12.2019.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>5</skill_level>
+        </Employee>
+        <Employee id="emp-134" reportsTo="emp-034" assignedProject="proj-014">
+            <full_name>Gwendolyn Mitchell</full_name>
+            <role>Artist</role>
+            <salary>83000</salary>
+            <hire_date>03.01.2021.</hire_date>
+            <years_of_experience>3</years_of_experience>
+            <skill_level>4</skill_level>
+        </Employee>
+        <Employee id="emp-135" reportsTo="emp-035" assignedProject="proj-015">
+            <full_name>Raul Berry</full_name>
+            <role>Sound Designer</role>
+            <salary>80000</salary>
+            <hire_date>22.02.2020.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>5</skill_level>
+        </Employee>
+        <Employee id="emp-136" reportsTo="emp-036" assignedProject="proj-016">
+            <full_name>Johanna Matthews</full_name>
+            <role>Sound Engineer</role>
+            <salary>83000</salary>
+            <hire_date>11.03.2019.</hire_date>
+            <years_of_experience>5</years_of_experience>
+            <skill_level>6</skill_level>
+        </Employee>
+        <Employee id="emp-137" reportsTo="emp-037" assignedProject="proj-017">
+            <full_name>Greg Wagner</full_name>
+            <role>QA Tester</role>
+            <salary>66000</salary>
+            <hire_date>30.04.2021.</hire_date>
+            <years_of_experience>2</years_of_experience>
+            <skill_level>3</skill_level>
+        </Employee>
+        <Employee id="emp-138" reportsTo="emp-038" assignedProject="proj-018">
+            <full_name>Jody Willis</full_name>
+            <role>QA Tester</role>
+            <salary>67000</salary>
+            <hire_date>19.05.2020.</hire_date>
+            <years_of_experience>3</years_of_experience>
+            <skill_level>4</skill_level>
+        </Employee>
+        <Employee id="emp-139" reportsTo="emp-039" assignedProject="proj-019">
+            <full_name>Jeanne Ray</full_name>
+            <role>Technical Artist</role>
+            <salary>90000</salary>
+            <hire_date>08.06.2019.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>5</skill_level>
+        </Employee>
+        <Employee id="emp-140" reportsTo="emp-040" assignedProject="proj-020">
+            <full_name>Darrell Watkins</full_name>
+            <role>Technical Artist</role>
+            <salary>92000</salary>
+            <hire_date>27.07.2020.</hire_date>
+            <years_of_experience>3</years_of_experience>
+            <skill_level>4</skill_level>
+        </Employee>
+        <Employee id="emp-141" reportsTo="emp-041" assignedProject="proj-001">
+            <full_name>Leroy Olson</full_name>
+            <role>Programmer</role>
+            <salary>88000</salary>
+            <hire_date>16.08.2019.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>5</skill_level>
+        </Employee>
+        <Employee id="emp-142" reportsTo="emp-042" assignedProject="proj-002">
+            <full_name>Wilma Carroll</full_name>
+            <role>Programmer</role>
+            <salary>90000</salary>
+            <hire_date>05.09.2020.</hire_date>
+            <years_of_experience>3</years_of_experience>
+            <skill_level>4</skill_level>
+        </Employee>
+        <Employee id="emp-143" reportsTo="emp-043" assignedProject="proj-003">
+            <full_name>Joey Duncan</full_name>
+            <role>Artist</role>
+            <salary>81000</salary>
+            <hire_date>24.10.2019.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>5</skill_level>
+        </Employee>
+        <Employee id="emp-144" reportsTo="emp-044" assignedProject="proj-004">
+            <full_name>Mae Snyder</full_name>
+            <role>Artist</role>
+            <salary>82000</salary>
+            <hire_date>13.11.2020.</hire_date>
+            <years_of_experience>3</years_of_experience>
+            <skill_level>4</skill_level>
+        </Employee>
+        <Employee id="emp-145" reportsTo="emp-045" assignedProject="proj-005">
+            <full_name>Lee Wells</full_name>
+            <role>Sound Designer</role>
+            <salary>79000</salary>
+            <hire_date>02.12.2019.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>5</skill_level>
+        </Employee>
+        <Employee id="emp-146" reportsTo="emp-046" assignedProject="proj-006">
+            <full_name>Guy Dunn</full_name>
+            <role>Sound Engineer</role>
+            <salary>82000</salary>
+            <hire_date>21.01.2021.</hire_date>
+            <years_of_experience>3</years_of_experience>
+            <skill_level>4</skill_level>
+        </Employee>
+        <Employee id="emp-147" reportsTo="emp-047" assignedProject="proj-007">
+            <full_name>Glenda Pierce</full_name>
+            <role>QA Tester</role>
+            <salary>65000</salary>
+            <hire_date>10.02.2020.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>5</skill_level>
+        </Employee>
+        <Employee id="emp-148" reportsTo="emp-048" assignedProject="proj-008">
+            <full_name>Nina Wallace</full_name>
+            <role>QA Tester</role>
+            <salary>66000</salary>
+            <hire_date>29.03.2019.</hire_date>
+            <years_of_experience>5</years_of_experience>
+            <skill_level>6</skill_level>
+        </Employee>
+        <Employee id="emp-149" reportsTo="emp-049" assignedProject="proj-009">
+            <full_name>Dwayne Cole</full_name>
+            <role>UI Designer</role>
+            <salary>80000</salary>
+            <hire_date>18.04.2021.</hire_date>
+            <years_of_experience>2</years_of_experience>
+            <skill_level>3</skill_level>
+        </Employee>
+        <Employee id="emp-150" reportsTo="emp-050" assignedProject="proj-010">
+            <full_name>Elsie Hayes</full_name>
+            <role>UX Designer</role>
+            <salary>83000</salary>
+            <hire_date>07.05.2020.</hire_date>
+            <years_of_experience>3</years_of_experience>
+            <skill_level>4</skill_level>
+        </Employee>
+        <Employee id="emp-151" reportsTo="emp-051" assignedProject="proj-011">
+            <full_name>Homer Mitchell</full_name>
+            <role>Programmer</role>
+            <salary>87000</salary>
+            <hire_date>26.06.2019.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>5</skill_level>
+        </Employee>
+        <Employee id="emp-152" reportsTo="emp-052" assignedProject="proj-012">
+            <full_name>Rosemary Berry</full_name>
+            <role>Programmer</role>
+            <salary>89000</salary>
+            <hire_date>15.07.2020.</hire_date>
+            <years_of_experience>3</years_of_experience>
+            <skill_level>4</skill_level>
+        </Employee>
+        <Employee id="emp-153" reportsTo="emp-053" assignedProject="proj-013">
+            <full_name>Lorenzo Matthews</full_name>
+            <role>Artist</role>
+            <salary>80000</salary>
+            <hire_date>04.08.2019.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>5</skill_level>
+        </Employee>
+        <Employee id="emp-154" reportsTo="emp-054" assignedProject="proj-014">
+            <full_name>Miriam Wagner</full_name>
+            <role>Artist</role>
+            <salary>81000</salary>
+            <hire_date>23.09.2020.</hire_date>
+            <years_of_experience>3</years_of_experience>
+            <skill_level>4</skill_level>
+        </Employee>
+        <Employee id="emp-155" reportsTo="emp-055" assignedProject="proj-015">
+            <full_name>Rosa Willis</full_name>
+            <role>Sound Designer</role>
+            <salary>78000</salary>
+            <hire_date>12.10.2019.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>5</skill_level>
+        </Employee>
+        <Employee id="emp-156" reportsTo="emp-056" assignedProject="proj-016">
+            <full_name>Ruben Ray</full_name>
+            <role>Sound Engineer</role>
+            <salary>81000</salary>
+            <hire_date>01.11.2020.</hire_date>
+            <years_of_experience>3</years_of_experience>
+            <skill_level>4</skill_level>
+        </Employee>
+        <Employee id="emp-157" reportsTo="emp-057" assignedProject="proj-017">
+            <full_name>Margie Watkins</full_name>
+            <role>QA Tester</role>
+            <salary>64000</salary>
+            <hire_date>20.12.2019.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>5</skill_level>
+        </Employee>
+        <Employee id="emp-158" reportsTo="emp-058" assignedProject="proj-018">
+            <full_name>Alberto Olson</full_name>
+            <role>QA Tester</role>
+            <salary>65000</salary>
+            <hire_date>09.01.2021.</hire_date>
+            <years_of_experience>3</years_of_experience>
+            <skill_level>4</skill_level>
+        </Employee>
+        <Employee id="emp-159" reportsTo="emp-059" assignedProject="proj-019">
+            <full_name>Della Carroll</full_name>
+            <role>Technical Artist</role>
+            <salary>88000</salary>
+            <hire_date>28.02.2020.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>5</skill_level>
+        </Employee>
+        <Employee id="emp-160" reportsTo="emp-060" assignedProject="proj-020">
+            <full_name>Lyle Duncan</full_name>
+            <role>Technical Artist</role>
+            <salary>90000</salary>
+            <hire_date>17.03.2019.</hire_date>
+            <years_of_experience>5</years_of_experience>
+            <skill_level>6</skill_level>
+        </Employee>
+        <Employee id="emp-161" reportsTo="emp-061" assignedProject="proj-001">
+            <full_name>Tammy Snyder</full_name>
+            <role>Programmer</role>
+            <salary>86000</salary>
+            <hire_date>06.04.2021.</hire_date>
+            <years_of_experience>2</years_of_experience>
+            <skill_level>3</skill_level>
+        </Employee>
+        <Employee id="emp-162" reportsTo="emp-062" assignedProject="proj-002">
+            <full_name>Alexander Wells</full_name>
+            <role>Programmer</role>
+            <salary>88000</salary>
+            <hire_date>25.05.2020.</hire_date>
+            <years_of_experience>3</years_of_experience>
+            <skill_level>4</skill_level>
+        </Employee>
+        <Employee id="emp-163" reportsTo="emp-063" assignedProject="proj-003">
+            <full_name>Nellie Dunn</full_name>
+            <role>Artist</role>
+            <salary>79000</salary>
+            <hire_date>14.06.2019.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>5</skill_level>
+        </Employee>
+        <Employee id="emp-164" reportsTo="emp-064" assignedProject="proj-004">
+            <full_name>Emanuel Pierce</full_name>
+            <role>Artist</role>
+            <salary>80000</salary>
+            <hire_date>03.07.2020.</hire_date>
+            <years_of_experience>3</years_of_experience>
+            <skill_level>4</skill_level>
+        </Employee>
+        <Employee id="emp-165" reportsTo="emp-065" assignedProject="proj-005">
+            <full_name>Marguerite Wallace</full_name>
+            <role>Sound Designer</role>
+            <salary>77000</salary>
+            <hire_date>22.08.2019.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>5</skill_level>
+        </Employee>
+        <Employee id="emp-166" reportsTo="emp-066" assignedProject="proj-006">
+            <full_name>Gene Cole</full_name>
+            <role>Sound Engineer</role>
+            <salary>80000</salary>
+            <hire_date>11.09.2020.</hire_date>
+            <years_of_experience>3</years_of_experience>
+            <skill_level>4</skill_level>
+        </Employee>
+        <Employee id="emp-167" reportsTo="emp-067" assignedProject="proj-007">
+            <full_name>Eunice Hayes</full_name>
+            <role>QA Tester</role>
+            <salary>63000</salary>
+            <hire_date>30.10.2019.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>5</skill_level>
+        </Employee>
+        <Employee id="emp-168" reportsTo="emp-068" assignedProject="proj-008">
+            <full_name>Mitchell Mitchell</full_name>
+            <role>QA Tester</role>
+            <salary>64000</salary>
+            <hire_date>19.11.2020.</hire_date>
+            <years_of_experience>3</years_of_experience>
+            <skill_level>4</skill_level>
+        </Employee>
+        <Employee id="emp-169" reportsTo="emp-069" assignedProject="proj-009">
+            <full_name>Susie Berry</full_name>
+            <role>UI Designer</role>
+            <salary>78000</salary>
+            <hire_date>08.12.2019.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>5</skill_level>
+        </Employee>
+        <Employee id="emp-170" reportsTo="emp-070" assignedProject="proj-010">
+            <full_name>Claude Matthews</full_name>
+            <role>UX Designer</role>
+            <salary>81000</salary>
+            <hire_date>27.01.2021.</hire_date>
+            <years_of_experience>3</years_of_experience>
+            <skill_level>4</skill_level>
+        </Employee>
+        <Employee id="emp-171" reportsTo="emp-071" assignedProject="proj-011">
+            <full_name>Bessie Wagner</full_name>
+            <role>Programmer</role>
+            <salary>85000</salary>
+            <hire_date>16.02.2020.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>5</skill_level>
+        </Employee>
+        <Employee id="emp-172" reportsTo="emp-072" assignedProject="proj-012">
+            <full_name>Drew Willis</full_name>
+            <role>Programmer</role>
+            <salary>87000</salary>
+            <hire_date>05.03.2019.</hire_date>
+            <years_of_experience>5</years_of_experience>
+            <skill_level>6</skill_level>
+        </Employee>
+        <Employee id="emp-173" reportsTo="emp-073" assignedProject="proj-013">
+            <full_name>Rachel Ray</full_name>
+            <role>Artist</role>
+            <salary>78000</salary>
+            <hire_date>24.04.2021.</hire_date>
+            <years_of_experience>2</years_of_experience>
+            <skill_level>3</skill_level>
+        </Employee>
+        <Employee id="emp-174" reportsTo="emp-074" assignedProject="proj-014">
+            <full_name>Clint Watkins</full_name>
+            <role>Artist</role>
+            <salary>79000</salary>
+            <hire_date>13.05.2020.</hire_date>
+            <years_of_experience>3</years_of_experience>
+            <skill_level>4</skill_level>
+        </Employee>
+        <Employee id="emp-175" reportsTo="emp-075" assignedProject="proj-015">
+            <full_name>Daisy Olson</full_name>
+            <role>Sound Designer</role>
+            <salary>76000</salary>
+            <hire_date>02.06.2019.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>5</skill_level>
+        </Employee>
+        <Employee id="emp-176" reportsTo="emp-076" assignedProject="proj-016">
+            <full_name>Kurt Carroll</full_name>
+            <role>Sound Engineer</role>
+            <salary>79000</salary>
+            <hire_date>21.07.2020.</hire_date>
+            <years_of_experience>3</years_of_experience>
+            <skill_level>4</skill_level>
+        </Employee>
+        <Employee id="emp-177" reportsTo="emp-077" assignedProject="proj-017">
+            <full_name>Roxanne Duncan</full_name>
+            <role>QA Tester</role>
+            <salary>62000</salary>
+            <hire_date>10.08.2019.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>5</skill_level>
+        </Employee>
+        <Employee id="emp-178" reportsTo="emp-078" assignedProject="proj-018">
+            <full_name>Warren Snyder</full_name>
+            <role>QA Tester</role>
+            <salary>63000</salary>
+            <hire_date>29.09.2020.</hire_date>
+            <years_of_experience>3</years_of_experience>
+            <skill_level>4</skill_level>
+        </Employee>
+        <Employee id="emp-179" reportsTo="emp-079" assignedProject="proj-019">
+            <full_name>Karla Wells</full_name>
+            <role>Technical Artist</role>
+            <salary>86000</salary>
+            <hire_date>18.10.2019.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>5</skill_level>
+        </Employee>
+        <Employee id="emp-180" reportsTo="emp-080" assignedProject="proj-020">
+            <full_name>Luther Dunn</full_name>
+            <role>Technical Artist</role>
+            <salary>88000</salary>
+            <hire_date>07.11.2020.</hire_date>
+            <years_of_experience>3</years_of_experience>
+            <skill_level>4</skill_level>
+        </Employee>
+        <Employee id="emp-181" reportsTo="emp-081" assignedProject="proj-001">
+            <full_name>Molly Pierce</full_name>
+            <role>Programmer</role>
+            <salary>84000</salary>
+            <hire_date>26.12.2019.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>5</skill_level>
+        </Employee>
+        <Employee id="emp-182" reportsTo="emp-082" assignedProject="proj-002">
+            <full_name>Leland Wallace</full_name>
+            <role>Programmer</role>
+            <salary>86000</salary>
+            <hire_date>15.01.2021.</hire_date>
+            <years_of_experience>3</years_of_experience>
+            <skill_level>4</skill_level>
+        </Employee>
+        <Employee id="emp-183" reportsTo="emp-083" assignedProject="proj-003">
+            <full_name>Katrina Cole</full_name>
+            <role>Artist</role>
+            <salary>77000</salary>
+            <hire_date>04.02.2020.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>5</skill_level>
+        </Employee>
+        <Employee id="emp-184" reportsTo="emp-084" assignedProject="proj-004">
+            <full_name>Garrett Hayes</full_name>
+            <role>Artist</role>
+            <salary>78000</salary>
+            <hire_date>23.03.2019.</hire_date>
+            <years_of_experience>5</years_of_experience>
+            <skill_level>6</skill_level>
+        </Employee>
+        <Employee id="emp-185" reportsTo="emp-085" assignedProject="proj-005">
+            <full_name>Ebony Mitchell</full_name>
+            <role>Sound Designer</role>
+            <salary>75000</salary>
+            <hire_date>12.04.2021.</hire_date>
+            <years_of_experience>2</years_of_experience>
+            <skill_level>3</skill_level>
+        </Employee>
+        <Employee id="emp-186" reportsTo="emp-086" assignedProject="proj-006">
+            <full_name>Wesley Berry</full_name>
+            <role>Sound Engineer</role>
+            <salary>78000</salary>
+            <hire_date>01.05.2020.</hire_date>
+            <years_of_experience>3</years_of_experience>
+            <skill_level>4</skill_level>
+        </Employee>
+        <Employee id="emp-187" reportsTo="emp-087" assignedProject="proj-007">
+            <full_name>Tamara Matthews</full_name>
+            <role>QA Tester</role>
+            <salary>61000</salary>
+            <hire_date>20.06.2019.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>5</skill_level>
+        </Employee>
+        <Employee id="emp-188" reportsTo="emp-088" assignedProject="proj-008">
+            <full_name>Percy Wagner</full_name>
+            <role>QA Tester</role>
+            <salary>62000</salary>
+            <hire_date>09.07.2020.</hire_date>
+            <years_of_experience>3</years_of_experience>
+            <skill_level>4</skill_level>
+        </Employee>
+        <Employee id="emp-189" reportsTo="emp-089" assignedProject="proj-009">
+            <full_name>Kristy Willis</full_name>
+            <role>UI Designer</role>
+            <salary>76000</salary>
+            <hire_date>28.08.2019.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>5</skill_level>
+        </Employee>
+        <Employee id="emp-190" reportsTo="emp-090" assignedProject="proj-010">
+            <full_name>Vanessa Ray</full_name>
+            <role>UX Designer</role>
+            <salary>79000</salary>
+            <hire_date>17.09.2020.</hire_date>
+            <years_of_experience>3</years_of_experience>
+            <skill_level>4</skill_level>
+        </Employee>
+        <Employee id="emp-191" reportsTo="emp-091" assignedProject="proj-011">
+            <full_name>Colin Watkins</full_name>
+            <role>Programmer</role>
+            <salary>83000</salary>
+            <hire_date>06.10.2019.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>5</skill_level>
+        </Employee>
+        <Employee id="emp-192" reportsTo="emp-092" assignedProject="proj-012">
+            <full_name>Loretta Olson</full_name>
+            <role>Programmer</role>
+            <salary>85000</salary>
+            <hire_date>25.11.2020.</hire_date>
+            <years_of_experience>3</years_of_experience>
+            <skill_level>4</skill_level>
+        </Employee>
+        <Employee id="emp-193" reportsTo="emp-093" assignedProject="proj-013">
+            <full_name>Bryant Carroll</full_name>
+            <role>Artist</role>
+            <salary>76000</salary>
+            <hire_date>14.12.2019.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>5</skill_level>
+        </Employee>
+        <Employee id="emp-194" reportsTo="emp-094" assignedProject="proj-014">
+            <full_name>Esther Duncan</full_name>
+            <role>Artist</role>
+            <salary>77000</salary>
+            <hire_date>03.01.2021.</hire_date>
+            <years_of_experience>3</years_of_experience>
+            <skill_level>4</skill_level>
+        </Employee>
+        <Employee id="emp-195" reportsTo="emp-095" assignedProject="proj-015">
+            <full_name>Darin Snyder</full_name>
+            <role>Sound Designer</role>
+            <salary>74000</salary>
+            <hire_date>22.02.2020.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>5</skill_level>
+        </Employee>
+        <Employee id="emp-196" reportsTo="emp-096" assignedProject="proj-016">
+            <full_name>Sabrina Wells</full_name>
+            <role>Sound Engineer</role>
+            <salary>77000</salary>
+            <hire_date>11.03.2019.</hire_date>
+            <years_of_experience>5</years_of_experience>
+            <skill_level>6</skill_level>
+        </Employee>
+        <Employee id="emp-197" reportsTo="emp-097" assignedProject="proj-017">
+            <full_name>Bradford Dunn</full_name>
+            <role>QA Tester</role>
+            <salary>60000</salary>
+            <hire_date>30.04.2021.</hire_date>
+            <years_of_experience>2</years_of_experience>
+            <skill_level>3</skill_level>
+        </Employee>
+        <Employee id="emp-198" reportsTo="emp-098" assignedProject="proj-018">
+            <full_name>Dominic Pierce</full_name>
+            <role>QA Tester</role>
+            <salary>61000</salary>
+            <hire_date>19.05.2020.</hire_date>
+            <years_of_experience>3</years_of_experience>
+            <skill_level>4</skill_level>
+        </Employee>
+        <Employee id="emp-199" reportsTo="emp-099" assignedProject="proj-019">
+            <full_name>Angie Wallace</full_name>
+            <role>Technical Artist</role>
+            <salary>84000</salary>
+            <hire_date>08.06.2019.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>5</skill_level>
+        </Employee>
+        <Employee id="emp-200" reportsTo="emp-100" assignedProject="proj-020">
+            <full_name>Dexter Cole</full_name>
+            <role>Technical Artist</role>
+            <salary>86000</salary>
+            <hire_date>27.07.2020.</hire_date>
+            <years_of_experience>3</years_of_experience>
+            <skill_level>4</skill_level>
+        </Employee>
+        <Employee id="emp-201" reportsTo="emp-001" assignedProject="proj-001">
+            <full_name>Lucille Hayes</full_name>
+            <role>Programmer</role>
+            <salary>82000</salary>
+            <hire_date>16.08.2019.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>5</skill_level>
+        </Employee>
+        <Employee id="emp-202" reportsTo="emp-002" assignedProject="proj-002">
+            <full_name>Rafael Mitchell</full_name>
+            <role>Programmer</role>
+            <salary>84000</salary>
+            <hire_date>05.09.2020.</hire_date>
+            <years_of_experience>3</years_of_experience>
+            <skill_level>4</skill_level>
+        </Employee>
+        <Employee id="emp-203" reportsTo="emp-003" assignedProject="proj-003">
+            <full_name>Janis Berry</full_name>
+            <role>Artist</role>
+            <salary>75000</salary>
+            <hire_date>24.10.2019.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>5</skill_level>
+        </Employee>
+        <Employee id="emp-204" reportsTo="emp-004" assignedProject="proj-004">
+            <full_name>Kelly Matthews</full_name>
+            <role>Artist</role>
+            <salary>76000</salary>
+            <hire_date>13.11.2020.</hire_date>
+            <years_of_experience>3</years_of_experience>
+            <skill_level>4</skill_level>
+        </Employee>
+        <Employee id="emp-205" reportsTo="emp-005" assignedProject="proj-005">
+            <full_name>Gretchen Wagner</full_name>
+            <role>Sound Designer</role>
+            <salary>73000</salary>
+            <hire_date>02.12.2019.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>5</skill_level>
+        </Employee>
+        <Employee id="emp-206" reportsTo="emp-006" assignedProject="proj-006">
+            <full_name>Jake Willis</full_name>
+            <role>Sound Engineer</role>
+            <salary>76000</salary>
+            <hire_date>21.01.2021.</hire_date>
+            <years_of_experience>3</years_of_experience>
+            <skill_level>4</skill_level>
+        </Employee>
+        <Employee id="emp-207" reportsTo="emp-007" assignedProject="proj-007">
+            <full_name>Faith Ray</full_name>
+            <role>QA Tester</role>
+            <salary>59000</salary>
+            <hire_date>10.02.2020.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>5</skill_level>
+        </Employee>
+        <Employee id="emp-208" reportsTo="emp-008" assignedProject="proj-008">
+            <full_name>Ramon Watkins</full_name>
+            <role>QA Tester</role>
+            <salary>60000</salary>
+            <hire_date>29.03.2019.</hire_date>
+            <years_of_experience>5</years_of_experience>
+            <skill_level>6</skill_level>
+        </Employee>
+        <Employee id="emp-209" reportsTo="emp-009" assignedProject="proj-009">
+            <full_name>Angelica Olson</full_name>
+            <role>UI Designer</role>
+            <salary>74000</salary>
+            <hire_date>18.04.2021.</hire_date>
+            <years_of_experience>2</years_of_experience>
+            <skill_level>3</skill_level>
+        </Employee>
+        <Employee id="emp-210" reportsTo="emp-010" assignedProject="proj-010">
+            <full_name>Harvey Carroll</full_name>
+            <role>UX Designer</role>
+            <salary>77000</salary>
+            <hire_date>07.05.2020.</hire_date>
+            <years_of_experience>3</years_of_experience>
+            <skill_level>4</skill_level>
+        </Employee>
+        <Employee id="emp-211" reportsTo="emp-011" assignedProject="proj-011">
+            <full_name>Faye Duncan</full_name>
+            <role>Programmer</role>
+            <salary>81000</salary>
+            <hire_date>26.06.2019.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>5</skill_level>
+        </Employee>
+        <Employee id="emp-212" reportsTo="emp-012" assignedProject="proj-012">
+            <full_name>Jessie Snyder</full_name>
+            <role>Programmer</role>
+            <salary>83000</salary>
+            <hire_date>15.07.2020.</hire_date>
+            <years_of_experience>3</years_of_experience>
+            <skill_level>4</skill_level>
+        </Employee>
+        <Employee id="emp-213" reportsTo="emp-013" assignedProject="proj-013">
+            <full_name>Jeannette Wells</full_name>
+            <role>Artist</role>
+            <salary>74000</salary>
+            <hire_date>04.08.2019.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>5</skill_level>
+        </Employee>
+        <Employee id="emp-214" reportsTo="emp-014" assignedProject="proj-014">
+            <full_name>Patrick Dunn</full_name>
+            <role>Artist</role>
+            <salary>75000</salary>
+            <hire_date>23.09.2020.</hire_date>
+            <years_of_experience>3</years_of_experience>
+            <skill_level>4</skill_level>
+        </Employee>
+        <Employee id="emp-215" reportsTo="emp-015" assignedProject="proj-015">
+            <full_name>Lauren Pierce</full_name>
+            <role>Sound Designer</role>
+            <salary>72000</salary>
+            <hire_date>12.10.2019.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>5</skill_level>
+        </Employee>
+        <Employee id="emp-216" reportsTo="emp-016" assignedProject="proj-016">
+            <full_name>Edwin Wallace</full_name>
+            <role>Sound Engineer</role>
+            <salary>75000</salary>
+            <hire_date>01.11.2020.</hire_date>
+            <years_of_experience>3</years_of_experience>
+            <skill_level>4</skill_level>
+        </Employee>
+        <Employee id="emp-217" reportsTo="emp-017" assignedProject="proj-017">
+            <full_name>Pat Cole</full_name>
+            <role>QA Tester</role>
+            <salary>58000</salary>
+            <hire_date>20.12.2019.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>5</skill_level>
+        </Employee>
+        <Employee id="emp-218" reportsTo="emp-018" assignedProject="proj-018">
+            <full_name>Mindy Hayes</full_name>
+            <role>QA Tester</role>
+            <salary>59000</salary>
+            <hire_date>09.01.2021.</hire_date>
+            <years_of_experience>3</years_of_experience>
+            <skill_level>4</skill_level>
+        </Employee>
+        <Employee id="emp-219" reportsTo="emp-019" assignedProject="proj-019">
+            <full_name>Lester Mitchell</full_name>
+            <role>Technical Artist</role>
+            <salary>82000</salary>
+            <hire_date>28.02.2020.</hire_date>
+            <years_of_experience>4</years_of_experience>
+            <skill_level>5</skill_level>
+        </Employee>
+        <Employee id="emp-220" reportsTo="emp-020" assignedProject="proj-020">
+            <full_name>Megan Berry</full_name>
+            <role>Technical Artist</role>
+            <salary>84000</salary>
+            <hire_date>17.03.2019.</hire_date>
+            <years_of_experience>5</years_of_experience>
+            <skill_level>6</skill_level>
+        </Employee>
+    </Employees>
+
+    <Equipment>
+        <Item id="eq-001" type="Workstation" assignedTo="emp-001">
+            <model>Alienware Aurora R15</model>
+            <specs>Intel i9, 64GB RAM, RTX 4090</specs>
+            <purchaseDate>10.01.2024.</purchaseDate>
+            <warrantyUntil>10.01.2026.</warrantyUntil>
+        </Item>
+        <Item id="eq-002" type="Workstation" assignedTo="emp-002">
+            <model>MSI Trident X</model>
+            <specs>Intel i7, 32GB RAM, RTX 4080</specs>
+            <purchaseDate>15.02.2024.</purchaseDate>
+            <warrantyUntil>15.02.2026.</warrantyUntil>
+        </Item>
+        <Item id="eq-003" type="Workstation" assignedTo="emp-003">
+            <model>Corsair One i300</model>
+            <specs>Intel i9, 64GB RAM, RTX 4090</specs>
+            <purchaseDate>05.03.2024.</purchaseDate>
+            <warrantyUntil>05.03.2026.</warrantyUntil>
+        </Item>
+        <Item id="eq-004" type="Workstation" assignedTo="emp-004">
+            <model>HP OMEN 45L</model>
+            <specs>Intel i7, 32GB RAM, RTX 4080</specs>
+            <purchaseDate>20.01.2024.</purchaseDate>
+            <warrantyUntil>20.01.2026.</warrantyUntil>
+        </Item>
+        <Item id="eq-005" type="Workstation" assignedTo="emp-005">
+            <model>Lenovo Legion Tower 7i</model>
+            <specs>Intel i9, 64GB RAM, RTX 4090</specs>
+            <purchaseDate>12.02.2024.</purchaseDate>
+            <warrantyUntil>12.02.2026.</warrantyUntil>
+        </Item>
+        <Item id="eq-006" type="Workstation" assignedTo="emp-006">
+            <model>ASUS ROG Strix GA35</model>
+            <specs>AMD Ryzen 9, 32GB RAM, RTX 4080</specs>
+            <purchaseDate>25.03.2024.</purchaseDate>
+            <warrantyUntil>25.03.2026.</warrantyUntil>
+        </Item>
+        <Item id="eq-007" type="Workstation" assignedTo="emp-007">
+            <model>Dell XPS 8960</model>
+            <specs>Intel i7, 32GB RAM, RTX 4070 Ti</specs>
+            <purchaseDate>08.04.2024.</purchaseDate>
+            <warrantyUntil>08.04.2026.</warrantyUntil>
+        </Item>
+        <Item id="eq-008" type="Workstation" assignedTo="emp-008">
+            <model>Mac Studio</model>
+            <specs>M2 Ultra, 128GB RAM</specs>
+            <purchaseDate>18.01.2024.</purchaseDate>
+            <warrantyUntil>18.01.2026.</warrantyUntil>
+        </Item>
+        <Item id="eq-009" type="Workstation" assignedTo="emp-009">
+            <model>MacBook Pro 16</model>
+            <specs>M3 Max, 64GB RAM</specs>
+            <purchaseDate>22.02.2024.</purchaseDate>
+            <warrantyUntil>22.02.2026.</warrantyUntil>
+        </Item>
+        <Item id="eq-010" type="Workstation" assignedTo="emp-010">
+            <model>Razer Blade 18</model>
+            <specs>Intel i9, 32GB RAM, RTX 4090</specs>
+            <purchaseDate>14.03.2024.</purchaseDate>
+            <warrantyUntil>14.03.2026.</warrantyUntil>
+        </Item>
+        <Item id="eq-011" type="Monitor" assignedTo="emp-001">
+            <model>Samsung Odyssey G9</model>
+            <specs>49" Curved, 240Hz</specs>
+            <purchaseDate>10.01.2024.</purchaseDate>
+            <warrantyUntil>10.01.2026.</warrantyUntil>
+        </Item>
+        <Item id="eq-012" type="Monitor" assignedTo="emp-001">
+            <model>LG 27GP950</model>
+            <specs>27" 4K, 144Hz</specs>
+            <purchaseDate>10.01.2024.</purchaseDate>
+            <warrantyUntil>10.01.2026.</warrantyUntil>
+        </Item>
+        <Item id="eq-013" type="Monitor" assignedTo="emp-002">
+            <model>ASUS ROG Swift PG32UQX</model>
+            <specs>32" 4K, 144Hz</specs>
+            <purchaseDate>15.02.2024.</purchaseDate>
+            <warrantyUntil>15.02.2026.</warrantyUntil>
+        </Item>
+        <Item id="eq-014" type="Monitor" assignedTo="emp-003">
+            <model>Dell UltraSharp U4323QE</model>
+            <specs>43" 4K</specs>
+            <purchaseDate>05.03.2024.</purchaseDate>
+            <warrantyUntil>05.03.2026.</warrantyUntil>
+        </Item>
+        <Item id="eq-015" type="Monitor" assignedTo="emp-004">
+            <model>Alienware AW3423DW</model>
+            <specs>34" Curved QD-OLED</specs>
+            <purchaseDate>20.01.2024.</purchaseDate>
+            <warrantyUntil>20.01.2026.</warrantyUntil>
+        </Item>
+        <Item id="eq-016" type="Graphics Tablet" assignedTo="emp-023">
+            <model>Wacom Cintiq Pro 24</model>
+            <specs>4K Display</specs>
+            <purchaseDate>12.02.2024.</purchaseDate>
+            <warrantyUntil>12.02.2026.</warrantyUntil>
+        </Item>
+        <Item id="eq-017" type="Graphics Tablet" assignedTo="emp-024">
+            <model>Wacom Intuos Pro L</model>
+            <specs>Large</specs>
+            <purchaseDate>25.03.2024.</purchaseDate>
+            <warrantyUntil>25.03.2026.</warrantyUntil>
+        </Item>
+        <Item id="eq-018" type="Graphics Tablet" assignedTo="emp-033">
+            <model>Huion Kamvas Pro 22</model>
+            <specs>22" Display</specs>
+            <purchaseDate>08.04.2024.</purchaseDate>
+            <warrantyUntil>08.04.2026.</warrantyUntil>
+        </Item>
+        <Item id="eq-019" type="Graphics Tablet" assignedTo="emp-034">
+            <model>XP-Pen Artist 24 Pro</model>
+            <specs>24" Display</specs>
+            <purchaseDate>18.01.2024.</purchaseDate>
+            <warrantyUntil>18.01.2026.</warrantyUntil>
+        </Item>
+        <Item id="eq-020" type="Audio Equipment" assignedTo="emp-025">
+            <model>Focusrite Scarlett 18i20</model>
+            <specs>Audio Interface</specs>
+            <purchaseDate>22.02.2024.</purchaseDate>
+            <warrantyUntil>22.02.2026.</warrantyUntil>
+        </Item>
+        <Item id="eq-021" type="Audio Equipment" assignedTo="emp-026">
+            <model>Neumann U87 Ai</model>
+            <specs>Microphone</specs>
+            <purchaseDate>14.03.2024.</purchaseDate>
+            <warrantyUntil>14.03.2026.</warrantyUntil>
+        </Item>
+        <Item id="eq-022" type="Audio Equipment" assignedTo="emp-035">
+            <model>AKG K812</model>
+            <specs>Headphones</specs>
+            <purchaseDate>02.04.2024.</purchaseDate>
+            <warrantyUntil>02.04.2026.</warrantyUntil>
+        </Item>
+        <Item id="eq-023" type="Audio Equipment" assignedTo="emp-036">
+            <model>Genelec 8341A</model>
+            <specs>Studio Monitors (Pair)</specs>
+            <purchaseDate>11.01.2024.</purchaseDate>
+            <warrantyUntil>11.01.2026.</warrantyUntil>
+        </Item>
+        <Item id="eq-024" type="VR Headset" assignedTo="emp-037">
+            <model>Meta Quest 3</model>
+            <specs>512GB</specs>
+            <purchaseDate>19.02.2024.</purchaseDate>
+            <warrantyUntil>19.02.2026.</warrantyUntil>
+        </Item>
+        <Item id="eq-025" type="VR Headset" assignedTo="emp-038">
+            <model>Valve Index</model>
+            <specs>Full Kit</specs>
+            <purchaseDate>27.03.2024.</purchaseDate>
+            <warrantyUntil>27.03.2026.</warrantyUntil>
+        </Item>
+        <Item id="eq-026" type="VR Headset" assignedTo="emp-039">
+            <model>HTC Vive Pro 2</model>
+            <specs>Full Kit</specs>
+            <purchaseDate>05.04.2024.</purchaseDate>
+            <warrantyUntil>05.04.2026.</warrantyUntil>
+        </Item>
+        <Item id="eq-027" type="VR Headset" assignedTo="emp-040">
+            <model>PlayStation VR2</model>
+            <specs>PS5 Compatible</specs>
+            <purchaseDate>15.01.2024.</purchaseDate>
+            <warrantyUntil>15.01.2026.</warrantyUntil>
+        </Item>
+        <Item id="eq-028" type="Server" assignedTo="emp-005">
+            <model>Dell PowerEdge R760</model>
+            <specs>Dual Xeon, 256GB RAM, 48TB Storage</specs>
+            <purchaseDate>08.02.2024.</purchaseDate>
+            <warrantyUntil>08.02.2027.</warrantyUntil>
+        </Item>
+        <Item id="eq-029" type="Server" assignedTo="emp-005">
+            <model>HP ProLiant DL380 Gen11</model>
+            <specs>Dual Xeon, 128GB RAM, 24TB Storage</specs>
+            <purchaseDate>18.03.2024.</purchaseDate>
+            <warrantyUntil>18.03.2027.</warrantyUntil>
+        </Item>
+        <Item id="eq-030" type="Development Kit" assignedTo="emp-021">
+            <model>PlayStation 5 Dev Kit</model>
+            <specs>Debug Station</specs>
+            <purchaseDate>22.01.2024.</purchaseDate>
+            <warrantyUntil>22.01.2026.</warrantyUntil>
+        </Item>
+        <Item id="eq-031" type="Development Kit" assignedTo="emp-022">
+            <model>Xbox Series X Dev Kit</model>
+            <specs>GDK</specs>
+            <purchaseDate>12.02.2024.</purchaseDate>
+            <warrantyUntil>12.02.2026.</warrantyUntil>
+        </Item>
+        <Item id="eq-032" type="Development Kit" assignedTo="emp-041">
+            <model>Nintendo Switch Dev Kit</model>
+            <specs>NX</specs>
+            <purchaseDate>28.03.2024.</purchaseDate>
+            <warrantyUntil>28.03.2026.</warrantyUntil>
+        </Item>
+        <Item id="eq-033" type="Development Kit" assignedTo="emp-042">
+            <model>Steam Deck Dev Kit</model>
+            <specs>Developer Edition</specs>
+            <purchaseDate>07.04.2024.</purchaseDate>
+            <warrantyUntil>07.04.2026.</warrantyUntil>
+        </Item>
+        <Item id="eq-034" type="Mobile Device" assignedTo="emp-043">
+            <model>iPhone 15 Pro Max</model>
+            <specs>1TB</specs>
+            <purchaseDate>16.01.2024.</purchaseDate>
+            <warrantyUntil>16.01.2026.</warrantyUntil>
+        </Item>
+        <Item id="eq-035" type="Mobile Device" assignedTo="emp-044">
+            <model>Samsung Galaxy S24 Ultra</model>
+            <specs>1TB</specs>
+            <purchaseDate>24.02.2024.</purchaseDate>
+            <warrantyUntil>24.02.2026.</warrantyUntil>
+        </Item>
+        <Item id="eq-036" type="Mobile Device" assignedTo="emp-045">
+            <model>iPad Pro 12.9</model>
+            <specs>M2, 2TB</specs>
+            <purchaseDate>03.03.2024.</purchaseDate>
+            <warrantyUntil>03.03.2026.</warrantyUntil>
+        </Item>
+        <Item id="eq-037" type="Mobile Device" assignedTo="emp-046">
+            <model>Google Pixel 8 Pro</model>
+            <specs>512GB</specs>
+            <purchaseDate>13.04.2024.</purchaseDate>
+            <warrantyUntil>13.04.2026.</warrantyUntil>
+        </Item>
+        <Item id="eq-038" type="Networking" assignedTo="emp-047">
+            <model>Ubiquiti UniFi Switch Pro</model>
+            <specs>48 Port PoE</specs>
+            <purchaseDate>21.01.2024.</purchaseDate>
+            <warrantyUntil>21.01.2026.</warrantyUntil>
+        </Item>
+        <Item id="eq-039" type="Networking" assignedTo="emp-048">
+            <model>Netgear Orbi Pro</model>
+            <specs>WiFi 6 Mesh System</specs>
+            <purchaseDate>09.02.2024.</purchaseDate>
+            <warrantyUntil>09.02.2026.</warrantyUntil>
+        </Item>
+        <Item id="eq-040" type="Storage" assignedTo="emp-049">
+            <model>Synology DS1823xs+</model>
+            <specs>8 Bay NAS, 64TB</specs>
+            <purchaseDate>17.03.2024.</purchaseDate>
+            <warrantyUntil>17.03.2027.</warrantyUntil>
+        </Item>
+        <Item id="eq-041" type="Storage" assignedTo="emp-050">
+            <model>QNAP TS-453D</model>
+            <specs>4 Bay NAS, 32TB</specs>
+            <purchaseDate>26.04.2024.</purchaseDate>
+            <warrantyUntil>26.04.2027.</warrantyUntil>
+        </Item>
+        <Item id="eq-042" type="Capture Card" assignedTo="emp-051">
+            <model>Elgato 4K60 Pro Mk.2</model>
+            <specs>PCIe</specs>
+            <purchaseDate>14.01.2024.</purchaseDate>
+            <warrantyUntil>14.01.2026.</warrantyUntil>
+        </Item>
+        <Item id="eq-043" type="Capture Card" assignedTo="emp-052">
+            <model>AverMedia Live Gamer 4K</model>
+            <specs>External</specs>
+            <purchaseDate>23.02.2024.</purchaseDate>
+            <warrantyUntil>23.02.2026.</warrantyUntil>
+        </Item>
+        <Item id="eq-044" type="Camera" assignedTo="emp-053">
+            <model>Sony FX3</model>
+            <specs>Cinema Camera</specs>
+            <purchaseDate>01.03.2024.</purchaseDate>
+            <warrantyUntil>01.03.2026.</warrantyUntil>
+        </Item>
+        <Item id="eq-045" type="Camera" assignedTo="emp-054">
+            <model>Blackmagic Pocket Cinema 6K</model>
+            <specs>Pro</specs>
+            <purchaseDate>11.04.2024.</purchaseDate>
+            <warrantyUntil>11.04.2026.</warrantyUntil>
+        </Item>
+        <Item id="eq-046" type="Lighting" assignedTo="emp-055">
+            <model>Aputure LS 600d Pro</model>
+            <specs>LED Light Kit</specs>
+            <purchaseDate>19.01.2024.</purchaseDate>
+            <warrantyUntil>19.01.2026.</warrantyUntil>
+        </Item>
+        <Item id="eq-047" type="Lighting" assignedTo="emp-056">
+            <model>Godox SL-60W</model>
+            <specs>LED Video Light (3x)</specs>
+            <purchaseDate>07.02.2024.</purchaseDate>
+            <warrantyUntil>07.02.2026.</warrantyUntil>
+        </Item>
+        <Item id="eq-048" type="Green Screen" assignedTo="emp-057">
+            <model>Elgato Green Screen</model>
+            <specs>Collapsible</specs>
+            <purchaseDate>15.03.2024.</purchaseDate>
+            <warrantyUntil>15.03.2026.</warrantyUntil>
+        </Item>
+        <Item id="eq-049" type="Motion Capture" assignedTo="emp-058">
+            <model>Xsens MVN Link</model>
+            <specs>Full Body Suit</specs>
+            <purchaseDate>24.04.2024.</purchaseDate>
+            <warrantyUntil>24.04.2027.</warrantyUntil>
+        </Item>
+        <Item id="eq-050" type="Motion Capture" assignedTo="emp-059">
+            <model>Rokoko Smart Gloves</model>
+            <specs>Pro</specs>
+            <purchaseDate>12.01.2024.</purchaseDate>
+            <warrantyUntil>12.01.2026.</warrantyUntil>
+        </Item>
+        <Item id="eq-051" type="3D Printer" assignedTo="emp-060">
+            <model>Ultimaker S5</model>
+            <specs>Pro Bundle</specs>
+            <purchaseDate>20.02.2024.</purchaseDate>
+            <warrantyUntil>20.02.2027.</warrantyUntil>
+        </Item>
+        <Item id="eq-052" type="3D Printer" assignedTo="emp-061">
+            <model>Formlabs Form 3+</model>
+            <specs>Resin Printer</specs>
+            <purchaseDate>29.03.2024.</purchaseDate>
+            <warrantyUntil>29.03.2027.</warrantyUntil>
+        </Item>
+    </Equipment>
+</GameStudio>
