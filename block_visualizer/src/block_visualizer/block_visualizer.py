@@ -39,7 +39,7 @@ class BlockVisualizer(VisualizerPlugin):
             function tick(e) {
                 node.attr("transform", function(d) {
                     return "translate(" + d.x + "," + d.y + ")";
-                }).call(force.drag);
+                }).call(drag);
             
                 link.attr('x1', function(d) { return d.source.x; })
                     .attr('y1', function(d) { return d.source.y; })
@@ -103,12 +103,16 @@ class BlockVisualizer(VisualizerPlugin):
                 .attr('stroke', '#000000')     
                 .attr('stroke-width', '1px')
         """ + render_direction + """
+            var drag = force.drag().on('dragstart', function() {
+                d3.event.sourceEvent.stopPropagation(); 
+            });
+    
             var node = graph.selectAll('.node')
                 .data(force.nodes()) 
                 .enter().append('g')
                 .attr('class', function(d){ return 'node id' + d.id; })
                 .on('click', function(){ nodeClick(this); })
-                .call(force.drag);
+                .call(drag);
                 
             const d3ForceKeys = new Set(['index', 'weight', 'x', 'y', 'px', 'py'])
                                 
