@@ -30,21 +30,46 @@
                     <div class="toolbar-group">
                         <span class="toolbar-label">Plugin</span>
                         <select id="data-format-select">
-                            <option value="json">JSON</option>
-                            <option value="xml">XML</option>
+                            <option value="" hidden></option>
+                            {% for plugin in data_source_plugins %}
+                            <option value="{{ plugin.identifier }}">{{ plugin.name }}</option>
+                            {% endfor %}
                         </select>
+                        <script>
+                            document.addEventListener('DOMContentLoaded', (event) => {
+                                const selectEl = document.getElementById('data-format-select');
+                                const currentURL = new URL(window.location.href)
+                                selectEl.addEventListener('change', function() {
+                                    var source = this.value;
+                                    currentURL.searchParams.set("datasource", this.value)
+                                    if (source) {
+                                        window.location.href = currentURL.href;
+                                    }
+                                });
+                                if(currentURL.searchParams.get("datasource")){
+                                    selectEl.value = currentURL.searchParams.get("datasource")
+                                }
+                            });
+                        </script>
+
                         <select id="visualizer-select">
-                            <option value="simple">Simple</option>
-                            <option value="block">Block</option>
+                            <option value="" hidden></option>
+                            {% for plugin in visualizer_plugins %}
+                            <option value="{{ plugin.identifier }}">{{ plugin.name }}</option>
+                            {% endfor %}
                         </select>
                     </div>
 
                     <div class="toolbar-divider"></div>
 
                     <div class="toolbar-group">
-                        <span class="toolbar-label">File</span>
-                        <input type="text" id="file-input" placeholder="File path">
+                        {% for key, value in fields.items %}
+                        <span class="toolbar-label">{{ key }}</span>
+                        <input type="{{ value }}">
+                        {% endfor %}
+                        {% if fields %}
                         <button class="btn btn-dark" id="load-btn">Load</button>
+                        {% endif %}
                     </div>
 
                     <div class="toolbar-divider"></div>

@@ -1,4 +1,6 @@
 from abc import ABC, abstractmethod
+from typing import Dict
+
 from ..model.graph import Graph
 
 class Plugin(ABC):
@@ -13,6 +15,10 @@ class Plugin(ABC):
 class DataSourcePlugin(Plugin):
     @abstractmethod
     def load(self, **kwargs) -> Graph:
+        pass
+
+    @abstractmethod
+    def fields(self) -> Dict[str, str]:
         pass
 
 class VisualizerPlugin(Plugin):

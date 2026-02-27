@@ -12,6 +12,9 @@ class JsonDataSource(DataSourcePlugin):
     def identifier(self) -> str:
         return "json_data_source"
 
+    def fields(self) -> Dict[str,str]:
+        return {"directed": "checkbox", "file_path": "text"}
+
     def load(self, **kwargs) -> Graph:
         file_path: str = kwargs.get("file_path")
         if file_path is None:
