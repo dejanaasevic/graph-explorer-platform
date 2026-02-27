@@ -14,6 +14,12 @@ class XmlDataSource(DataSourcePlugin):
     def identifier(self) -> str:
         return "xml_data_source"
 
+    def fields(self) -> Dict[str,str]:
+        return {"directed": "checkbox",
+                "file_path": "text",
+                "reference_source_attr":"text",
+                "reference_target_attrs":"text"}
+
     def load(self, **kwargs) -> Graph:
         file_path: str = kwargs.get("file_path")
         if file_path is None:
