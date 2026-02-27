@@ -2,16 +2,6 @@ from api.model import Graph, Node, Edge
 from api.plugins import VisualizerPlugin
 import json
 
-def serialize_node(node: Node):
-    dictionary = {"id": str(node.id)}
-    for attribute in node.attributes:
-        dictionary[attribute] = str(node.attributes[attribute])
-    return json.dumps(dictionary)
-
-def serialize_edge(edge: Edge):
-    dictionary = {"source": str(edge.source.id), "target": str(edge.target.id)}
-    return json.dumps(dictionary)
-
 class BlockVisualizer(VisualizerPlugin):
     def name(self) -> str:
         return "Block Visualizer"
@@ -19,17 +9,31 @@ class BlockVisualizer(VisualizerPlugin):
     def identifier(self) -> str:
         return "block_visualizer"
 
+    @staticmethod
+    def serialize_node(node: Node):
+        dictionary = {"id": str(node.id)}
+        for attribute in node.attributes:
+            dictionary[attribute] = str(node.attributes[attribute])
+        return json.dumps(dictionary)
+
+    @staticmethod
+    def serialize_edge(edge: Edge):
+        dictionary = {"source": str(edge.source.id), "target": str(edge.target.id)}
+        return json.dumps(dictionary)
+
     def render(self, graph:Graph, **kwargs) -> str:
         node_list_json = "nodes = {"
         for node in graph.get_nodes():
             node_list_json += "'" + str(node.id) + "':"
-            node_list_json += serialize_node(node) + ",\n"
+            node_list_json += BlockVisualizer.serialize_node(node) + ",\n"
         node_list_json = node_list_json[:-2] + "}\n"
 
         edge_list_json = "edges = ["
         for edge in graph.get_edges():
-            edge_list_json += serialize_edge(edge) + ",\n"
+            edge_list_json += BlockVisualizer.serialize_edge(edge) + ",\n"
         edge_list_json = edge_list_json[:-2] + "]\n"
+
+        render_direction = "\t\t.attr('marker-end', 'url(#arrow)')\n" if graph.is_directed() else "\n"
 
         d3 = """
             function tick(e) {
@@ -60,6 +64,21 @@ class BlockVisualizer(VisualizerPlugin):
                 .attr("offset", "100%")
                 .attr("stop-color", "#ffffcc");
                 
+            var arrow = d3.select("svg")
+                .append("defs")
+                .selectAll("marker")
+                .data(["arrow"])
+                .enter().append("marker")
+                .attr("id", "arrow")
+                .attr("viewBox", "0 -5 10 10")
+                .attr("refX", 15) 
+                .attr("refY", 0.5)
+                .attr("markerWidth", 6)
+                .attr("markerHeight", 6)
+                .attr("orient", "auto")
+                .append("path")
+                .attr("d", "M0,-5L10,0L0,5");
+                
             var graph = d3.select("#graph")
             
             edges.forEach(function(edge) {
@@ -82,8 +101,8 @@ class BlockVisualizer(VisualizerPlugin):
                 .enter().append('line')
                 .attr('class', 'link')
                 .attr('stroke', '#000000')     
-                .attr('stroke-width', '1px');
-                
+                .attr('stroke-width', '1px')
+        """ + render_direction + """
             var node = graph.selectAll('.node')
                 .data(force.nodes()) 
                 .enter().append('g')
@@ -130,5 +149,5 @@ class BlockVisualizer(VisualizerPlugin):
             }
         """
 
-        script: str = "<script>" + node_list_json + edge_list_json + d3 + "</script>"
+        script: str = "<script>\n" + node_list_json + edge_list_json + d3 + "</script>"
         return script
