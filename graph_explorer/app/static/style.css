@@ -95,7 +95,7 @@ html, body {
     margin-right: 4px;
 }
 
-.toolbar-group {
+.toolbar-group, form {
     display: flex;
     align-items: center;
     gap: 10px;

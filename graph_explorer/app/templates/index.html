@@ -35,22 +35,6 @@
                             <option value="{{ plugin.identifier }}">{{ plugin.name }}</option>
                             {% endfor %}
                         </select>
-                        <script>
-                            document.addEventListener('DOMContentLoaded', (event) => {
-                                const selectEl = document.getElementById('data-format-select');
-                                const currentURL = new URL(window.location.href)
-                                selectEl.addEventListener('change', function() {
-                                    var source = this.value;
-                                    currentURL.searchParams.set("datasource", this.value)
-                                    if (source) {
-                                        window.location.href = currentURL.href;
-                                    }
-                                });
-                                if(currentURL.searchParams.get("datasource")){
-                                    selectEl.value = currentURL.searchParams.get("datasource")
-                                }
-                            });
-                        </script>
 
                         <select id="visualizer-select">
                             <option value="" hidden></option>
@@ -62,15 +46,20 @@
 
                     <div class="toolbar-divider"></div>
 
-                    <div class="toolbar-group">
+                    {% if fields %}
+                    <form class="toolbar-group" action="/{{ workspace_id }}/render" method="post">
+                        {% csrf_token %}
                         {% for key, value in fields.items %}
                         <span class="toolbar-label">{{ key }}</span>
-                        <input type="{{ value }}">
-                        {% endfor %}
-                        {% if fields %}
-                        <button class="btn btn-dark" id="load-btn">Load</button>
+                        {% if value == "checkbox" %}
+                        <input type="{{ value }}" name="{{ key }}" value="True">
+                        {% else %}
+                        <input type="{{ value }}" name="{{ key }}">
                         {% endif %}
-                    </div>
+                        {% endfor %}
+                        <button class="btn btn-dark" id="load-btn">Load</button>
+                    </form>
+                    {% endif %}
 
                     <div class="toolbar-divider"></div>
 

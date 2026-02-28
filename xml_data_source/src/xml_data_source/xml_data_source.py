@@ -25,7 +25,7 @@ class XmlDataSource(DataSourcePlugin):
         if file_path is None:
             raise AttributeError("file_path is required")
 
-        directed: bool = kwargs.get("directed", True)
+        directed: bool = kwargs.get("directed", False)
 
         reference_source_attr: str = kwargs.get("reference_source_attr", "id")
         reference_target_attrs: List[str] = kwargs.get(
