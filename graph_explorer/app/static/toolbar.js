@@ -9,4 +9,33 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     bindWorkspaceChips();
+
+    // Filter query tags
+    document.getElementById('filter-btn').addEventListener('click', addQueryTag);
+    document.getElementById('value-input').addEventListener('keydown', e => {
+        if(e.key === 'Enter'){
+            addQueryTag();
+        }
+    });
+
+    function addQueryTag() {
+        const attribute = document.getElementById('attribute-input').value.trim();
+        const operator = document.getElementById('operator-select').value;
+        const value = document.getElementById('value-input').value.trim();
+        if(!attribute || !value){
+            return;
+        }
+        const tag = document.createElement('span');
+        tag.className = 'query-tag';
+        tag.innerHTML = `${attribute} ${operator} ${value} <button class="remove-btn">×</button>`;
+        tag.querySelector('.remove-btn').addEventListener('click', () => tag.remove());
+        document.getElementById('query-tags').appendChild(tag);
+
+        document.getElementById('attribute-input').value = '';
+        document.getElementById('value-input').value = '';
+    }
+
+    document.getElementById('clear-btn').addEventListener('click', () => {
+        document.getElementById('query-tags').innerHTML = '';
+    });
 });
