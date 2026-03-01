@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "graph-simple-visualizer"
+version = "0.0.1"
+description = "Graph visualization plugin for simple visualization"
+dependencies = ["graph-api>=0.0.1"]
+
+[project.entry-points."graph.visualizer"]
+simple_visualizer = "simple_visualizer.simple_visualizer:SimpleVisualizer"
