@@ -11,14 +11,14 @@ document.addEventListener('DOMContentLoaded', () => {
     bindWorkspaceChips();
 
     // Filter query tags
-    document.getElementById('filter-btn').addEventListener('click', addQueryTag);
+    document.getElementById('filter-btn').addEventListener('click', addFilterQueryTag);
     document.getElementById('value-input').addEventListener('keydown', e => {
         if(e.key === 'Enter'){
-            addQueryTag();
+            addFilterQueryTag();
         }
     });
 
-    function addQueryTag() {
+    function addFilterQueryTag() {
         const attribute = document.getElementById('attribute-input').value.trim();
         const operator = document.getElementById('operator-select').value;
         const value = document.getElementById('value-input').value.trim();
@@ -38,4 +38,26 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('clear-btn').addEventListener('click', () => {
         document.getElementById('query-tags').innerHTML = '';
     });
+
+     // Search query tags
+    document.getElementById('search-btn').addEventListener('click', addSearchQueryTag);
+    document.getElementById('search-input').addEventListener('keydown', e => {
+        if(e.key === 'Enter'){
+            addSearchQueryTag();
+        }
+    });
+
+   function addSearchQueryTag() {
+        const value = document.getElementById('search-input').value.trim();
+        if(!value) return;
+
+        const tag = document.createElement('span');
+        tag.className = 'query-tag';
+        tag.innerHTML = `${value} <button class="remove-btn">×</button>`;
+        tag.querySelector('.remove-btn').addEventListener('click', () => tag.remove());
+
+        const queryTags = document.getElementById('query-tags');
+        queryTags.appendChild(tag);
+        document.getElementById('search-input').value = '';
+    }
 });
