@@ -35,22 +35,6 @@
                             <option value="{{ plugin.identifier }}">{{ plugin.name }}</option>
                             {% endfor %}
                         </select>
-                        <script>
-                            document.addEventListener('DOMContentLoaded', (event) => {
-                                const selectEl = document.getElementById('data-format-select');
-                                const currentURL = new URL(window.location.href)
-                                selectEl.addEventListener('change', function() {
-                                    var source = this.value;
-                                    currentURL.searchParams.set("datasource", this.value)
-                                    if (source) {
-                                        window.location.href = currentURL.href;
-                                    }
-                                });
-                                if(currentURL.searchParams.get("datasource")){
-                                    selectEl.value = currentURL.searchParams.get("datasource")
-                                }
-                            });
-                        </script>
 
                         <select id="visualizer-select">
                             <option value="" hidden></option>
@@ -62,22 +46,27 @@
 
                     <div class="toolbar-divider"></div>
 
-                    <div class="toolbar-group">
+                    {% if fields %}
+                    <form class="toolbar-group" action="/{{ workspace_id }}/render" method="post">
+                        {% csrf_token %}
                         {% for key, value in fields.items %}
                         <span class="toolbar-label">{{ key }}</span>
-                        <input type="{{ value }}">
-                        {% endfor %}
-                        {% if fields %}
-                        <button class="btn btn-dark" id="load-btn">Load</button>
+                        {% if value == "checkbox" %}
+                        <input type="{{ value }}" name="{{ key }}" value="True">
+                        {% else %}
+                        <input type="{{ value }}" name="{{ key }}">
                         {% endif %}
-                    </div>
+                        {% endfor %}
+                        <button type="submit" class="btn btn-dark" id="load-btn">Load</button>
+                    </form>
+                    {% endif %}
 
                     <div class="toolbar-divider"></div>
 
                     <div class="toolbar-group">
                         <span class="toolbar-label">Search</span>
                         <input type="text" id="search-input" placeholder="Search">
-                        <button class="btn btn-dark" id="search-btn">Search</button>
+                        <button type="button" class="btn btn-dark" id="search-btn">Search</button>
                     </div>
 
                     <div class="toolbar-divider"></div>
@@ -94,8 +83,8 @@
                             <option value="<=">&lt;=</option>
                         </select>
                         <input type="text" id="value-input" placeholder="Value" class="input-sm">
-                        <button class="btn btn-dark" id="filter-btn">Filter</button>
-                        <button class="btn btn-outline" id="clear-btn">Clear</button>
+                        <button type="button" class="btn btn-dark" id="filter-btn">Filter</button>
+                        <button type="button" class="btn btn-outline" id="clear-btn">Clear</button>
                     </div>
 
                     <div class="toolbar-divider"></div>
@@ -106,7 +95,6 @@
                             <div class="workspace-chip active" data-ws="1">WS 1</div>
                             <div class="workspace-chip" data-ws="2">WS 2</div>
                             <div class="workspace-chip" data-ws="3">WS 3</div>
-                            <button class="workspace-add" id="add-ws-btn" title="New workspace">+</button>
                         </div>
                     </div>
 
@@ -114,9 +102,6 @@
                 <div class="toolbar-queries">
                     <span class="toolbar-label">Active queries:</span>
                     <div id="query-tags">
-                        <span class="query-tag">Dea <button class="remove-btn">×</button></span>
-                        <span class="query-tag">age = 21 <button class="remove-btn">×</button></span>
-                        <span class="query-tag">Gender = Female <button class="remove-btn">×</button></span>
                     </div>
                 </div>
             </div>
@@ -140,10 +125,6 @@
             <div id="main-view" class="grid-item">
                 <div class="panel-header">
                     <span class="panel-title">Main View</span>
-                    <div class="view-tabs">
-                        <button class="view-tab active">Simple</button>
-                        <button class="view-tab">Block</button>
-                    </div>
                 </div>
                 <div id="main-view-canvas">
                     <svg id="main-svg"><g id="graph"></g></svg>
@@ -161,11 +142,13 @@
                 <div id="cli-input-row">
                     <span id="cli-prompt">&gt;</span>
                     <input type="text" id="cli-input" placeholder="type a command..." autocomplete="off" spellcheck="false">
-                    <button class="btn btn-dark" id="cli-run-btn">Run</button>
+                    <button type="button" class="btn btn-dark" id="cli-run-btn">Run</button>
                 </div>
             </div>
         </div>
         {% load static %}
         <script src="{% static 'main.js' %}"></script>
+        <script src="{% static 'cli.js' %}"></script>
+        <script src="{% static 'toolbar.js' %}"></script>
     </body>
 </html>

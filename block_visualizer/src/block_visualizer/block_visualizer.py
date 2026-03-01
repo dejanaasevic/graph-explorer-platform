@@ -46,8 +46,10 @@ class BlockVisualizer(VisualizerPlugin):
                     .attr('x2', function(d) { return d.target.x; })
                     .attr('y2', function(d) { return d.target.y; });
             }
+            
+            var graph = d3.select("#graph")
                 
-            var gradient = d3.select("svg")
+            var gradient = graph
                 .append("defs")
                 .append("linearGradient")
                 .attr("id", "grad")
@@ -64,7 +66,7 @@ class BlockVisualizer(VisualizerPlugin):
                 .attr("offset", "100%")
                 .attr("stop-color", "#ffffcc");
                 
-            var arrow = d3.select("svg")
+            var arrow = graph
                 .append("defs")
                 .selectAll("marker")
                 .data(["arrow"])
@@ -79,7 +81,6 @@ class BlockVisualizer(VisualizerPlugin):
                 .append("path")
                 .attr("d", "M0,-5L10,0L0,5");
                 
-            var graph = d3.select("#graph")
             
             edges.forEach(function(edge) {
                 edge.source = nodes[edge.source];

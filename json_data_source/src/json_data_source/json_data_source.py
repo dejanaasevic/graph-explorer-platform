@@ -20,7 +20,7 @@ class JsonDataSource(DataSourcePlugin):
         if file_path is None:
             raise AttributeError("file_path is required")
 
-        directed: bool = kwargs.get("directed", True)
+        directed: bool = kwargs.get("directed", False)
 
         graph: Graph = Graph(directed=directed)
         id_to_node: Dict[str, Node] = {}
