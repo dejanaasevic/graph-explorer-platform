@@ -39,24 +39,25 @@ class SimpleVisualizer(VisualizerPlugin):
         edge_list_js += "];\n"
 
         arrow_marker = """
-            d3.select("svg").append("defs").selectAll("marker")
+            d3.select("#main-svg").append("defs").selectAll("marker")
                 .data(["arrow"])
                 .enter().append("marker")
                 .attr("id", "arrow")
                 .attr("viewBox", "0 -5 10 10")
-                .attr("refX", 28)
+                .attr("refX", 34)
                 .attr("refY", 0)
                 .attr("markerWidth", 6)
                 .attr("markerHeight", 6)
                 .attr("orient", "auto")
                 .append("path")
-                .attr("d", "M0,-5L10,0L0,5");
+                .attr("d", "M0,-5L10,0L0,5")
+                .attr("fill", "#999");
         """ if graph.is_directed() else ""
 
         arrow_attr = ".attr('marker-end', 'url(#arrow)')" if graph.is_directed() else ""
 
         d3 = f"""
-            var radius = 20;
+            var radius = 32;
 
             {arrow_marker}
 
@@ -103,13 +104,22 @@ class SimpleVisualizer(VisualizerPlugin):
 
             node.append("text")
                 .attr("text-anchor", "middle")
-                .attr("dy", "0.35em")
-                .attr("font-size", "11px")
+                .attr("font-size", "10px")
                 .attr("fill", "#fff")
                 .attr("pointer-events", "none")
-                .text(function(d) {{
-                    var label = d.label || d.id;
-                    return label.length > 10 ? label.substring(0, 10) + "..." : label;
+                .each(function(d) {{
+                    var label = String(d.label || d.id);
+                    var charsPerLine = 10;
+                    var sel = d3.select(this);
+                    if (label.length <= charsPerLine) {{
+                        sel.append("tspan").attr("x", 0).attr("dy", "0.35em").text(label);
+                    }} else {{
+                        var line1 = label.substring(0, charsPerLine);
+                        var rest = label.substring(charsPerLine);
+                        var line2 = rest.length > charsPerLine ? rest.substring(0, charsPerLine - 1) + "..." : rest;
+                        sel.append("tspan").attr("x", 0).attr("dy", "-0.25em").text(line1);
+                        sel.append("tspan").attr("x", 0).attr("dy", "1.2em").text(line2);
+                    }}
                 }});
 
             node.append("title")
