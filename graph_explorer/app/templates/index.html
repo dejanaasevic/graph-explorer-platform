@@ -6,6 +6,8 @@
         <link rel="stylesheet" href="{% static 'style.css' %}"/>
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
         <script src="https://d3js.org/d3.v3.js"></script>
+        {% load static %}
+        <script src="{% static 'events.js' %}"></script>
         <title>Graph Explorer</title>
     </head>
     <body>
@@ -147,6 +149,7 @@
             </div>
         </div>
         {% load static %}
+        <script src="{% static 'birdview.js' %}"></script>
         <script src="{% static 'main.js' %}"></script>
         <script src="{% static 'cli.js' %}"></script>
         <script src="{% static 'toolbar.js' %}"></script>

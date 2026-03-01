@@ -6,8 +6,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const zoom = d3.behavior.zoom().scaleExtent([0.1, 10]).on('zoom', function () {
             graph.attr('transform', 'translate(' + d3.event.translate + ') scale(' + d3.event.scale + ')');
+            GraphEvents.publish('graph:zoom', {
+                translate: d3.event.translate.slice(),
+                scale: d3.event.scale
+            });
     });
     svg.call(zoom);
+    window._mainZoom = zoom;
 
     // prevent zoom and pan while dragging and dropping node
     svg.selectAll('.node').on('mousedown.zoom', null);
@@ -38,6 +43,14 @@ document.addEventListener('DOMContentLoaded', () => {
         var url = new URL(currentURL.origin + '/' + workspace_id + '/select_vis')
         console.log(URL)
         url.searchParams.set("visualizer", visualizer)
-        fetch(url).then(response => console.log(response))
+        fetch(url).then(response => console.log(response));
+        GraphEvents.publish('graph:reset', {});
     });
+
+    window.nodeClick = function(el) {
+        const wasSelected = el.classList.contains('selected');
+        document.querySelectorAll('#graph .node').forEach(n => n.classList.remove('selected'));
+        if (!wasSelected) el.classList.add('selected');
+        GraphEvents.publish('node:selected', { el: el, selected: !wasSelected });
+    };
 });
