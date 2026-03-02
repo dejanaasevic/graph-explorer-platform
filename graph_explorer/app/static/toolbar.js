@@ -5,10 +5,31 @@ document.addEventListener('DOMContentLoaded', () => {
             chip.addEventListener('click', () => {
                 document.querySelectorAll('.workspace-chip').forEach(c => c.classList.remove('active'));
                 chip.classList.add('active')
+                window.location.href = window.location.origin + '/workspace/' + chip.getAttribute('data-ws')
             });
         });
     }
     bindWorkspaceChips();
+
+    // Add workspaces
+    document.getElementById("add-ws-btn").addEventListener('click', function() {
+        var url = new URL(window.location.origin + '/create_workspace')
+        fetch(url)
+            .then(response => response.json())
+            .then(response => {
+                var workspaceSpan = document.getElementById("workspace-span")
+                var newWorkspaceButton = document.createElement('div')
+                newWorkspaceButton.setAttribute('class', 'workspace-chip')
+                newWorkspaceButton.setAttribute('data-ws', response.workspace_count - 1)
+                newWorkspaceButton.innerText = `WS ${response.workspace_count}`
+                newWorkspaceButton.addEventListener('click', function() {
+                    document.querySelectorAll('.workspace-chip').forEach(c => c.classList.remove('active'));
+                    newWorkspaceButton.classList.add('active')
+                    window.location.href = window.location.origin + '/workspace/' + newWorkspaceButton.getAttribute('data-ws')
+                })
+                workspaceSpan.appendChild(newWorkspaceButton)
+            })
+    })
 
     // Filter query tags
     document.getElementById('filter-btn').addEventListener('click', addFilterQueryTag);

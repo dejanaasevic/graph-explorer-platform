@@ -94,9 +94,16 @@
                     <div class="toolbar-group">
                         <span class="toolbar-label">Workspaces</span>
                         <div class="workspace-list" id="workspace-list">
-                            <div class="workspace-chip active" data-ws="1">WS 1</div>
-                            <div class="workspace-chip" data-ws="2">WS 2</div>
-                            <div class="workspace-chip" data-ws="3">WS 3</div>
+                            <span class="workspace-list" id="workspace-span">
+                                {% for i in workspace_count %}
+                                {% if i == workspace_id %}
+                                <div class="workspace-chip active" data-ws="{{ i }}">WS {{ i | add:"1" }}</div>
+                                {% else %}
+                                <div class="workspace-chip" data-ws="{{ i }}">WS {{ i | add:"1" }}</div>
+                                {% endif %}
+                                {% endfor %}
+                            </span>
+                            <button class="workspace-add" id="add-ws-btn" title="New workspace">+</button>
                         </div>
                     </div>
 

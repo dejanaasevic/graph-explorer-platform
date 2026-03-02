@@ -92,8 +92,8 @@ class BlockVisualizer(VisualizerPlugin):
                 .nodes(d3.values(nodes))
                 .links(edges)
                 .on("tick", tick)
-                .linkDistance(3000)
-                .linkStrength(0)
+                .linkDistance(500)
+                .linkStrength(0.01)
                 .charge(-2000)
                 .start();
                 
