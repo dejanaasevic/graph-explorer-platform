@@ -394,6 +394,23 @@ select {
 
 .tree-field span { color: var(--ink); font-weight: 600; }
 
+.tree-toggle-placeholder {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+.tree-node-header.tree-selected {
+    background: var(--highlight-bg);
+    outline: 2px solid var(--highlight);
+    outline-offset: -2px;
+}
+
+.tree-node-attrs {
+    padding-left: 30px;
+}
+
 #bird-view {
     grid-column: 1;
     grid-row: 3;
