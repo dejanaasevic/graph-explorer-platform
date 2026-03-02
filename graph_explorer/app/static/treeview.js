@@ -33,7 +33,7 @@
 
     /** Render attribute rows for a node (non-D3 keys). */
     function renderAttributes(nodeData) {
-        var html = '';
+     var html = '';
         Object.keys(nodeData).forEach(function (key) {
             if (D3_KEYS.has(key)) return;
             html += '<div class="tree-field">' + key + ': <span>' + nodeData[key] + '</span></div>';
@@ -50,22 +50,20 @@
         var nodeData = nodes[nodeId];
         if (!nodeData) return '';
 
-        var label = nodeData.label || nodeData.name || nodeData.id || nodeId;
+        var label = nodeData.label || nodeData.name || nodeData.tag || (nodeData.id ? String(nodeData.id).substring(0, 8) : nodeId.substring(0, 8));
         var children = adj[nodeId] || [];
         var hasChildren = children.length > 0;
-
-        // Cycle: this node is already an ancestor on the path
         var isCycle = visited.has(nodeId);
         var isExpanded = expanded.has(nodeId);
 
         var toggleIcon = '';
-        if (hasChildren && !isCycle) {
-            toggleIcon = '<span class="tree-toggle">' + (isExpanded ? '−' : '+') + '</span>';
+         if (hasChildren && !isCycle) {
+            toggleIcon = '<span class="tree-toggle" data-toggle="' + nodeId + '">' + (isExpanded ? '−' : '+') + '</span>';
         } else {
             toggleIcon = '<span class="tree-toggle-placeholder"></span>';
         }
 
-        var cycleLabel = isCycle ? ' <em style="color:var(--err);font-size:10px;">[cycle]</em>' : '';
+        var cycleLabel = isCycle ? ' <em style="color:var(--err);font-size:10px;">[↩ cycle]</em>' : '';
 
         var html = '<div class="tree-node" data-node-id="' + nodeId + '">';
         html += '<div class="tree-node-header" data-node-id="' + nodeId + '">';
@@ -74,25 +72,92 @@
         html += cycleLabel;
         html += '</div>';
 
-        // Attribute fields (always visible when parent is expanded)
-        html += '<div class="tree-node-attrs" style="' + (isExpanded ? '' : 'display:none') + '">';
+        html += '<div class="tree-node-attrs" data-attrs-for="' + nodeId + '" style="' + (isExpanded ? '' : 'display:none') + '">';
         html += renderAttributes(nodeData);
         html += '</div>';
 
-        // Children container
         if (hasChildren && !isCycle && isExpanded) {
-            html += '<div class="tree-node-children">';
+            html += '<div class="tree-node-children" data-children-for="' + nodeId + '">';
             var newVisited = new Set(visited);
             newVisited.add(nodeId);
             children.forEach(function (childId) {
                 html += renderNode(childId, adj, newVisited, expanded);
             });
             html += '</div>';
+        } else if (hasChildren && !isCycle && !isExpanded) {
+            html += '<div class="tree-node-children" data-children-for="' + nodeId + '" style="display:none"></div>';
         }
 
         html += '</div>';
         return html;
     }
+
+
+    function handleToggle(nodeId, state, nodeElement) {
+        var adj = state.adj;
+        var expanded = state.expanded;
+
+        var children = adj[nodeId] || [];
+        if (children.length === 0) return;
+
+        var childrenDiv = nodeElement.querySelector('[data-children-for="' + nodeId + '"]');
+        var attrsDiv = nodeElement.querySelector('[data-attrs-for="' + nodeId + '"]');
+        var toggleBtn = nodeElement.querySelector('[data-toggle="' + nodeId + '"]');
+
+        if (expanded.has(nodeId)) {
+            expanded.delete(nodeId);
+
+            if (childrenDiv) childrenDiv.style.display = 'none';
+            if (attrsDiv) attrsDiv.style.display = 'none';
+            if (toggleBtn) toggleBtn.textContent = '+';
+
+        } else {
+            expanded.add(nodeId);
+
+            if (attrsDiv) attrsDiv.style.display = '';
+            if (toggleBtn) toggleBtn.textContent = '−';
+
+            if (childrenDiv) {
+                childrenDiv.style.display = '';
+
+                if (childrenDiv.children.length === 0) {
+
+                    var visited = new Set();
+                    var el = nodeElement;
+                    while (el) {
+                        var pid = el.getAttribute('data-node-id');
+                        if (pid) visited.add(pid);
+                        el = el.parentElement.closest('.tree-node');
+                    }
+
+                    var html = '';
+                    children.forEach(function (childId) {
+                        html += renderNode(childId, adj, visited, expanded);
+                    });
+
+                    childrenDiv.innerHTML = html;
+                }
+            }
+        }
+}
+
+function attachClickHandlers(state) {
+    var container = document.getElementById('tree-view-content');
+
+    container.addEventListener('click', function (e) {
+        var header = e.target.closest('.tree-node-header');
+        if (!header) return;
+
+        var nodeId = header.getAttribute('data-node-id');
+        if (!nodeId) return;
+
+        var nodeElement = header.closest('.tree-node');
+
+        handleToggle(nodeId, state, nodeElement);
+
+        GraphEvents.publish('node:selected', { id: nodeId, source: 'tree' });
+    });
+}
 
     function buildTree() {
         if (typeof nodes === 'undefined' || typeof edges === 'undefined') return;
@@ -102,20 +167,18 @@
 
         var adj = buildAdjacency(edges);
         var rootId = pickRoot(nodeIds, edges);
-
-        // Start with root expanded
         var expanded = new Set([rootId]);
+        var state = { adj: adj, rootId: rootId, expanded: expanded };
 
         var container = document.getElementById('tree-view-content');
         if (!container) return;
 
         container.innerHTML = renderNode(rootId, adj, new Set(), expanded);
+        container._treeState = state;
 
-        // Store state on container for use in later commits
-        container._treeState = { adj: adj, rootId: rootId, expanded: expanded };
-    }
+        attachClickHandlers(state);
+        }
 
-    // Expose so later commits can call rebuild
     window._treeViewBuild = buildTree;
 
 
@@ -138,10 +201,8 @@
         attributeFilter: ['transform']
     });
 
-    // Also try immediately in case graph is already rendered
     document.addEventListener('DOMContentLoaded', maybeInit);
 
-    // Re-build on graph reset
     GraphEvents.subscribe('graph:reset', function () {
         initDone = false;
         var container = document.getElementById('tree-view-content');
