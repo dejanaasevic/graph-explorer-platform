@@ -1,4 +1,4 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render, redirect
 from django.apps import apps
 from django.views.decorators.csrf import csrf_exempt
@@ -19,6 +19,7 @@ def index(request, workspace_id):
         "visualizer_plugins":apps.get_app_config('app').visualizer_plugins,
         "fields":fields,
         "workspace_id":workspace_id,
+        "workspace_count": range(len(apps.get_app_config('app').workspaces)),
     })
 
 def init(request):
@@ -38,14 +39,27 @@ def select_vis(request, workspace_id):
 @csrf_exempt
 def render_graph(request, workspace_id):
     workspace: Workspace = apps.get_app_config('app').workspaces[workspace_id]
-    graph_vis = workspace.load_and_render(request.POST.dict())
+    if request.method == 'POST':
+        graph_vis = workspace.load_and_render(request.POST.dict())
+    else:
+        graph_vis = workspace.visualizer.render(workspace.graph)
     return render(request,'index.html', {
         "data_source_plugins": apps.get_app_config('app').data_source_plugins,
         "visualizer_plugins": apps.get_app_config('app').visualizer_plugins,
         "fields":workspace.data_source.fields(),
         "graph":graph_vis,
         "workspace_id":workspace_id,
+        "workspace_count":range(len(apps.get_app_config('app').workspaces)),
     })
 
 def create_workspace(request):
-    pass
+    apps.get_app_config('app').workspaces.append(Workspace())
+    response = {"workspace_count":len(apps.get_app_config('app').workspaces)}
+    return JsonResponse(response)
+
+def switch_workspace(request, workspace_id):
+    workspace: Workspace = apps.get_app_config('app').workspaces[workspace_id]
+    if workspace.graph is None:
+        return redirect('/' + str(workspace_id))
+    else:
+        return redirect('/' + str(workspace_id) + '/render')
