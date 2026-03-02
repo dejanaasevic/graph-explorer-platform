@@ -27,8 +27,7 @@
         return { x: minX - pad, y: minY - pad, w: (maxX - minX) + 2 * pad, h: (maxY - minY) + 2 * pad };
     }
 
-    // Applies the inverse of the main view zoom transform so the graph
-    // appears in its natural graph-space coordinates inside bird-svg
+    // Undo zoom and pan to keep the graph unscaled and unshifted
     function updateWrapper() {
         const tx = state.translate[0];
         const ty = state.translate[1];
@@ -55,21 +54,21 @@
         bird.selectAll('*').remove();
         bird.attr('preserveAspectRatio', 'xMidYMid meet');
 
-        // Mirror whatever is in #graph using <use> — works for any visualizer
-        // pointer-events: none so clicks pass through to bird-svg handler
+        // Mirror whatever is in #graph using <use>
         bird.append('g')
             .attr('id', 'bird-graph-wrapper')
-            .attr('pointer-events', 'none')
+            .attr('pointer-events', 'none') // so clicks pass through to bird-svg handler
             .append('use')
             .attr('xlink:href', '#graph');
 
-        // Viewport rect on top
+        // Viewport rect
         bird.append('rect')
             .attr('class', 'viewport-rect')
-            .attr('id', 'bird-viewport');
+            .attr('id', 'bird-viewport')
+            .attr('stroke-width', 4)
+            .attr('vector-effect', 'non-scaling-stroke');
 
         // Drag viewport to pan main view
-        // d3.event.dx/dy are in viewBox (graph) coords — no conversion needed
         d3.select('#bird-viewport').call(
             d3.behavior.drag().on('drag', function () {
                 state.translate[0] -= d3.event.dx * state.scale;
@@ -115,7 +114,6 @@
     }
 
     // Watch #graph for transform changes (node position updates from any visualizer)
-    // This way visualizer components don't need to know about GraphEvents
     let updatePending = false;
     const observer = new MutationObserver(function () {
         if (updatePending) return;
