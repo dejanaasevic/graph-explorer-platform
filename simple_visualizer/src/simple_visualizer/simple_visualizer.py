@@ -44,7 +44,7 @@ class SimpleVisualizer(VisualizerPlugin):
                 .enter().append("marker")
                 .attr("id", "arrow")
                 .attr("viewBox", "0 -5 10 10")
-                .attr("refX", 34)
+                .attr("refX", 46)
                 .attr("refY", 0)
                 .attr("markerWidth", 6)
                 .attr("markerHeight", 6)
@@ -142,6 +142,7 @@ class SimpleVisualizer(VisualizerPlugin):
                 node.attr("transform", function(d) {{
                     return "translate(" + d.x + "," + d.y + ")";
                 }});
+
             }}
         """
 
