@@ -68,9 +68,62 @@ document.addEventListener('DOMContentLoaded', () => {
         const wasSelected = node.classList.contains('selected');
         document.querySelectorAll('#graph .node').forEach(n => n.classList.remove('selected'));
         if (!wasSelected) node.classList.add('selected');
-        GraphEvents.publish('node:selected', { el: node, selected: !wasSelected });
+
+        var nodeId = null;
+        node.classList.forEach(function (c) {
+            if (c !== 'node' && c !== 'selected') {
+                nodeId = c.replace(/^id/, '');
+            }
+        });
+
+        GraphEvents.publish('node:selected', {el: node, id: nodeId, selected: !wasSelected});
     });
 
+    // Tree View → Main View
+    // When a node is selected in Tree View, highlight it and pan Main View to centre on it.
+    GraphEvents.subscribe('node:selected', function(data) {
+        if (data.source !== 'tree') return;
+
+        var nodeId = data.id;
+        if (!nodeId) return;
+
+        document.querySelectorAll('#graph .node').forEach(function(n) {
+            n.classList.remove('selected');
+        });
+
+        var nodeEl = document.querySelector('#graph .node[class*="' + nodeId + '"]');
+        if (!nodeEl && nodes[nodeId] && nodes[nodeId].id) {
+            var xmlId = String(nodes[nodeId].id);
+            nodeEl = document.querySelector('#graph .node[class*="' + xmlId + '"]');
+        }
+
+        if (!nodeEl) return;
+        nodeEl.classList.add('selected');
+
+        // Pan Main View to centre on the selected node.
+        var transform = nodeEl.getAttribute('transform');
+        var match = transform && transform.match(/translate\(([^,]+),([^)]+)\)/);
+        if (!match) return;
+
+        var nodeX = parseFloat(match[1]);
+        var nodeY = parseFloat(match[2]);
+
+        var mainSVG = document.getElementById('main-svg');
+        var scale = window._mainZoom.scale();
+        var newTx = mainSVG.clientWidth  / 2 - nodeX * scale;
+        var newTy = mainSVG.clientHeight / 2 - nodeY * scale;
+
+        window._mainZoom.translate([newTx, newTy]);
+        d3.select('#graph').attr('transform',
+            'translate(' + newTx + ',' + newTy + ') scale(' + scale + ')');
+
+        // Notify Bird View and any other listeners of the new pan position
+        GraphEvents.publish('graph:zoom', {
+            translate: [newTx, newTy],
+            scale: scale
+        });
+
+    });
     // Handled on mouseup, keep empty to prevent double toggle
     window.nodeClick = function (el) {};
 });

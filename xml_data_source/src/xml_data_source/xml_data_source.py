@@ -14,11 +14,13 @@ class XmlDataSource(DataSourcePlugin):
     def identifier(self) -> str:
         return "xml_data_source"
 
-    def fields(self) -> Dict[str,str]:
-        return {"directed": "checkbox",
-                "file_path": "text",
-                "reference_source_attr":"text",
-                "reference_target_attrs":"text"}
+    def fields(self) -> Dict[str, str]:
+        return {
+            "directed": "checkbox",
+            "file_path": "text",
+            "reference_source_attr": "text",
+            "reference_target_attrs": "text"
+        }
 
     def load(self, **kwargs) -> Graph:
         file_path: str = kwargs.get("file_path")
@@ -27,11 +29,9 @@ class XmlDataSource(DataSourcePlugin):
 
         directed: bool = kwargs.get("directed", False)
 
-        reference_source_attr: str = kwargs.get("reference_source_attr", "id")
-        reference_target_attrs: List[str] = kwargs.get(
-            "reference_target_attrs",
-            ["reportsTo", "assignedProject", "assignedTo"]
-        )
+        reference_source_attr: str = kwargs.get("reference_source_attr") or "id"
+        reference_target_attrs_raw: str = kwargs.get("reference_target_attrs") or "reportsTo,assignedProject,assignedTo"
+        reference_target_attrs: List[str] = [x.strip() for x in reference_target_attrs_raw.split(",")]
 
         graph = Graph(directed=directed)
         id_to_node: Dict[str, Node] = {}
@@ -58,10 +58,15 @@ class XmlDataSource(DataSourcePlugin):
             id_to_node: Dict[str, Node],
             parent_node: Optional[Node] = None,
             relation: Optional[str] = None,
-    ) -> Node:
+    ) -> Optional[Node]:
+
+        if len(element) == 0:
+            if parent_node is not None and element.text and element.text.strip():
+                parsed_value = self.parse_attribute_value(element.text.strip())
+                parent_node.add_attribute(element.tag, parsed_value)
+            return None
 
         node = Node()
-
         node.add_attribute("tag", element.tag)
 
         element_id = element.attrib.get("id")
@@ -79,12 +84,6 @@ class XmlDataSource(DataSourcePlugin):
             edge.add_attribute("relation", relation or element.tag)
             graph.add_edge(edge)
 
-        if element.text and element.text.strip():
-            node.add_attribute(
-                "text",
-                self.parse_attribute_value(element.text.strip())
-            )
-
         for child in element:
             self.parse_element(child, graph, id_to_node, node, child.tag)
 
@@ -98,9 +97,7 @@ class XmlDataSource(DataSourcePlugin):
             source_attr: str,
             target_attrs: List[str],
     ):
-
         for element in root.iter():
-
             source_id = element.attrib.get(source_attr)
             if not source_id:
                 continue
