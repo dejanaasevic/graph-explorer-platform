@@ -1,3 +1,4 @@
+import json
 from django.http import HttpResponse, JsonResponse, HttpResponseBadRequest
 from django.shortcuts import render, redirect
 from django.apps import apps
@@ -42,7 +43,7 @@ def render_graph(request, workspace_id):
     if request.method == 'POST':
         graph_vis = workspace.load_and_render(request.POST.dict())
     else:
-        graph_vis = workspace.visualizer.render(workspace.base_graph)
+        graph_vis = workspace.visualizer.render(workspace.graph)
     return render(request,'index.html', {
         "data_source_plugins": apps.get_app_config('app').data_source_plugins,
         "visualizer_plugins": apps.get_app_config('app').visualizer_plugins,
@@ -73,3 +74,18 @@ def cli(request, workspace_id):
         return HttpResponse(message)
     except Exception as e:
         return HttpResponseBadRequest(str(e))
+
+
+@csrf_exempt
+def apply_queries(request, workspace_id):
+    workspace: Workspace = apps.get_app_config('app').workspaces[workspace_id]
+    body = json.loads(request.body)
+    queries = body.get('queries', [])
+    if queries:
+        workspace.apply_queries(queries)
+    else:
+        workspace.clear_queries()
+    return JsonResponse({"ok": True})
+
+
+
