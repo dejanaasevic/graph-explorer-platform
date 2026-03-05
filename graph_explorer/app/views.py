@@ -42,7 +42,7 @@ def render_graph(request, workspace_id):
     if request.method == 'POST':
         graph_vis = workspace.load_and_render(request.POST.dict())
     else:
-        graph_vis = workspace.visualizer.render(workspace.graph)
+        graph_vis = workspace.visualizer.render(workspace.base_graph)
     return render(request,'index.html', {
         "data_source_plugins": apps.get_app_config('app').data_source_plugins,
         "visualizer_plugins": apps.get_app_config('app').visualizer_plugins,
@@ -59,17 +59,17 @@ def create_workspace(request):
 
 def switch_workspace(request, workspace_id):
     workspace: Workspace = apps.get_app_config('app').workspaces[workspace_id]
-    if workspace.graph is None:
+    if workspace.base_graph is None:
         return redirect('/' + str(workspace_id))
     else:
         return redirect('/' + str(workspace_id) + '/render')
 
 def cli(request, workspace_id):
     workspace: Workspace = apps.get_app_config('app').workspaces[workspace_id]
-    if workspace.graph is None:
+    if workspace.base_graph is None:
         return HttpResponseBadRequest("Please load the graph object before using the CLI!")
     try:
-        message = workspace.cli.parse_command(workspace.graph, request.GET.get('command'))
+        message = workspace.cli.parse_command(workspace.base_graph, request.GET.get('command'))
         return HttpResponse(message)
     except Exception as e:
         return HttpResponseBadRequest(str(e))
