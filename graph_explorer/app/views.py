@@ -49,6 +49,7 @@ def render_graph(request, workspace_id):
         "visualizer_plugins": apps.get_app_config('app').visualizer_plugins,
         "fields":workspace.data_source.fields(),
         "graph":graph_vis,
+        "queries": workspace.queries,
         "workspace_id":workspace_id,
         "workspace_count":range(len(apps.get_app_config('app').workspaces)),
     })

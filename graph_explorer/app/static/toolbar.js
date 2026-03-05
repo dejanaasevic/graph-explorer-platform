@@ -6,17 +6,14 @@ document.addEventListener('DOMContentLoaded', () => {
         return isNaN(id) ? 0 : id;
     }
 
-    // After a redirect the tags HTML is restored from sessionStorage but the
-    // remove-btn click listeners are lost (innerHTML doesn't restore handlers).
-    // Re-bind them here before anything else runs.
-    function bindRemoveButtons() {
-        document.querySelectorAll('#query-tags .remove-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                btn.closest('.query-tag').remove();
-                syncWithBackend();
-            });
-        });
-    }
+    document.getElementById('query-tags').addEventListener('click', (e) => {
+        const btn = e.target.closest('.remove-btn');
+        if (!btn) {
+            return
+        };
+        btn.closest('.query-tag').remove();
+        syncWithBackend();
+    });
 
     const savedTags = sessionStorage.getItem('queryTagsHTML');
     if (savedTags) {
@@ -61,15 +58,18 @@ document.addEventListener('DOMContentLoaded', () => {
     // Filter query tags
     document.getElementById('filter-btn').addEventListener('click', addFilterQueryTag);
     document.getElementById('value-input').addEventListener('keydown', e => {
-        if(e.key === 'Enter') addFilterQueryTag();
+        if(e.key === 'Enter'){
+            addFilterQueryTag();
+        }
     });
 
     function addFilterQueryTag() {
         const attribute = document.getElementById('attribute-input').value.trim();
         const operator = document.getElementById('operator-select').value;
         const value = document.getElementById('value-input').value.trim();
-        if(!attribute || !value) return;
-
+        if(!attribute || !value) {
+            return;
+        }
         const tag = document.createElement('span');
         tag.className = 'query-tag';
         tag.dataset.type = 'filter';
@@ -77,7 +77,10 @@ document.addEventListener('DOMContentLoaded', () => {
         tag.dataset.operator = operator;
         tag.dataset.value = value;
         tag.innerHTML = `${attribute} ${operator} ${value} <button class="remove-btn">×</button>`;
-        tag.querySelector('.remove-btn').addEventListener('click', () => { tag.remove(); syncWithBackend(); });
+        tag.querySelector('.remove-btn').addEventListener('click', () => {
+            tag.remove();
+            syncWithBackend();
+        });
         document.getElementById('query-tags').appendChild(tag);
 
         document.getElementById('attribute-input').value = '';
@@ -93,19 +96,26 @@ document.addEventListener('DOMContentLoaded', () => {
     // Search query tags
     document.getElementById('search-btn').addEventListener('click', addSearchQueryTag);
     document.getElementById('search-input').addEventListener('keydown', e => {
-        if(e.key === 'Enter') addSearchQueryTag();
+        if(e.key === 'Enter') {
+            addSearchQueryTag();
+        }
     });
 
     function addSearchQueryTag() {
         const value = document.getElementById('search-input').value.trim();
-        if(!value) return;
+        if(!value){
+            return;
+        }
 
         const tag = document.createElement('span');
         tag.className = 'query-tag';
         tag.dataset.type = 'search';
         tag.dataset.value = value;
         tag.innerHTML = `${value} <button class="remove-btn">×</button>`;
-        tag.querySelector('.remove-btn').addEventListener('click', () => { tag.remove(); syncWithBackend(); });
+        tag.querySelector('.remove-btn').addEventListener('click', () => {
+            tag.remove();
+            syncWithBackend();
+        });
 
         document.getElementById('query-tags').appendChild(tag);
         document.getElementById('search-input').value = '';
@@ -134,8 +144,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const workspaceId = getWorkspaceId();
         const queries = collectQueries();
 
-        sessionStorage.setItem('queryTagsHTML', document.getElementById('query-tags').innerHTML);
-
         const res = await fetch(`/${workspaceId}/apply_queries`, {
             method:  'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -143,7 +151,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         if (!res.ok) {
-            sessionStorage.removeItem('queryTagsHTML');
             return;
         }
 
