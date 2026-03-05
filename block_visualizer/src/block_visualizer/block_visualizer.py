@@ -143,6 +143,10 @@ class BlockVisualizer(VisualizerPlugin):
             }
                 
             function render(){
+                force.nodes(d3.values(nodes));
+                force.links(edges);
+                force.start();
+                
                 link = graph.selectAll('.link')
                     .data(edges, d => d.source.id + d.target.id)
                 node = graph.selectAll('.node')
@@ -177,8 +181,6 @@ class BlockVisualizer(VisualizerPlugin):
                 
                 node = graph.selectAll('.node');
                 link = graph.selectAll('.link');
-                
-                console.log('render called')
             }
             
             render()

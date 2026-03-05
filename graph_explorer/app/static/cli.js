@@ -54,9 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function renderUpdate(){
-        force.nodes(d3.values(nodes));
-        force.links(edges);
-        force.start();
         render()
         GraphEvents.publish('graph:update')
     }
