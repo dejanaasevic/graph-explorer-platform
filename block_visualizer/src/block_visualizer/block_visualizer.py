@@ -97,6 +97,15 @@ class BlockVisualizer(VisualizerPlugin):
                 .charge(-2000)
                 .start();
                 
+            var link = graph.selectAll('.link')
+                    .data(edges, d => d.source.id + d.target.id)
+            var node = graph.selectAll('.node')
+                    .data(force.nodes(), d => d.id)
+                
+            var drag = force.drag().on('dragstart', function() {
+                    d3.event.sourceEvent.stopPropagation(); 
+                });
+                
             const d3ForceKeys = new Set(['index', 'weight', 'x', 'y', 'px', 'py'])
             
             function displayBlock(d){
@@ -134,28 +143,30 @@ class BlockVisualizer(VisualizerPlugin):
             }
                 
             function render(){
-                var link = graph.selectAll('.link')
+                link = graph.selectAll('.link')
                     .data(edges, d => d.source.id + d.target.id)
-                    .enter().append('line')
+                node = graph.selectAll('.node')
+                    .data(force.nodes(), d => d.id)
+                    
+                link.enter().append('line')
                     .attr('class', 'link')
                     .attr('stroke', '#000000')     
                     .attr('stroke-width', '1px')
             """ + render_direction + """
-                var drag = force.drag().on('dragstart', function() {
-                    d3.event.sourceEvent.stopPropagation(); 
-                });
-        
-                var node = graph.selectAll('.node')
-                    .data(force.nodes(), d => d.id) 
-                    .enter().append('g')
+                
+                node.enter().append('g')
                     .attr('class', function(d){ return 'node id' + d.id; })
                     .on('click', function(){ nodeClick(this); })
-                    .call(drag);
+                    .call(drag)
+                    .each(function(d){ displayBlock(d); });
                     
-                node.each(function(d){ displayBlock(d); });
+                node.each(function(d){
+                    d3.select(this).selectAll("*").remove()
+                    displayBlock(d)
+                });
                 
-                graph.selectAll('.link')
-                    .data(edges, d => d.source.id + d.target.id)
+                graph.selectAll('.node')
+                    .data(force.nodes(), d => d.id)
                     .exit()
                     .remove()
                 
@@ -163,6 +174,11 @@ class BlockVisualizer(VisualizerPlugin):
                     .data(edges, d => d.source.id + d.target.id)
                     .exit()
                     .remove()
+                
+                node = graph.selectAll('.node');
+                link = graph.selectAll('.link');
+                
+                console.log('render called')
             }
             
             render()

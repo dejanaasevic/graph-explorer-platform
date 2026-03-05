@@ -53,43 +53,69 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    function renderUpdate(){
+        force.nodes(d3.values(nodes));
+        force.links(edges);
+        force.start();
+        render()
+        GraphEvents.publish('graph:update')
+    }
+
     function updateView(args, response) {
         switch (args[0]){
             case 'create-node':
                 appendLine("ok", "Created node!")
                 let new_node = JSON.parse(response)
                 nodes[new_node.id] = new_node
-                render()
+                renderUpdate()
                 break;
             case 'create-edge':
                 appendLine("ok", "Created edge!")
                 let new_edge = JSON.parse(response)
-                edges.append(new_edge)
-                render()
+                new_edge.source = nodes[new_edge.source]
+                new_edge.target = nodes[new_edge.target]
+                edges.push(new_edge)
+                renderUpdate()
                 break;
             case 'update-node':
                 appendLine("ok", "Updated node!")
                 let updated_node = JSON.parse(response)
-                nodes[updated_node.id] = updated_node
-                render()
+                Object.assign(nodes[updated_node.id], updated_node)
+                renderUpdate()
                 break;
             case 'update-edge':
                 appendLine("ok", "Updated edge!")
                 let updated_edge = JSON.parse(response)
-                // edge updating
+                for (let i in edges) {
+                    if (edges[i].source.id === updated_edge.source && edges[i].target.id === updated_edge.target) {
+                        edges[i].source = nodes[updated_edge.source]
+                        edges[i].target = nodes[updated_edge.target]
+                        Object.assign(edges[i], updated_edge)
+                        break;
+                    }
+                }
+                renderUpdate()
                 break;
             case 'delete-node':
                 appendLine("ok", "Deleted node!")
-                delete nodes[args[1]]
+                let id = args[1]
+                for (let i = edges.length - 1; i >= 0; i--) {
+                    if (edges[i].source.id === id || edges[i].target.id === id) {
+                        edges.splice(i, 1)
+                    }
+                }
+                delete nodes[id]
+                renderUpdate()
                 break;
             case 'delete-edge':
                 appendLine("ok", "Deleted edge!")
                 for (let i in edges){
-                    if (edges[i].source === args[1] && edges[i].target === args[2]){
+                    if (edges[i].source === nodes[args[1]] && edges[i].target === nodes[args[2]]){
                         edges.splice(i, 1)
                         break;
                     }
                 }
+                renderUpdate()
                 break;
         }
     }
@@ -106,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 break;
             case 'ArrowDown':
                 commandCounter = Math.min(commandStack.length, commandCounter + 1)
-                cliInput.value = '' ? commandCounter === commandStack.length : commandStack[commandCounter]
+                cliInput.value = commandStack[commandCounter] ? commandStack[commandCounter] : ''
         }
     });
 });

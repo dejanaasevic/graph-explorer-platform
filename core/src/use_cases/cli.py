@@ -53,7 +53,7 @@ class CLI(object):
         """
         Parses the attributes of create- and update- commands
 
-        Every attribute is of the form [name]=[value] and is followed by a flag describing its data type
+        Every attribute is of the form [name]=[value] and is preceded by a flag describing its data type
         Possible flags are: --int, --float, --string, and --date
         NOTE: Dates are accepted in the DD.MM.YYYY format
         """
@@ -103,17 +103,20 @@ class CLI(object):
     @staticmethod
     def create_node(graph: Graph, args: list[str]) -> Node:
         """
-        Creates a new node, assigns a unique ID to it and returns it
+        Creates a new node with given attributes
+        Returns the newly created node
         """
         attributes: dict[str, Any] = CLI.parse_attributes(args, False)
-        new_node = Node(attributes)
+        new_node = Node()
+        new_node.set_attributes(attributes)
         graph.add_node(new_node)
         return new_node
 
     @staticmethod
     def create_edge(graph: Graph, args: list[str]) -> Edge:
         """
-        Creates a new edge and returns it
+        Creates a new edge with given attributes
+        Returns the newly created edge
         """
         source: Node = graph.get_node(UUID(args[0]))
         target: Node = graph.get_node(UUID(args[1]))
@@ -122,7 +125,8 @@ class CLI(object):
         if target is None:
             raise InvalidArgumentException(f"Node with ID {args[1]} does not exist!")
         attributes: dict[str, Any] = CLI.parse_attributes(args[2:], False)
-        new_edge = Edge(source, target, attributes)
+        new_edge = Edge(source, target)
+        new_edge.set_attributes(attributes)
         graph.add_edge(new_edge)
         return new_edge
 

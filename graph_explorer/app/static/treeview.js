@@ -53,7 +53,7 @@
     }
 
     // Keys added by D3 force layout — excluded from attribute display
-    var D3_KEYS = new Set(['index', 'weight', 'x', 'y', 'px', 'py', 'id', 'label', 'tag']);
+    var D3_KEYS = new Set(['index', 'weight', 'x', 'y', 'px', 'py', 'label', 'tag']);
 
     // Renders key-value attribute rows for a node, skipping internal D3 keys
     function renderAttributes(nodeData) {
@@ -334,4 +334,10 @@
             }
         }, 50);
     });
+
+    GraphEvents.subscribe('graph:updated', function() {
+        var container = document.getElementById('tree-view-content');
+        if (container) container.innerHTML = '';
+        buildTree()
+    })
 })();
