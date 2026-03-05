@@ -1,4 +1,4 @@
-from django.http import HttpResponse, JsonResponse
+from django.http import HttpResponse, JsonResponse, HttpResponseBadRequest
 from django.shortcuts import render, redirect
 from django.apps import apps
 from django.views.decorators.csrf import csrf_exempt
@@ -63,3 +63,13 @@ def switch_workspace(request, workspace_id):
         return redirect('/' + str(workspace_id))
     else:
         return redirect('/' + str(workspace_id) + '/render')
+
+def cli(request, workspace_id):
+    workspace: Workspace = apps.get_app_config('app').workspaces[workspace_id]
+    if workspace.graph is None:
+        return HttpResponseBadRequest("Please load the graph object before using the CLI!")
+    try:
+        message = workspace.cli.parse_command(workspace.graph, request.GET.get('command'))
+        return HttpResponse(message)
+    except Exception as e:
+        return HttpResponseBadRequest(str(e))

@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import Dict
 
-from ..model.graph import Graph
+from ..model.graph import Graph, Node, Edge
 
 class Plugin(ABC):
     @abstractmethod
@@ -40,6 +40,22 @@ class VisualizerPlugin(Plugin):
     - Each node element must have class "node" (used by views)
     - #main-svg is available for SVG <defs> (e.g. arrow markers)
     """
+
+    @staticmethod
+    @abstractmethod
+    def serialize_node(node: Node) -> str:
+        """
+        Render a single node as a JavaScript string.
+        """
+        pass
+
+    @staticmethod
+    @abstractmethod
+    def serialize_edge(edge: Edge) -> str:
+        """
+        Render a single edge as a JavaScript string.
+        """
+        pass
 
     @abstractmethod
     def render(self, graph: Graph, **kwargs) -> str:

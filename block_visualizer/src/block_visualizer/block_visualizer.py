@@ -97,27 +97,7 @@ class BlockVisualizer(VisualizerPlugin):
                 .charge(-2000)
                 .start();
                 
-            var link = graph.selectAll('.link')
-                .data(edges)
-                .enter().append('line')
-                .attr('class', 'link')
-                .attr('stroke', '#000000')     
-                .attr('stroke-width', '1px')
-        """ + render_direction + """
-            var drag = force.drag().on('dragstart', function() {
-                d3.event.sourceEvent.stopPropagation(); 
-            });
-    
-            var node = graph.selectAll('.node')
-                .data(force.nodes()) 
-                .enter().append('g')
-                .attr('class', function(d){ return 'node id' + d.id; })
-                .on('click', function(){ nodeClick(this); })
-                .call(drag);
-                
             const d3ForceKeys = new Set(['index', 'weight', 'x', 'y', 'px', 'py'])
-                                
-            node.each(function(d){ displayBlock(d); });
             
             function displayBlock(d){
                 var width = 275;
@@ -152,6 +132,40 @@ class BlockVisualizer(VisualizerPlugin):
                     .append('title')
                     .text(mouseoverText)
             }
+                
+            function render(){
+                var link = graph.selectAll('.link')
+                    .data(edges, d => d.source.id + d.target.id)
+                    .enter().append('line')
+                    .attr('class', 'link')
+                    .attr('stroke', '#000000')     
+                    .attr('stroke-width', '1px')
+            """ + render_direction + """
+                var drag = force.drag().on('dragstart', function() {
+                    d3.event.sourceEvent.stopPropagation(); 
+                });
+        
+                var node = graph.selectAll('.node')
+                    .data(force.nodes(), d => d.id) 
+                    .enter().append('g')
+                    .attr('class', function(d){ return 'node id' + d.id; })
+                    .on('click', function(){ nodeClick(this); })
+                    .call(drag);
+                    
+                node.each(function(d){ displayBlock(d); });
+                
+                graph.selectAll('.link')
+                    .data(edges, d => d.source.id + d.target.id)
+                    .exit()
+                    .remove()
+                
+                graph.selectAll('.link')
+                    .data(edges, d => d.source.id + d.target.id)
+                    .exit()
+                    .remove()
+            }
+            
+            render()
         """
 
         script: str = "<script>\n" + node_list_json + edge_list_json + d3 + "</script>"

@@ -22,7 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const selectVis = document.getElementById('visualizer-select');
     const currentURL = new URL(window.location.href)
     const workspace_id = currentURL.pathname.split('/').at(1)
-    console.log(workspace_id)
 
     if(currentURL.searchParams.get("datasource")){
         selectDS.value = currentURL.searchParams.get("datasource")
