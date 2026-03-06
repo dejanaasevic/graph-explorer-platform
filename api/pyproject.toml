@@ -1,4 +1,4 @@
-[build-system]
+ [build-system]
 requires = ["setuptools>=42", "wheel"]
 build-backend = "setuptools.build_meta"
 
@@ -7,3 +7,11 @@ name = "graph-api"
 version = "0.0.1"
 description = "Graph visualisation API"
 dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["test_api"]
