@@ -5,19 +5,33 @@ import json
 
 class SimpleVisualizer(VisualizerPlugin):
     def name(self) -> str:
+        """Returns the display name of the visualizer."""
         return "Simple Visualizer"
 
     def identifier(self) -> str:
+        """Returns the unique string identifier of the visualizer."""
         return "simple_visualizer"
 
     @staticmethod
     def node_label(node: Node) -> str:
+        """
+        Returns the display label for a node.
+
+        Uses the first attribute value if any attributes exist,
+        otherwise falls back to the first 8 characters of the node's ID.
+        """
         if node.attributes:
             return str(next(iter(node.attributes.values())))
         return str(node.id)[:8]
 
     @staticmethod
     def serialize_node(node: Node) -> str:
+        """
+        Serializes a node to a JSON string.
+
+        The resulting object contains the node's ID, its display label,
+        and all of its attributes as string values.
+        """
         dictionary = {"id": str(node.id), "label": SimpleVisualizer.node_label(node)}
         for attribute in node.attributes:
             dictionary[attribute] = str(node.attributes[attribute])
@@ -25,9 +39,21 @@ class SimpleVisualizer(VisualizerPlugin):
 
     @staticmethod
     def serialize_edge(edge: Edge) -> str:
+        """
+        Serializes an edge to a JSON string.
+
+        The resulting object contains the source and target node IDs as strings.
+        """
         return json.dumps({"source": str(edge.source.id), "target": str(edge.target.id)})
 
     def render(self, graph: Graph, **kwargs) -> str:
+        """
+        Renders the graph as an HTML script tag containing D3.js visualization code.
+
+        Generates JavaScript that builds a force-directed graph using D3 v3.
+        Supports both directed and undirected graphs — directed graphs include
+        arrow markers on edges. Returns a <script> string ready to be embedded in HTML.
+        """
         node_list_js = "var nodes = {\n"
         for node in graph.get_nodes():
             node_list_js += f"  '{node.id}': {self.serialize_node(node)},\n"
