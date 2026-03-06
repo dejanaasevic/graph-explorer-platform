@@ -111,6 +111,23 @@
                 <div class="toolbar-queries">
                     <span class="toolbar-label">Active queries:</span>
                     <div id="query-tags">
+                         {% for query in queries %}
+                            {% if query.type == "search" %}
+                                <span class="query-tag" data-type="search" data-value="{{ query.text }}">
+                                    {{ query.text }}
+                                    <button class="remove-btn">×</button>
+                                </span>
+                            {% elif query.type == "filter" %}
+                                <span class="query-tag"
+                                      data-type="filter"
+                                      data-attribute="{{ query.attribute }}"
+                                      data-operator="{{ query.operator }}"
+                                      data-value="{{ query.value }}">
+                                    {{ query.attribute }} {{ query.operator }} {{ query.value }}
+                                    <button class="remove-btn">×</button>
+                                </span>
+                            {% endif %}
+                        {% endfor %}
                     </div>
                 </div>
             </div>
@@ -159,7 +176,7 @@
         <script src="{% static 'birdview.js' %}"></script>
         <script src="{% static 'treeview.js' %}"></script>
         <script src="{% static 'main.js' %}"></script>
-        <script src="{% static 'cli.js' %}"></script>
-        <script src="{% static 'toolbar.js' %}"></script>
+        <script type="module" src="{% static 'cli.js' %}"></script>
+        <script type="module" src="{% static 'toolbar.js' %}"></script>
     </body>
 </html>

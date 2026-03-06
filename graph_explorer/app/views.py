@@ -1,4 +1,5 @@
-from django.http import HttpResponse, JsonResponse
+import json
+from django.http import HttpResponse, JsonResponse, HttpResponseBadRequest
 from django.shortcuts import render, redirect
 from django.apps import apps
 from django.views.decorators.csrf import csrf_exempt
@@ -48,6 +49,7 @@ def render_graph(request, workspace_id):
         "visualizer_plugins": apps.get_app_config('app').visualizer_plugins,
         "fields":workspace.data_source.fields(),
         "graph":graph_vis,
+        "queries": workspace.queries,
         "workspace_id":workspace_id,
         "workspace_count":range(len(apps.get_app_config('app').workspaces)),
     })
@@ -59,7 +61,32 @@ def create_workspace(request):
 
 def switch_workspace(request, workspace_id):
     workspace: Workspace = apps.get_app_config('app').workspaces[workspace_id]
-    if workspace.graph is None:
+    if workspace.base_graph is None:
         return redirect('/' + str(workspace_id))
     else:
         return redirect('/' + str(workspace_id) + '/render')
+
+def cli(request, workspace_id):
+    workspace: Workspace = apps.get_app_config('app').workspaces[workspace_id]
+    if workspace.base_graph is None:
+        return HttpResponseBadRequest("Please load the graph object before using the CLI!")
+    try:
+        message = workspace.cli_input(request.GET.get('command'))
+        return HttpResponse(message)
+    except Exception as e:
+        return HttpResponseBadRequest(str(e))
+
+
+@csrf_exempt
+def apply_queries(request, workspace_id):
+    workspace: Workspace = apps.get_app_config('app').workspaces[workspace_id]
+    body = json.loads(request.body)
+    queries = body.get('queries', [])
+    if queries:
+        workspace.apply_queries(queries)
+    else:
+        workspace.clear_queries()
+    return JsonResponse({"ok": True})
+
+
+

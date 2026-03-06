@@ -8,4 +8,6 @@ urlpatterns = [
     path('<int:workspace_id>/render', views.render_graph, name='render'),
     path('create_workspace', views.create_workspace),
     path('workspace/<int:workspace_id>', views.switch_workspace),
+    path('<int:workspace_id>/cli', views.cli),
+    path('<int:workspace_id>/apply_queries', views.apply_queries, name='apply_queries'),
 ]

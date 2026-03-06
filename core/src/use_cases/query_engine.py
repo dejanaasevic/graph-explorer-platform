@@ -36,7 +36,7 @@ class QueryEngine:
         new_graph: Graph = Graph(graph.is_directed())
         map_nodes : Dict[uuid.UUID, Node] = {}
         for node in nodes:
-            node_copy : Node = node.copy()
+            node_copy : Node = node.copy(keep_id=True)
             map_nodes[node.id] = node_copy
             new_graph.add_node(node_copy)
         for edge in graph.get_edges():

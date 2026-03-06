@@ -21,18 +21,20 @@ class BlockVisualizer(VisualizerPlugin):
         dictionary = {"source": str(edge.source.id), "target": str(edge.target.id)}
         return json.dumps(dictionary)
 
-    def render(self, graph:Graph, **kwargs) -> str:
+    def render(self, graph: Graph, **kwargs) -> str:
         node_list_json = "nodes = {"
         for node in graph.get_nodes():
             node_list_json += "'" + str(node.id) + "':"
             node_list_json += BlockVisualizer.serialize_node(node) + ",\n"
-        node_list_json = node_list_json[:-2] + "}\n"
-
+        if node_list_json != "nodes = {":
+            node_list_json = node_list_json[:-2]
+        node_list_json += "}\n"
         edge_list_json = "edges = ["
         for edge in graph.get_edges():
             edge_list_json += BlockVisualizer.serialize_edge(edge) + ",\n"
-        edge_list_json = edge_list_json[:-2] + "]\n"
-
+        if edge_list_json != "edges = [":
+            edge_list_json = edge_list_json[:-2]
+        edge_list_json += "]\n"
         render_direction = "\t\t.attr('marker-end', 'url(#arrow)')\n" if graph.is_directed() else "\n"
 
         d3 = """
@@ -40,7 +42,7 @@ class BlockVisualizer(VisualizerPlugin):
                 node.attr("transform", function(d) {
                     return "translate(" + d.x + "," + d.y + ")";
                 }).call(drag);
-            
+
                 link.attr('x1', function(d) { return d.source.x; })
                     .attr('y1', function(d) { return d.source.y; })
                     .attr('x2', function(d) { return d.target.x; })
@@ -87,8 +89,12 @@ class BlockVisualizer(VisualizerPlugin):
                 edge.target = nodes[edge.target];
             });
             
+            var svgEl = document.getElementById('main-svg');
+            var svgW = (svgEl && svgEl.clientWidth)  || 960;
+            var svgH = (svgEl && svgEl.clientHeight) || 600;
+
             var force = d3.layout.force()
-                .size([480, 270])
+                .size([svgW, svgH])
                 .nodes(d3.values(nodes))
                 .links(edges)
                 .on("tick", tick)
@@ -98,26 +104,15 @@ class BlockVisualizer(VisualizerPlugin):
                 .start();
                 
             var link = graph.selectAll('.link')
-                .data(edges)
-                .enter().append('line')
-                .attr('class', 'link')
-                .attr('stroke', '#000000')     
-                .attr('stroke-width', '1px')
-        """ + render_direction + """
-            var drag = force.drag().on('dragstart', function() {
-                d3.event.sourceEvent.stopPropagation(); 
-            });
-    
+                    .data(edges, d => d.source.id + d.target.id)
             var node = graph.selectAll('.node')
-                .data(force.nodes()) 
-                .enter().append('g')
-                .attr('class', function(d){ return 'node id' + d.id; })
-                .on('click', function(){ nodeClick(this); })
-                .call(drag);
+                    .data(force.nodes(), d => d.id)
                 
-            const d3ForceKeys = new Set(['index', 'weight', 'x', 'y', 'px', 'py'])
-                                
-            node.each(function(d){ displayBlock(d); });
+            var drag = force.drag().on('dragstart', function() {
+                    d3.event.sourceEvent.stopPropagation(); 
+                });
+                
+            var d3ForceKeys = new Set(['index', 'weight', 'x', 'y', 'px', 'py'])
             
             function displayBlock(d){
                 var width = 275;
@@ -152,6 +147,49 @@ class BlockVisualizer(VisualizerPlugin):
                     .append('title')
                     .text(mouseoverText)
             }
+                
+            function render(){
+                force.nodes(d3.values(nodes));
+                force.links(edges);
+                force.start();
+                
+                link = graph.selectAll('.link')
+                    .data(edges, d => d.source.id + d.target.id)
+                node = graph.selectAll('.node')
+                    .data(force.nodes(), d => d.id)
+                    
+                link.enter().append('line')
+                    .attr('class', 'link')
+                    .attr('stroke', '#000000')     
+                    .attr('stroke-width', '1px')
+            """ + render_direction + """
+                
+                node.enter().append('g')
+                    .attr('class', function(d){ return 'node id' + d.id; })
+                    .on('click', function(){ nodeClick(this); })
+                    .call(drag)
+                    .each(function(d){ displayBlock(d); });
+                    
+                node.each(function(d){
+                    d3.select(this).selectAll("*").remove()
+                    displayBlock(d)
+                });
+                
+                graph.selectAll('.node')
+                    .data(force.nodes(), d => d.id)
+                    .exit()
+                    .remove()
+                
+                graph.selectAll('.link')
+                    .data(edges, d => d.source.id + d.target.id)
+                    .exit()
+                    .remove()
+                
+                node = graph.selectAll('.node');
+                link = graph.selectAll('.link');
+            }
+            
+            render()
         """
 
         script: str = "<script>\n" + node_list_json + edge_list_json + d3 + "</script>"

@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import Dict
 
-from ..model.graph import Graph
+from ..model.graph import Graph, Node, Edge
 
 class Plugin(ABC):
     @abstractmethod
@@ -13,12 +13,32 @@ class Plugin(ABC):
         pass
 
 class DataSourcePlugin(Plugin):
+    """
+    Base class for data source plugins.
+
+    Data Source plugins create a Graph object stored in platform during runtime.
+    """
     @abstractmethod
     def load(self, **kwargs) -> Graph:
+        """
+        Function that transforms the input into a Graph object.
+
+        Keyword arguments can take any form necessary for Graph loading.
+        """
         pass
 
     @abstractmethod
     def fields(self) -> Dict[str, str]:
+        """
+        Returns a dictionary that maps the HTML <input> value attributes to
+        type attributes needed for generating the HTML <form> for data input.
+
+        Dictionary items should be mapped onto HTML <input> in following manner:
+        <input value=[key] type=[value] />
+
+        Dictionary keys should fit the keyword arguments used in load() function.
+        :return:
+        """
         pass
 
 class VisualizerPlugin(Plugin):
@@ -39,7 +59,24 @@ class VisualizerPlugin(Plugin):
     - Render all nodes and edges into d3.select("#graph")
     - Each node element must have class "node" (used by views)
     - #main-svg is available for SVG <defs> (e.g. arrow markers)
+    - render() function implementation for graph rendering and update handling
     """
+
+    @staticmethod
+    @abstractmethod
+    def serialize_node(node: Node) -> str:
+        """
+        Render a single node as a JavaScript string.
+        """
+        pass
+
+    @staticmethod
+    @abstractmethod
+    def serialize_edge(edge: Edge) -> str:
+        """
+        Render a single edge as a JavaScript string.
+        """
+        pass
 
     @abstractmethod
     def render(self, graph: Graph, **kwargs) -> str:
