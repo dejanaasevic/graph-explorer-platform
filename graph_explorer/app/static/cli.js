@@ -1,3 +1,5 @@
+import {addSearchQueryTag, addFilterQueryTag} from "./toolbar.js";
+
 document.addEventListener('DOMContentLoaded', () => {
     const cliInput = document.getElementById('cli-input');
     const cliOutput = document.getElementById('cli-output');
@@ -113,6 +115,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 }
                 renderUpdate()
+                break;
+            case 'search':
+                appendLine("ok", "Search query applied!")
+                addSearchQueryTag(args[1])
+            case 'filter':
+                appendLine("ok", "Filter query applied!")
+                addFilterQueryTag(args[1], args[2], args[3])
                 break;
         }
     }

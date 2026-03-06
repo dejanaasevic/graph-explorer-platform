@@ -71,7 +71,7 @@ def cli(request, workspace_id):
     if workspace.base_graph is None:
         return HttpResponseBadRequest("Please load the graph object before using the CLI!")
     try:
-        message = workspace.cli.parse_command(workspace.base_graph, request.GET.get('command'))
+        message = workspace.cli_input(request.GET.get('command'))
         return HttpResponse(message)
     except Exception as e:
         return HttpResponseBadRequest(str(e))

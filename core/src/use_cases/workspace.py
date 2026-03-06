@@ -1,7 +1,7 @@
-from api.model import Graph
+from api.model import Graph, Node, Edge
 from api.plugins import DataSourcePlugin, VisualizerPlugin
 from typing import Dict, List
-from .cli_proxy import CLIProxy
+from .cli import CLI
 from use_cases.query_engine import QueryEngine
 
 
@@ -16,7 +16,6 @@ class Workspace(object):
         self.graph: Graph = None
         self.data_source: DataSourcePlugin = None
         self.visualizer: VisualizerPlugin = None
-        self.cli: CLIProxy = None
         self.queries: List[Dict[str, str]] = []
 
     def set_data_source(self, data_source: DataSourcePlugin):
@@ -30,7 +29,6 @@ class Workspace(object):
         Sets the visualizer for the workspace.
         """
         self.visualizer = visualizer
-        self.cli = CLIProxy(self.visualizer)
 
     def load_and_render(self, kwargs: Dict[str, str]):
         """
@@ -60,3 +58,12 @@ class Workspace(object):
         self.queries = []
         self.graph = self.base_graph
         return self.visualizer.render(self.base_graph)
+
+    def cli_input(self, expression: str):
+        result = CLI.parse_command(self.base_graph, expression)
+        if isinstance(result, str):
+            return result
+        if isinstance(result, Node):
+            return self.visualizer.serialize_node(result)
+        if isinstance(result, Edge):
+            return self.visualizer.serialize_edge(result)

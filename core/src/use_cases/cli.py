@@ -42,6 +42,14 @@ class CLI(object):
                 if len(parsed) != 3:
                     raise InvalidArgumentException("delete-edge takes two arguments!")
                 return CLI.delete_edge(graph, parsed[1], parsed[2])
+            case 'search':
+                if len(parsed) != 2:
+                    raise InvalidArgumentException("search takes one argument!")
+                return parsed[1]
+            case 'filter':
+                if len(parsed) < 3:
+                    raise InvalidArgumentException("Improper filter expression format!")
+                return command.split(' ', maxsplit=1)
             case 'clear-graph':
                 CLI.clear(graph)
                 return "Graph cleared!"
