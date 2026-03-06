@@ -4,6 +4,7 @@ from django.shortcuts import render, redirect
 from django.apps import apps
 from django.views.decorators.csrf import csrf_exempt
 from use_cases import PluginService, Workspace
+import tempfile, os
 
 def index(request, workspace_id):
     workspace: Workspace = apps.get_app_config('app').workspaces[workspace_id]
@@ -41,7 +42,15 @@ def select_vis(request, workspace_id):
 def render_graph(request, workspace_id):
     workspace: Workspace = apps.get_app_config('app').workspaces[workspace_id]
     if request.method == 'POST':
-        graph_vis = workspace.load_and_render(request.POST.dict())
+        post_data = request.POST.dict()
+        for key, uploaded_file in request.FILES.items():
+            suffix = os.path.splitext(uploaded_file.name)[1]
+            tmp = tempfile.NamedTemporaryFile(delete=False, suffix=suffix)
+            for chunk in uploaded_file.chunks():
+                tmp.write(chunk)
+            tmp.close()
+            post_data[key] = tmp.name
+        graph_vis = workspace.load_and_render(post_data)
     else:
         graph_vis = workspace.visualizer.render(workspace.graph)
     return render(request,'index.html', {
@@ -87,6 +96,3 @@ def apply_queries(request, workspace_id):
     else:
         workspace.clear_queries()
     return JsonResponse({"ok": True})
-
-
-
