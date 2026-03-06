@@ -184,6 +184,8 @@ class CLI(object):
         for key, value in attributes.items():
             if key in node.attributes and value is None:
                 del node.attributes[key]
+            elif value is None:
+                pass
             else:
                 node.attributes[key] = value
         return node

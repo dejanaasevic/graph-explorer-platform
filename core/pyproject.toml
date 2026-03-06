@@ -7,3 +7,11 @@ name = "graph-core"
 version = "0.0.1"
 description = "Graph visualisation core"
 dependencies = ["graph-api>=0.0.1"]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["test_core"]
