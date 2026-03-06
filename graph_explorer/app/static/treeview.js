@@ -36,20 +36,21 @@
         return adj;
     }
 
-    // Picks the root node: prefers a node with no incoming edges (true root).
-    // Falls back to the first node if the graph is fully cyclic.
-    function pickRoot(nodeIds, edgesArr) {
+    // Picks all root nodes: nodes with no incoming edges.
+    // Falls back to first node if the graph is fully cyclic.
+    function pickRoots(nodeIds, edgesArr) {
         var hasIncoming = {};
         edgesArr.forEach(function (edge) {
             var tgtRaw = typeof edge.target === 'object' ? edge.target.id : edge.target;
             if (tgtRaw) hasIncoming[String(tgtRaw)] = true;
         });
+        var roots = [];
         for (var i = 0; i < nodeIds.length; i++) {
             var n = nodes[nodeIds[i]];
             var xmlId = n && n.id ? String(n.id) : nodeIds[i];
-            if (!hasIncoming[nodeIds[i]] && !hasIncoming[xmlId]) return nodeIds[i];
+            if (!hasIncoming[nodeIds[i]] && !hasIncoming[xmlId]) roots.push(nodeIds[i]);
         }
-        return nodeIds[0];
+        return roots.length > 0 ? roots : [nodeIds[0]];
     }
 
     // Keys added by D3 force layout — excluded from attribute display
@@ -197,14 +198,18 @@
         if (nodeIds.length === 0) return;
 
         var adj = buildAdjacency(edges);
-        var rootId = pickRoot(nodeIds, edges);
-        var expanded = new Set([rootId]);
-        var state = { adj: adj, rootId: rootId, expanded: expanded };
+        var rootIds = pickRoots(nodeIds, edges);
+        var expanded = new Set([rootIds[0]]);
+        var state = { adj: adj, rootId: rootIds[0], rootIds: rootIds, expanded: expanded };
 
         var container = document.getElementById('tree-view-content');
         if (!container) return;
 
-        container.innerHTML = renderNode(rootId, adj, new Set(), expanded);
+        var html = '';
+        rootIds.forEach(function (rid) {
+            html += renderNode(rid, adj, new Set(), expanded);
+        });
+        container.innerHTML = html;
         // Store state on the DOM element so subscribers can access it
         container._treeState = state;
         attachClickHandlers(state);
@@ -282,7 +287,10 @@
         var state = container._treeState;
         if (!state) return;
 
-        var path = findPathToNode(targetUuid, state.adj, state.rootId);
+        var path = null;
+        (state.rootIds || [state.rootId]).forEach(function (rid) {
+            if (!path) path = findPathToNode(targetUuid, state.adj, rid);
+        });
         if (!path) return;
 
         // Open each ancestor along the path (excluding the target itself)

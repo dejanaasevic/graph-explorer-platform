@@ -21,18 +21,20 @@ class BlockVisualizer(VisualizerPlugin):
         dictionary = {"source": str(edge.source.id), "target": str(edge.target.id)}
         return json.dumps(dictionary)
 
-    def render(self, graph:Graph, **kwargs) -> str:
+    def render(self, graph: Graph, **kwargs) -> str:
         node_list_json = "nodes = {"
         for node in graph.get_nodes():
             node_list_json += "'" + str(node.id) + "':"
             node_list_json += BlockVisualizer.serialize_node(node) + ",\n"
-        node_list_json = node_list_json[:-2] + "}\n"
-
+        if node_list_json != "nodes = {":
+            node_list_json = node_list_json[:-2]
+        node_list_json += "}\n"
         edge_list_json = "edges = ["
         for edge in graph.get_edges():
             edge_list_json += BlockVisualizer.serialize_edge(edge) + ",\n"
-        edge_list_json = edge_list_json[:-2] + "]\n"
-
+        if edge_list_json != "edges = [":
+            edge_list_json = edge_list_json[:-2]
+        edge_list_json += "]\n"
         render_direction = "\t\t.attr('marker-end', 'url(#arrow)')\n" if graph.is_directed() else "\n"
 
         d3 = """
@@ -40,7 +42,7 @@ class BlockVisualizer(VisualizerPlugin):
                 node.attr("transform", function(d) {
                     return "translate(" + d.x + "," + d.y + ")";
                 }).call(drag);
-            
+
                 link.attr('x1', function(d) { return d.source.x; })
                     .attr('y1', function(d) { return d.source.y; })
                     .attr('x2', function(d) { return d.target.x; })
@@ -87,8 +89,12 @@ class BlockVisualizer(VisualizerPlugin):
                 edge.target = nodes[edge.target];
             });
             
+            var svgEl = document.getElementById('main-svg');
+            var svgW = (svgEl && svgEl.clientWidth)  || 960;
+            var svgH = (svgEl && svgEl.clientHeight) || 600;
+
             var force = d3.layout.force()
-                .size([480, 270])
+                .size([svgW, svgH])
                 .nodes(d3.values(nodes))
                 .links(edges)
                 .on("tick", tick)
@@ -106,7 +112,7 @@ class BlockVisualizer(VisualizerPlugin):
                     d3.event.sourceEvent.stopPropagation(); 
                 });
                 
-            const d3ForceKeys = new Set(['index', 'weight', 'x', 'y', 'px', 'py'])
+            var d3ForceKeys = new Set(['index', 'weight', 'x', 'y', 'px', 'py'])
             
             function displayBlock(d){
                 var width = 275;

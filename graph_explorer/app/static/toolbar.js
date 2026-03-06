@@ -1,4 +1,28 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+    function getWorkspaceId() {
+        const parts = window.location.pathname.split('/').filter(Boolean);
+        const id = parseInt(parts[0], 10);
+        return isNaN(id) ? 0 : id;
+    }
+
+    document.getElementById('query-tags').addEventListener('click', (e) => {
+        const btn = e.target.closest('.remove-btn');
+        if (!btn) {
+            return
+        };
+        btn.closest('.query-tag').remove();
+        syncWithBackend();
+    });
+
+    const savedTags = sessionStorage.getItem('queryTagsHTML');
+    if (savedTags) {
+        const qt = document.getElementById('query-tags');
+        if (qt) qt.innerHTML = savedTags;
+        sessionStorage.removeItem('queryTagsHTML');
+        bindRemoveButtons();
+    }
+
     // Workspace switching
     function bindWorkspaceChips(){
         document.querySelectorAll('.workspace-chip').forEach(chip =>{
@@ -43,42 +67,93 @@ document.addEventListener('DOMContentLoaded', () => {
         const attribute = document.getElementById('attribute-input').value.trim();
         const operator = document.getElementById('operator-select').value;
         const value = document.getElementById('value-input').value.trim();
-        if(!attribute || !value){
+        if(!attribute || !value) {
             return;
         }
         const tag = document.createElement('span');
         tag.className = 'query-tag';
+        tag.dataset.type = 'filter';
+        tag.dataset.attribute = attribute;
+        tag.dataset.operator = operator;
+        tag.dataset.value = value;
         tag.innerHTML = `${attribute} ${operator} ${value} <button class="remove-btn">×</button>`;
-        tag.querySelector('.remove-btn').addEventListener('click', () => tag.remove());
+        tag.querySelector('.remove-btn').addEventListener('click', () => {
+            tag.remove();
+            syncWithBackend();
+        });
         document.getElementById('query-tags').appendChild(tag);
 
         document.getElementById('attribute-input').value = '';
         document.getElementById('value-input').value = '';
+        syncWithBackend();
     }
 
     document.getElementById('clear-btn').addEventListener('click', () => {
         document.getElementById('query-tags').innerHTML = '';
+        syncWithBackend();
     });
 
-     // Search query tags
+    // Search query tags
     document.getElementById('search-btn').addEventListener('click', addSearchQueryTag);
     document.getElementById('search-input').addEventListener('keydown', e => {
-        if(e.key === 'Enter'){
+        if(e.key === 'Enter') {
             addSearchQueryTag();
         }
     });
 
-   function addSearchQueryTag() {
+    function addSearchQueryTag() {
         const value = document.getElementById('search-input').value.trim();
-        if(!value) return;
+        if(!value){
+            return;
+        }
 
         const tag = document.createElement('span');
         tag.className = 'query-tag';
+        tag.dataset.type = 'search';
+        tag.dataset.value = value;
         tag.innerHTML = `${value} <button class="remove-btn">×</button>`;
-        tag.querySelector('.remove-btn').addEventListener('click', () => tag.remove());
+        tag.querySelector('.remove-btn').addEventListener('click', () => {
+            tag.remove();
+            syncWithBackend();
+        });
 
-        const queryTags = document.getElementById('query-tags');
-        queryTags.appendChild(tag);
+        document.getElementById('query-tags').appendChild(tag);
         document.getElementById('search-input').value = '';
+        syncWithBackend();
+    }
+
+    function collectQueries() {
+        const queries = [];
+        document.querySelectorAll('#query-tags .query-tag').forEach(tag => {
+            const type = tag.dataset.type;
+            if (type === 'search') {
+                queries.push({ type: 'search', text: tag.dataset.value });
+            } else if (type === 'filter') {
+                queries.push({
+                    type:      'filter',
+                    attribute: tag.dataset.attribute,
+                    operator:  tag.dataset.operator,
+                    value:     tag.dataset.value,
+                });
+            }
+        });
+        return queries;
+    }
+
+    async function syncWithBackend() {
+        const workspaceId = getWorkspaceId();
+        const queries = collectQueries();
+
+        const res = await fetch(`/${workspaceId}/apply_queries`, {
+            method:  'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body:    JSON.stringify({ queries }),
+        });
+
+        if (!res.ok) {
+            return;
+        }
+
+        window.location.href = `/${workspaceId}/render`;
     }
 });
