@@ -1,5 +1,4 @@
 import uuid
-import pytest
 
 from api.model import Graph, Edge, Node
 
