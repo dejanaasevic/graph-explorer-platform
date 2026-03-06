@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function renderUpdate(){
         render()
-        GraphEvents.publish('graph:update')
+        GraphEvents.publish('graph:updated')
     }
 
     function updateView(args, response) {
