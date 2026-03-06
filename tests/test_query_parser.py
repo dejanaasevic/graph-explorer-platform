@@ -10,6 +10,9 @@ class TestFilterExpression:
         assert expression.value == 30
 
 class TestParser:
+
+    # ───────────────── type parsing ─────────────────
+
     def test_parses_int(self):
         expression = Parser.parse("age >= 30")
         assert expression.value == 30
@@ -36,6 +39,8 @@ class TestParser:
         expression = Parser.parse("status == active")
         assert expression.value == "active"
 
+    # ───────────────── attribute & operator ─────────────────
+
     def test_attribute_lowercased(self):
         expression = Parser.parse("Age == 24")
         assert expression.attribute == "age"
@@ -45,10 +50,14 @@ class TestParser:
             expression = Parser.parse(f"x {operation} 1")
             assert expression.operator == operation
 
+    # ───────────────── whitespace handling ─────────────────
+
     def test_extra_leading_trailing_whitespace(self):
         expression = Parser.parse("  age == 10  ")
         assert expression.attribute == "age"
         assert expression.value == 10
+
+    # ───────────────── error cases ─────────────────
 
     def test_raises_on_too_few_parts(self):
         with pytest.raises(ValueError):
