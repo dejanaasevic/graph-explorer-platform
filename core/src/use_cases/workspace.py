@@ -60,6 +60,9 @@ class Workspace(object):
         return self.visualizer.render(self.base_graph)
 
     def cli_input(self, expression: str):
+        """
+        Proxy function for processing CLI inputs
+        """
         result = CLI.parse_command(self.base_graph, expression)
         if isinstance(result, str):
             return result
