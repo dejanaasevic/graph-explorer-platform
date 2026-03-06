@@ -7,9 +7,24 @@ from use_cases.query_parser import FilterExpression, Parser
 
 
 class QueryEngine:
+    """Provide static methods for querying and filtering a Graph.
+
+    All operations return a new subgraph containing only the nodes
+    (and the edges between them) that satisfy the given criteria.
+    The original graph is never modified.
+    """
 
     @staticmethod
     def search(graph: Graph, text: str) -> Graph:
+        """Return a subgraph of all nodes whose attributes contain the search text.
+
+        A node is included if the search text appears (case-insensitive) in
+        any of its attribute keys or attribute values.
+
+        Keyword arguments:
+        graph -- the source Graph to search
+        text  -- the substring to look for in node attribute keys and values
+        """
         valid_nodes: List[Node] = []
         for node in graph.get_nodes():
             for key, value in node.attributes.items():
@@ -21,6 +36,16 @@ class QueryEngine:
 
     @staticmethod
     def filter(graph: Graph, expression: str) -> Graph:
+        """Return a subgraph of all nodes that satisfy a filter expression.
+
+        The expression is parsed into a FilterExpression (attribute, operator,
+        value) and each node is tested against it. Nodes that do not have the
+        specified attribute are skipped silently.
+
+        Keyword arguments:
+        graph      -- the source Graph to filter
+        expression -- a filter expression string, e.g. "age >= 30"
+        """
         filter_expression: FilterExpression = Parser.parse(expression)
         valid_nodes: List[Node] = []
         for node in graph.get_nodes():
@@ -33,8 +58,18 @@ class QueryEngine:
 
     @staticmethod
     def build_subgraph(nodes: List[Node], graph: Graph) -> Graph:
+        """Build and return a new Graph containing the given nodes and their interconnecting edges.
+
+        Each node is copied into the new graph. An edge from the source graph is
+        included only if both its source and target nodes are present in the
+        provided node list.
+
+        Keyword arguments:
+        nodes -- list of Node instances to include in the subgraph
+        graph -- the source Graph used to look up edges and directionality
+        """
         new_graph: Graph = Graph(graph.is_directed())
-        map_nodes : Dict[uuid.UUID, Node] = {}
+        map_nodes: Dict[uuid.UUID, Node] = {}
         for node in nodes:
             node_copy : Node = node.copy(keep_id=True)
             map_nodes[node.id] = node_copy
@@ -46,6 +81,17 @@ class QueryEngine:
 
     @staticmethod
     def is_valid_node(node: Node, filter_expression: FilterExpression) -> bool:
+        """Return True if the node's attribute satisfies the filter expression.
+
+        Raises an Exception if the attribute value and the filter value have
+        incompatible types, or if the operator is not supported.
+
+        Supported operators: ==, !=, >, >=, <, <=
+
+        Keyword arguments:
+        node              -- the Node to evaluate
+        filter_expression -- the FilterExpression containing attribute, operator, and value
+        """
         attribute_value = node.attributes.get(filter_expression.attribute.lower())
 
         if attribute_value is None:
