@@ -44,7 +44,7 @@ class SimpleVisualizer(VisualizerPlugin):
                 .enter().append("marker")
                 .attr("id", "arrow")
                 .attr("viewBox", "0 -5 10 10")
-                .attr("refX", 46)
+                .attr("refX", 10)
                 .attr("refY", 0)
                 .attr("markerWidth", 6)
                 .attr("markerHeight", 6)
@@ -77,73 +77,110 @@ class SimpleVisualizer(VisualizerPlugin):
 
             var graphEl = d3.select("#graph");
 
-            var link = graphEl.selectAll(".link")
-                .data(edges)
-                .enter().append("line")
-                .attr("class", "link")
-                .attr("stroke", "#999")
-                .attr("stroke-width", "1.5px")
-                {arrow_attr};
-
             var drag = force.drag().on("dragstart", function() {{
                 d3.event.sourceEvent.stopPropagation();
             }});
 
-            var node = graphEl.selectAll(".node")
-                .data(force.nodes())
-                .enter().append("g")
-                .attr("class", function(d) {{ return "node id" + d.id; }})
-                .on("click", function() {{ nodeClick(this); }})
-                .call(drag);
+            var link = graphEl.selectAll(".link").data(edges);
+            var node = graphEl.selectAll(".node").data(force.nodes());
 
-            node.append("circle")
-                .attr("r", radius)
-                .attr("fill", "#6baed6")
-                .attr("stroke", "#2171b5")
-                .attr("stroke-width", "1.5px");
+            function displayNode(selection) {{
+                selection.append("circle")
+                    .attr("r", radius)
+                    .attr("fill", "#6baed6")
+                    .attr("stroke", "#2171b5")
+                    .attr("stroke-width", "1.5px");
 
-            node.append("text")
-                .attr("text-anchor", "middle")
-                .attr("font-size", "10px")
-                .attr("fill", "#fff")
-                .attr("pointer-events", "none")
-                .each(function(d) {{
-                    var label = String(d.label || d.id);
-                    var charsPerLine = 10;
-                    var sel = d3.select(this);
-                    if (label.length <= charsPerLine) {{
-                        sel.append("tspan").attr("x", 0).attr("dy", "0.35em").text(label);
-                    }} else {{
-                        var line1 = label.substring(0, charsPerLine);
-                        var rest = label.substring(charsPerLine);
-                        var line2 = rest.length > charsPerLine ? rest.substring(0, charsPerLine - 1) + "..." : rest;
-                        sel.append("tspan").attr("x", 0).attr("dy", "-0.25em").text(line1);
-                        sel.append("tspan").attr("x", 0).attr("dy", "1.2em").text(line2);
-                    }}
+                selection.append("text")
+                    .attr("text-anchor", "middle")
+                    .attr("font-size", "10px")
+                    .attr("fill", "#fff")
+                    .attr("pointer-events", "none")
+                    .each(function(d) {{
+                        var label = String(d.label || d.id);
+                        var charsPerLine = 10;
+                        var sel = d3.select(this);
+                        if (label.length <= charsPerLine) {{
+                            sel.append("tspan").attr("x", 0).attr("dy", "0.35em").text(label);
+                        }} else {{
+                            var line1 = label.substring(0, charsPerLine);
+                            var rest = label.substring(charsPerLine);
+                            var line2 = rest.length > charsPerLine ? rest.substring(0, charsPerLine - 1) + "..." : rest;
+                            sel.append("tspan").attr("x", 0).attr("dy", "-0.25em").text(line1);
+                            sel.append("tspan").attr("x", 0).attr("dy", "1.2em").text(line2);
+                        }}
+                    }});
+
+                selection.append("title")
+                    .text(function(d) {{
+                        var d3Keys = new Set(["index", "weight", "x", "y", "px", "py"]);
+                        var text = "";
+                        for (var key in d) {{
+                            if (!d3Keys.has(key)) text += key + ": " + d[key] + "\\n";
+                        }}
+                        return text;
+                    }});
+            }}
+
+            function render() {{
+                force.nodes(d3.values(nodes));
+                force.links(edges);
+                force.start();
+
+                link = graphEl.selectAll(".link")
+                    .data(edges, function(d) {{ return d.source.id + d.target.id; }});
+
+                link.enter().append("line")
+                    .attr("class", "link")
+                    .attr("stroke", "#999")
+                    .attr("stroke-width", "1.5px")
+                    {arrow_attr};
+
+                graphEl.selectAll(".link")
+                    .data(edges, function(d) {{ return d.source.id + d.target.id; }})
+                    .exit()
+                    .remove();
+
+                node = graphEl.selectAll(".node")
+                    .data(force.nodes(), function(d) {{ return d.id; }});
+
+                node.enter().append("g")
+                    .attr("class", function(d) {{ return "node id" + d.id; }})
+                    .on("click", function() {{ nodeClick(this); }})
+                    .call(drag)
+                    .call(displayNode);
+
+                node.each(function(d) {{
+                    d3.select(this).selectAll("*").remove();
+                    displayNode(d3.select(this));
                 }});
 
-            node.append("title")
-                .text(function(d) {{
-                    var d3Keys = new Set(["index", "weight", "x", "y", "px", "py"]);
-                    var text = "";
-                    for (var key in d) {{
-                        if (!d3Keys.has(key)) text += key + ": " + d[key] + "\\n";
-                    }}
-                    return text;
-                }});
+                graphEl.selectAll(".node")
+                    .data(force.nodes(), function(d) {{ return d.id; }})
+                    .exit()
+                    .remove();
+
+                node = graphEl.selectAll(".node");
+                link = graphEl.selectAll(".link");
+            }}
 
             function tick() {{
-                link
-                    .attr("x1", function(d) {{ return d.source.x; }})
-                    .attr("y1", function(d) {{ return d.source.y; }})
-                    .attr("x2", function(d) {{ return d.target.x; }})
-                    .attr("y2", function(d) {{ return d.target.y; }});
+                link.each(function(d) {{
+                    var dx = d.target.x - d.source.x, dy = d.target.y - d.source.y;
+                    var dist = Math.sqrt(dx*dx + dy*dy) || 1;
+                    d3.select(this)
+                        .attr("x1", d.source.x + dx/dist*radius)
+                        .attr("y1", d.source.y + dy/dist*radius)
+                        .attr("x2", d.target.x - dx/dist*radius)
+                        .attr("y2", d.target.y - dy/dist*radius);
+                }});
 
                 node.attr("transform", function(d) {{
                     return "translate(" + d.x + "," + d.y + ")";
                 }});
-
             }}
+
+            render();
         """
 
         return "<script>\n" + node_list_js + edge_list_js + d3 + "\n</script>"
