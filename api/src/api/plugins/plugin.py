@@ -1,5 +1,7 @@
 from abc import ABC, abstractmethod
-from ..model.graph import Graph
+from typing import Dict
+
+from ..model.graph import Graph, Node, Edge
 
 class Plugin(ABC):
     @abstractmethod
@@ -11,11 +13,81 @@ class Plugin(ABC):
         pass
 
 class DataSourcePlugin(Plugin):
+    """
+    Base class for data source plugins.
+
+    Data Source plugins create a Graph object stored in platform during runtime.
+    """
     @abstractmethod
     def load(self, **kwargs) -> Graph:
+        """
+        Function that transforms the input into a Graph object.
+
+        Keyword arguments can take any form necessary for Graph loading.
+        """
+        pass
+
+    @abstractmethod
+    def fields(self) -> Dict[str, str]:
+        """
+        Returns a dictionary that maps the HTML <input> value attributes to
+        type attributes needed for generating the HTML <form> for data input.
+
+        Dictionary items should be mapped onto HTML <input> in following manner:
+        <input value=[key] type=[value] />
+
+        Dictionary keys should fit the keyword arguments used in load() function.
+        :return:
+        """
         pass
 
 class VisualizerPlugin(Plugin):
+    """
+    Base class for visualizer plugins.
+
+    The platform renders the graph inside a fixed DOM structure defined in index.html:
+
+        <svg id="main-svg">
+            <g id="graph"></g>
+        </svg>
+
+    The render() method must return a <script> block that draws into this structure.
+    Zoom and pan are handled by views on #main-svg — the visualizer does not need
+    to implement them.
+
+    Required conventions for full platform integration:
+    - Render all nodes and edges into d3.select("#graph")
+    - Each node element must have class "node" (used by views)
+    - #main-svg is available for SVG <defs> (e.g. arrow markers)
+    - render() function implementation for graph rendering and update handling
+    """
+
+    @staticmethod
     @abstractmethod
-    def render(self, graph:Graph, **kwargs) -> str:
+    def serialize_node(node: Node) -> str:
+        """
+        Render a single node as a JavaScript string.
+        """
+        pass
+
+    @staticmethod
+    @abstractmethod
+    def serialize_edge(edge: Edge) -> str:
+        """
+        Render a single edge as a JavaScript string.
+        """
+        pass
+
+    @abstractmethod
+    def render(self, graph: Graph, **kwargs) -> str:
+        """
+        Render the graph as a JavaScript string.
+
+        Returns an HTML <script> block that, when executed in the browser,
+        draws the graph into #graph using D3 (v3). The returned string is
+        injected directly into the page via Django's {{ graph | safe }} tag.
+
+        Example minimal structure:
+            return "<script>d3.select('#graph').append(...)</script>"
+        """
         pass

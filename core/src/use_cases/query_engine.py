@@ -1,9 +1,9 @@
 import uuid
 from typing import List, Dict
 
-from api.src.api.model import Graph
-from api.src.api.model.graph import Node
-from core.src.use_cases.query_parser import FilterExpression, Parser
+from api.model import Graph
+from api.model import Node
+from use_cases.query_parser import FilterExpression, Parser
 
 
 class QueryEngine:
@@ -36,7 +36,7 @@ class QueryEngine:
         new_graph: Graph = Graph(graph.is_directed())
         map_nodes : Dict[uuid.UUID, Node] = {}
         for node in nodes:
-            node_copy : Node = node.copy()
+            node_copy : Node = node.copy(keep_id=True)
             map_nodes[node.id] = node_copy
             new_graph.add_node(node_copy)
         for edge in graph.get_edges():

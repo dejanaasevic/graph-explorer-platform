@@ -8,40 +8,63 @@ class InvalidArgumentException(Exception):
     pass
 
 class CLI(object):
-    def __init__(self, graph: Graph):
-        self.graph = graph
+    """
+    Object encapsulating the CLI functionalities.
 
-    def parse_command(self, command: str):
+    Those functionalities include:
+    - command parsing
+    - graph manipulation
+    - query argument passing
+    """
+
+    @staticmethod
+    def parse_command(graph: Graph, command: str):
+        """
+        Parses the command abd performs the graph action based on it
+
+        Throws InvalidArgumentException if the command is invalid
+        """
         parsed = command.split(' ')
-        try:
-            match parsed[0]:
-                case 'create-node':
-                    self.create_node(parsed[1:])
-                    print("Created new node!")
-                case 'create-edge':
-                    self.create_edge(parsed[1:])
-                    print("Created new edge!")
-                case 'update-node':
-                    self.update_node(parsed[1:])
-                    print("Updated node!")
-                case 'update-edge':
-                    self.update_edge(parsed[1:])
-                    print("Updated edge!")
-                case 'delete-node':
-                    self.delete_node(parsed[1])
-                    print("Removed node!")
-                case 'delete-edge':
-                    self.delete_edge(parsed[1])
-                    print("Removed edge!")
-                case 'clear':
-                    self.clear()
-                    print("Graph cleared!")
-                case _:
-                    print(f'Unknown command: {parsed[0]}')
-        except Exception as e:
-            print(e)
+        match parsed[0]:
+            case 'create-node':
+                return CLI.create_node(graph, parsed[1:])
+            case 'create-edge':
+                return CLI.create_edge(graph, parsed[1:])
+            case 'update-node':
+                return CLI.update_node(graph, parsed[1:])
+            case 'update-edge':
+                return CLI.update_edge(graph, parsed[1:])
+            case 'delete-node':
+                if len(parsed) != 2:
+                    raise InvalidArgumentException("delete-node takes one argument!")
+                return CLI.delete_node(graph, parsed[1])
+            case 'delete-edge':
+                if len(parsed) != 3:
+                    raise InvalidArgumentException("delete-edge takes two arguments!")
+                return CLI.delete_edge(graph, parsed[1], parsed[2])
+            case 'search':
+                if len(parsed) != 2:
+                    raise InvalidArgumentException("search takes one argument!")
+                return parsed[1]
+            case 'filter':
+                if len(parsed) < 3:
+                    raise InvalidArgumentException("Improper filter expression format!")
+                return command.split(' ', maxsplit=1)
+            case 'clear-graph':
+                CLI.clear(graph)
+                return "Graph cleared!"
+            case _:
+                raise InvalidArgumentException(f'Unknown command: {parsed[0]}')
 
-    def parse_attributes(self, args: list[str], update: bool) -> dict[str, Any]:
+    @staticmethod
+    def parse_attributes(args: list[str], update: bool) -> dict[str, Any]:
+        """
+        Parses the attributes of create- and update- commands
+
+        Every attribute is of the form [name]=[value] and is preceded by a flag describing its data type
+        Possible flags are: --int, --float, --string, and --date
+        NOTE: Dates are accepted in the DD.MM.YYYY format
+        """
         option = None
         attributes: dict[str, Any] = {}
         i = 0
@@ -85,58 +108,101 @@ class CLI(object):
             i += 1
         return attributes
 
-    def create_node(self, args: list[str]):
-        attributes: dict[str, Any] = self.parse_attributes(args, False)
-        new_node = Node(attributes)
-        self.graph.add_node(new_node)
+    @staticmethod
+    def create_node(graph: Graph, args: list[str]) -> Node:
+        """
+        Creates a new node with given attributes
+        Returns the newly created node
+        """
+        attributes: dict[str, Any] = CLI.parse_attributes(args, False)
+        new_node = Node()
+        new_node.set_attributes(attributes)
+        graph.add_node(new_node)
+        return new_node
 
-    def create_edge(self, args: list[str]):
-        source: Node = self.graph.get_node(UUID(args[0]))
-        target: Node = self.graph.get_node(UUID(args[1]))
+    @staticmethod
+    def create_edge(graph: Graph, args: list[str]) -> Edge:
+        """
+        Creates a new edge with given attributes
+        Returns the newly created edge
+        """
+        source: Node = graph.get_node(UUID(args[0]))
+        target: Node = graph.get_node(UUID(args[1]))
         if source is None:
             raise InvalidArgumentException(f"Node with ID {args[0]} does not exist!")
         if target is None:
             raise InvalidArgumentException(f"Node with ID {args[1]} does not exist!")
-        attributes: dict[str, Any] = self.parse_attributes(args[2:], False)
-        new_edge = Edge(source, target, attributes)
-        self.graph.add_edge(new_edge)
+        attributes: dict[str, Any] = CLI.parse_attributes(args[2:], False)
+        new_edge = Edge(source, target)
+        new_edge.set_attributes(attributes)
+        graph.add_edge(new_edge)
+        return new_edge
 
-    def clear(self):
-        for edge in self.graph.get_edges():
-            self.graph.remove_edge(edge.id)
-        for node in self.graph.get_nodes():
-            self.graph.remove_node(node.node_id)
+    def clear(graph: Graph):
+        """
+        Clears the graph
+        """
+        for edge in list(graph.get_edges()):
+            graph.remove_edge(edge.id)
+        for node in list(graph.get_nodes()):
+            graph.remove_node(node.id)
 
-    def delete_node(self, id: str):
+    @staticmethod
+    def delete_node(graph: Graph, id: str):
+        """
+        Deletes a node given its ID
+        No return value
+        """
         uuid: UUID = UUID(id)
-        if self.graph.get_node(uuid) is None:
+        if graph.get_node(uuid) is None:
             raise InvalidArgumentException(f"Node with ID {id} does not exist!")
-        self.graph.remove_node(uuid)
+        graph.remove_node(uuid)
 
-    def delete_edge(self, id: str):
-        uuid: UUID = UUID(id)
-        if self.graph.get_edge(uuid) is None:
-            raise InvalidArgumentException(f"Edge with ID {id} does not exist!")
-        self.graph.remove_edge(uuid)
+    @staticmethod
+    def delete_edge(graph: Graph, source_id: str, target_id: str):
+        """
+        Deletes an edge given its source and target node IDs
+        No return value
+        """
+        source_uuid: UUID = UUID(source_id)
+        target_uuid: UUID = UUID(target_id)
+        edge: Edge = graph.get_edge_between(source_uuid, target_uuid)
+        if edge is None:
+            raise InvalidArgumentException(f"Edge {source_id} - {target_id} does not exist!")
+        graph.remove_edge(edge.id)
 
-    def update_node(self, args: list[str]):
-        node: Node = self.graph.get_node(UUID(args[0]))
+    @staticmethod
+    def update_node(graph: Graph, args: list[str]) -> Node:
+        """
+        Updates the node given its ID
+        Returns the updated node
+        """
+        node: Node = graph.get_node(UUID(args[0]))
         if node is None:
             raise InvalidArgumentException(f"Node with ID {args[0]} does not exist!")
-        attributes: dict[str, Any] = self.parse_attributes(args[1:], True)
+        attributes: dict[str, Any] = CLI.parse_attributes(args[1:], True)
         for key, value in attributes.items():
             if key in node.attributes and value is None:
                 del node.attributes[key]
+            elif value is None:
+                pass
             else:
                 node.attributes[key] = value
+        return node
 
-    def update_edge(self, args: list[str]):
-        edge: Edge = self.graph.get_edge(UUID(args[0]))
+    @staticmethod
+    def update_edge(graph: Graph, args: list[str]) -> Edge:
+        """
+        Updates the edge given its ID
+        Returns the updated edge
+        """
+        edge: Edge = graph.get_edge(UUID(args[0]))
         if edge is None:
             raise InvalidArgumentException(f"Edge with ID {args[0]} does not exist!")
-        attributes: dict[str, Any] = self.parse_attributes(args[1:], True)
+        attributes: dict[str, Any] = CLI.parse_attributes(args[1:], True)
         for key, value in attributes.items():
             if key in edge.attributes and value is None:
                 del edge.attributes[key]
             else:
                 edge.attributes[key] = value
+        return edge

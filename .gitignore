@@ -1,5 +1,6 @@
 # Python
 __pycache__/
+.pytest_cache/
 *.pyc
 *.pyo
 *.pyd
@@ -20,3 +21,11 @@ dist/
 # OS
 .DS_Store
 Thumbs.db
+
+# Django
+*.sqlite3
+local_settings.py
+media/
+
+# Environment variables
+.env

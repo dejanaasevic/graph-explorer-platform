@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'style.css' %}"/>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+        <script src="https://d3js.org/d3.v3.js"></script>
+        {% load static %}
+        <script src="{% static 'events.js' %}"></script>
+        <title>Graph Explorer</title>
+    </head>
+    <body>
+        <div id="grid">
+            <div id="toolbar" class="grid-item">
+                <div class="toolbar-top">
+
+                    <div class="app-brand">
+                        <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                            <circle cx="5" cy="5" r="3" fill="currentColor" opacity="0.9"/>
+                            <circle cx="15" cy="5" r="3" fill="currentColor" opacity="0.55"/>
+                            <circle cx="10" cy="15" r="3" fill="currentColor" opacity="0.75"/>
+                            <line x1="5" y1="5" x2="15" y2="5" stroke="currentColor" stroke-width="1.5"/>
+                            <line x1="5" y1="5" x2="10" y2="15" stroke="currentColor" stroke-width="1.5"/>
+                            <line x1="15" y1="5" x2="10" y2="15" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                        Graph Explorer
+                    </div>
+
+                    <div class="toolbar-divider"></div>
+
+                    <div class="toolbar-group">
+                        <span class="toolbar-label">Plugin</span>
+                        <select id="data-format-select">
+                            <option value="" hidden></option>
+                            {% for plugin in data_source_plugins %}
+                            <option value="{{ plugin.identifier }}">{{ plugin.name }}</option>
+                            {% endfor %}
+                        </select>
+
+                        <select id="visualizer-select">
+                            <option value="" hidden></option>
+                            {% for plugin in visualizer_plugins %}
+                            <option value="{{ plugin.identifier }}">{{ plugin.name }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    <div class="toolbar-divider"></div>
+
+                    {% if fields %}
+                    <form class="toolbar-group" action="/{{ workspace_id }}/render" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {% for key, value in fields.items %}
+                        <span class="toolbar-label">{{ key }}</span>
+                        {% if value == "checkbox" %}
+                        <input type="checkbox" name="{{ key }}" value="True">
+                        {% else %}
+                        <label class="btn btn-dark file-upload-btn" style="padding-top:9px">
+                            Upload File
+                            <input type="file" name="{{ key }}" accept=".xml,.json" style="display:none" onchange="this.parentElement.querySelector('.file-name').textContent = this.files[0] ? this.files[0].name : ''">
+                        </label>
+                        <span class="file-name" style="font-size:11px;opacity:0.6;max-width:100px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;"></span>
+                        {% endif %}
+                        {% endfor %}
+                        <button type="submit" class="btn btn-dark" id="load-btn">Load</button>
+                    </form>
+                    {% endif %}
+
+                    <div class="toolbar-divider"></div>
+
+                    <div class="toolbar-group">
+                        <span class="toolbar-label">Search</span>
+                        <input type="text" id="search-input" placeholder="Search">
+                        <button type="button" class="btn btn-dark" id="search-btn">Search</button>
+                    </div>
+
+                    <div class="toolbar-divider"></div>
+
+                    <div class="toolbar-group">
+                        <span class="toolbar-label">Filter</span>
+                        <input type="text" id="attribute-input" placeholder="Attribute" class="input-sm">
+                        <select id="operator-select" class="select-sm">
+                            <option value="==">==</option>
+                            <option value="!=">!=</option>
+                            <option value=">">&gt;</option>
+                            <option value=">=">&gt;=</option>
+                            <option value="<">&lt;</option>
+                            <option value="<=">&lt;=</option>
+                        </select>
+                        <input type="text" id="value-input" placeholder="Value" class="input-sm">
+                        <button type="button" class="btn btn-dark" id="filter-btn">Filter</button>
+                        <button type="button" class="btn btn-outline" id="clear-btn">Clear</button>
+                    </div>
+
+                    <div class="toolbar-divider"></div>
+
+                    <div class="toolbar-group">
+                        <span class="toolbar-label">Workspaces</span>
+                        <div class="workspace-list" id="workspace-list">
+                            <span class="workspace-list" id="workspace-span">
+                                {% for i in workspace_count %}
+                                {% if i == workspace_id %}
+                                <div class="workspace-chip active" data-ws="{{ i }}">WS {{ i | add:"1" }}</div>
+                                {% else %}
+                                <div class="workspace-chip" data-ws="{{ i }}">WS {{ i | add:"1" }}</div>
+                                {% endif %}
+                                {% endfor %}
+                            </span>
+                            <button class="workspace-add" id="add-ws-btn" title="New workspace">+</button>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="toolbar-queries">
+                    <span class="toolbar-label">Active queries:</span>
+                    <div id="query-tags">
+                         {% for query in queries %}
+                            {% if query.type == "search" %}
+                                <span class="query-tag" data-type="search" data-value="{{ query.text }}">
+                                    {{ query.text }}
+                                    <button class="remove-btn">×</button>
+                                </span>
+                            {% elif query.type == "filter" %}
+                                <span class="query-tag"
+                                      data-type="filter"
+                                      data-attribute="{{ query.attribute }}"
+                                      data-operator="{{ query.operator }}"
+                                      data-value="{{ query.value }}">
+                                    {{ query.attribute }} {{ query.operator }} {{ query.value }}
+                                    <button class="remove-btn">×</button>
+                                </span>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+            <div id="tree-view" class="grid-item">
+                <div class="panel-header">
+                    <span class="panel-title">Tree View</span>
+                </div>
+                <div id="tree-view-content"></div>
+            </div>
+
+            <div id="bird-view" class="grid-item">
+                <div class="panel-header">
+                    <span class="panel-title">Bird View</span>
+                </div>
+                <div id="bird-view-canvas">
+                    <svg id="bird-svg"></svg>
+                </div>
+            </div>
+
+            <div id="main-view" class="grid-item">
+                <div class="panel-header">
+                    <span class="panel-title">Main View</span>
+                </div>
+                <div id="main-view-canvas">
+                    <svg id="main-svg"><g id="graph"></g></svg>
+                    {{ graph | safe }}
+                </div>
+            </div>
+
+            <div id="cli" class="grid-item">
+                <div class="panel-header">
+                    <span class="panel-title">Console</span>
+                </div>
+                <div id="cli-output">
+                    <div class="cli-line ok">Graph Explorer ready.</div>
+                </div>
+                <div id="cli-input-row">
+                    <span id="cli-prompt">&gt;</span>
+                    <input type="text" id="cli-input" placeholder="type a command..." autocomplete="off" spellcheck="false">
+                    <button type="button" class="btn btn-dark" id="cli-run-btn">Run</button>
+                </div>
+            </div>
+        </div>
+        {% load static %}
+        <script src="{% static 'birdview.js' %}"></script>
+        <script src="{% static 'treeview.js' %}"></script>
+        <script src="{% static 'main.js' %}"></script>
+        <script type="module" src="{% static 'cli.js' %}"></script>
+        <script type="module" src="{% static 'toolbar.js' %}"></script>
+    </body>
+</html>
