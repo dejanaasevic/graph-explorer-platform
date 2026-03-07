@@ -27,9 +27,9 @@ class JsonDataSource(DataSourcePlugin):
 
         The returned dict maps field names to their UI input types:
           directed  -- checkbox; whether the resulting graph should be directed
-          file_path -- text; the path to the JSON file to load
+          file_path -- file; the path to the JSON file to load
         """
-        return {"directed": "checkbox", "file_path": "text"}
+        return {"directed": "checkbox", "file_path": "file"}
 
     def load(self, **kwargs) -> Graph:
         """Load a JSON file and return its contents as a Graph.

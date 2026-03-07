@@ -36,8 +36,9 @@
         return adj;
     }
 
-    // Picks all root nodes: nodes with no incoming edges.
-    // Falls back to first node if the graph is fully cyclic.
+    // Return all nodes that have no incoming edges — these become tree roots.
+    // If every node has at least one incoming edge (fully cyclic graph),
+    // fall back to using the first node as the single root.
     function pickRoots(nodeIds, edgesArr) {
         var hasIncoming = {};
         edgesArr.forEach(function (edge) {
@@ -56,7 +57,6 @@
     // Keys added by D3 force layout — excluded from attribute display
     var D3_KEYS = new Set(['index', 'weight', 'x', 'y', 'px', 'py', 'label', 'tag']);
 
-    // Renders key-value attribute rows for a node, skipping internal D3 keys
     function renderAttributes(nodeData) {
         var html = '';
         Object.keys(nodeData).forEach(function (key) {
@@ -68,7 +68,7 @@
 
     // Recursively renders a tree node as HTML.
     // Shows [cycle] and disables expansion when a cycle is detected via `visited`.
-    // A node gets a "+" toggle if it has children OR displayable attributes.
+    // A node gets a "+" toggle if it has children or displayable attributes.
     function renderNode(nodeId, adj, visited, expanded) {
         var nodeData = nodes[nodeId];
         if (!nodeData) return '';
@@ -178,7 +178,8 @@
         }
     }
 
-    // Attaches a single delegated click listener to the tree container.
+    // A single delegated click listener on the container handles all node clicks.
+    // On click: toggles the node and fires a selection event for cross-view sync.
     function attachClickHandlers(state) {
         var container = document.getElementById('tree-view-content');
         container.addEventListener('click', function (e) {
@@ -210,7 +211,6 @@
             html += renderNode(rid, adj, new Set(), expanded);
         });
         container.innerHTML = html;
-        // Store state on the DOM element so subscribers can access it
         container._treeState = state;
         attachClickHandlers(state);
     }
