@@ -43,6 +43,11 @@ class Workspace(object):
         return self.visualizer.render(self.base_graph)
 
     def apply_queries(self, queries: List[Dict[str, str]]):
+        """
+        Applies the given queries to the graph loaded in the workspace.
+
+        The newly created graph is stored alongside the base graph.
+        """
         self.queries = queries
         current: Graph = self.base_graph
         for query in queries:
@@ -55,6 +60,9 @@ class Workspace(object):
         return self.visualizer.render(current)
 
     def clear_queries(self):
+        """
+        Removes all queries from the workspace.
+        """
         self.queries = []
         self.graph = self.base_graph
         return self.visualizer.render(self.base_graph)

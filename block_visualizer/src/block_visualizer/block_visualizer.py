@@ -4,13 +4,21 @@ import json
 
 class BlockVisualizer(VisualizerPlugin):
     def name(self) -> str:
+        """Returns the display name of the visualizer."""
         return "Block Visualizer"
 
     def identifier(self) -> str:
+        """Returns the unique string identifier of the visualizer."""
         return "block_visualizer"
 
     @staticmethod
     def serialize_node(node: Node):
+        """
+        Serializes a node to a JSON string.
+
+        The resulting object contains the node's ID,
+        and all of its attributes as string values.
+        """
         dictionary = {"id": str(node.id)}
         for attribute in node.attributes:
             dictionary[attribute] = str(node.attributes[attribute])
@@ -18,10 +26,22 @@ class BlockVisualizer(VisualizerPlugin):
 
     @staticmethod
     def serialize_edge(edge: Edge):
+        """
+        Serializes an edge to a JSON string.
+
+        The resulting object contains the source and target node IDs as strings.
+        """
         dictionary = {"source": str(edge.source.id), "target": str(edge.target.id)}
         return json.dumps(dictionary)
 
     def render(self, graph: Graph, **kwargs) -> str:
+        """
+        Renders the graph as an HTML script tag containing D3.js visualization code.
+
+        Generates JavaScript that builds a force-directed graph using D3 v3.
+        Supports both directed and undirected graphs — directed graphs include
+        arrow markers on edges. Returns a <script> string ready to be embedded in HTML.
+        """
         node_list_json = "nodes = {"
         for node in graph.get_nodes():
             node_list_json += "'" + str(node.id) + "':"

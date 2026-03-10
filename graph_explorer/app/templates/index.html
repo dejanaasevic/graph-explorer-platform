@@ -51,18 +51,21 @@
                     {% if fields %}
                     <form class="toolbar-group" action="/{{ workspace_id }}/render" method="post" enctype="multipart/form-data">
                         {% csrf_token %}
-                        {% for key, value in fields.items %}
-                        <span class="toolbar-label">{{ key }}</span>
-                        {% if value == "checkbox" %}
+                    {% for key, value in fields.items %}
+                    <span class="toolbar-label">{{ key }}</span>
+                    {% if value == "checkbox" %}
                         <input type="checkbox" name="{{ key }}" value="True">
-                        {% else %}
+                    {% elif value == "text" %}
+                        <input type="text" name="{{ key }}" placeholder="{{ key }}" class="input-sm">
+                    {% elif value == "file" %}
                         <label class="btn btn-dark file-upload-btn" style="padding-top:9px">
-                            Upload File
-                            <input type="file" name="{{ key }}" accept=".xml,.json" style="display:none" onchange="this.parentElement.querySelector('.file-name').textContent = this.files[0] ? this.files[0].name : ''">
+                        Upload File
+                        <input type="file" name="{{ key }}" accept=".xml,.json" style="display:none"
+                        onchange="this.parentElement.nextElementSibling.textContent = this.files[0] ? this.files[0].name : ''">
                         </label>
                         <span class="file-name" style="font-size:11px;opacity:0.6;max-width:100px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;"></span>
-                        {% endif %}
-                        {% endfor %}
+                    {% endif %}
+                    {% endfor %}
                         <button type="submit" class="btn btn-dark" id="load-btn">Load</button>
                     </form>
                     {% endif %}
